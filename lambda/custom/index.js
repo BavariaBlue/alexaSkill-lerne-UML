@@ -1,7 +1,7 @@
 'use strict';
 
 var Alexa = require('alexa-sdk');
-
+var appId = '';
 var handlers = {
     'LaunchRequest': function () {
         this.emit(':tell','Hallo, nicht fleißiger Studierender, wie geht es dir heute?','ChooseSkillIntent');

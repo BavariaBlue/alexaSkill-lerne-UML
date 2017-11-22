@@ -2,10 +2,10 @@
     "session": {
       "sessionId": "SessionId.Session1",
       "application": {
-        "applicationId": "amzn1.echo-sdk-ams.app.<your skill id here>"
+        "applicationId": "amzn1.echo-sdk-ams.app.amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277"
       },
       "user": {
-        "userId": "amzn1.ask.account.testaccount1"
+        "userId": "amzn1.ask.account.AFI766UKI5FRYUZPICPDGZCHIMJWMLMCBZXALG3WW27ROJKS65VG7NHXYZFG7CQZ26OGJA2IG7E4ZG5BF5QM4ZIQKJ6GLBXYTH6AT2JRUU26KIVIGWXK4LDRHBB6ASPNPI4UW7SSND3WNQIEE5YCHVTPNXF4AZSVQUFJSGXZTHRS5BQUHZR5XMK7WYR7QMKNEXUDBJRPBH7ZTJY"
       },
       "new": true
     },
