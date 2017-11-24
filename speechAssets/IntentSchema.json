@@ -1,0 +1,262 @@
+{
+    "languageModel": {
+      "types": [
+        {
+          "name": "questionsForQuiz",
+          "values": [
+            {
+              "id": "100",
+              "name": {
+                "value": "Sind Attribute eher in Klassen- oder Verteilungsdiagramme zu sehen?",
+                "synonyms": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "wordsInDictionary",
+          "values": [
+            {
+              "id": null,
+              "name": {
+                "value": "Klassendiagramm",
+                "synonyms": [
+                  "class diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "UML",
+                "synonyms": [
+                  "Unified Modeling Language",
+                  "U . M. L.",
+                  "u. m. l."
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Objektdiagramm",
+                "synonyms": [
+                  "object diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Komponentendiagramm",
+                "synonyms": [
+                  "component diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Kompositionsstrukturdiagramm",
+                "synonyms": [
+                  "composite structure diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Verteilungsdiagramm",
+                "synonyms": [
+                  "deployment diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Paketdiagramm",
+                "synonyms": [
+                  "package diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Profildiagramm",
+                "synonyms": [
+                  "profil diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Strukturdiagramm",
+                "synonyms": [
+                  "Strukturdiagramme",
+                  "structure diagram",
+                  "structure diagrams"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Verhaltensdiagramm",
+                "synonyms": [
+                  "Verhaltensdiagramme",
+                  "behaviour diagram",
+                  "behaviour diagrams"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Use case Diagramm",
+                "synonyms": [
+                  "Anwendungsfalldiagramm",
+                  "use case diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Aktivitätsdiagramm",
+                "synonyms": [
+                  "activity diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Zustandsdiagramm",
+                "synonyms": [
+                  "state machine diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Interaktionsdiagramm",
+                "synonyms": [
+                  "Interaktionsdiagramme",
+                  "interaction diagrams",
+                  "interaction diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Sequenzdiagramm",
+                "synonyms": [
+                  "sequence diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Kommunikationsdiagramm",
+                "synonyms": [
+                  "communication diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Timing Diagramm",
+                "synonyms": [
+                  "timing diagram"
+                ]
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Interaktionsübersichtsdiagramm",
+                "synonyms": [
+                  "interaction overview diagram"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "ConsultDictionaryIntent",
+          "samples": [
+            "Was bedeutet {wordsInDictionary}",
+            "Was heißt {wordsInDictionary}",
+            "Nenne mir die Definition von {wordsInDictionary}",
+            "Definiere {wordsInDictionary}",
+            "Was ist ein {wordsInDictionary}",
+            "Was sind {wordsInDictionary}",
+            "Wie lautet die Definition von {wordsInDictionary}",
+            "Öffne das Dictionary. {wordsInDictionary}",
+            "Öffne das Wörterbuch. {wordsInDictionary}",
+            "Schlage nach {wordsInDictionary}"
+          ],
+          "slots": [
+            {
+              "name": "wordsInDictionary",
+              "type": "wordsInDictionary"
+            }
+          ]
+        },
+        {
+          "name": "OpenDictionaryIntent",
+          "samples": [
+            "Öffne das Wörterbuch",
+            "Wörterbuch",
+            "Dictionary",
+            "Open the dictionary",
+            "Kannst du das Wörterbuch öffnen",
+            "Öffne bitte das Wörterbuch",
+            "Nachschlagen",
+            "Nachschlagwerk",
+            "Lexikon",
+            "Verzeichnis",
+            "Wörterverzeichnis",
+            "Vokabular",
+            "Öffne Wörterbuch"
+          ],
+          "slots": []
+        },
+        {
+          "name": "OpenGameIntent",
+          "samples": [
+            "Lass uns ein Spiel spielen",
+            "Spiel"
+          ],
+          "slots": []
+        },
+        {
+          "name": "OpenQuizIntent",
+          "samples": [],
+          "slots": []
+        }
+      ],
+      "invocationName": "lerne u. m. l."
+    }
+  }
