@@ -68,6 +68,7 @@ sts.assumeRole({
           }
         };        
         var lambda = require('../src/index.js');
+        // TODO
         // CHANGE THIS STRING TO THE TEST FILE YOU GENERATED
         // BY COPYING OUT OF THE SERVICE SIMULATOR INTO A NEW JSON FILE
         // e.g. event = require('./sayOpenDictionary.json');
