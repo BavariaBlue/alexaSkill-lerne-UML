@@ -1,76 +1,157 @@
 'use strict';
+const Alexa = require("alexa-sdk");
+const appId = 'amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277';
 
-var Alexa = require('alexa-sdk');
-var appId = '';
-var handlers = {
-    'LaunchRequest': function () {
-        this.emit(':tell','Hallo, nicht fleißiger Studierender, wie geht es dir heute?','ChooseSkillIntent');
-    },
+exports.handler = function(event, context, callback) {
+    const alexa = Alexa.handler(event, context);
+    alexa.appId = appId;
+    // alexa.dynamoDBTableName = 'highLowGuessUsers';
+    alexa.registerHandlers(newSessionHandlers, startDictionaryHandler, consultDictionaryHandler, startQuizHandler, startGameHandler);
+    alexa.execute();
+};
+
+const states = {	
+    STARTMODE: 'START_GENERAL_MODE',                    
     
-    // new Intent because after getting e.g. a definition, 
-    // user wants new skill and so doesn't need to get a welcome message
-    'ChooseSkillIntent' : function () {
-        this.response.speak('Welchen Skill möchtest du öffnen?').listen('Du kannst zwischen ' +
-        'Wörterbuch, Quiz oder Spiel auswählen.');
-        this.emit(':responseReady');
-        // skill = subskill
-    },
-    
-    'OpenDictionaryIntent' : function () {
-        // utterances: without a dictionary slot -> for beginners
-        // currentState: no slot value given. Only for modal code.
-        // Asks for slot value and so always opens ConsultDictionaryIntent
-        
-        // only if it's the first time the skill was invoked in the session:
-        /*if(Object.keys(this.attributes).length === 0) { 
-            this.emit(':tell:', 'Willkommen zum Wörterbuch-Skill');
-            }
-            */
-            
-        // bei jedem Aufruf:
-        this.emit(':ask', 'Welchen Begriff möchtest du definiert haben?');
-    },
-    
-    // only consult dictionary, more modal. 
-    'ConsultDictionaryIntent' : function() {
-        // currentState: 
-        // a: beginner user: welcomed via OpenDictionaryIntent, now handling slot value 
-        // b: experienced user: welcomed via Launch -> got utterance to open dictionary with slot value.
-        var term = this.event.request.intent.slots.wordsInDictionary.value;
-        this.response.speak("Die Definition des Terms " + term + " lautet: " + 
-        "Veranschaulicht den Zustand eines Systems zu einem bestimmten Zeitpunkt.");
-        this.emit(':responseReady');
-        
-        this.emit(':ask', 'Möchtest du noch eine Definition erfahren?');
-        
-        // How do I ask for Yes or NO???
-        if(this.request.intent.name === 'AMAZON.YesIntent') {
-            this.emit('OpenDictionaryIntent');
+    STARTDICTIONARYMODE: 'START_DICTIONARY_MODE',       // User selected dictionary skill out of skill set or has answered 'new quiz' with yes
+    CONSULTDICTIONARYMODE: '_CONSULT_DICTIONARY_MODE',  // Prompt the user to start or restart the dictionary.
+
+    STARTQUIZMODE: '_START_QUIZ_MODE',				    // User selected quiz skill out of skill set or has answered 'new quiz' with yes
+    CONSULTQUIZMODE: '_CONSULT_QUIZ_MODE',              // Prompt the user to start or restart the quiz.
+
+    STARTGAMEMODE: '_START_GAME_MODE',				    // User selected game skill out of skill set or has answered 'new quiz' with yes 
+    CONSULTGAMEMODE: '_CONSULT_GAME_MODE',              // Prompt the user to start or restart the game.
+
+};
+
+const newSessionHandlers = { 
+    'NewSession': function() {
+        // check if the skill session is new
+        if(Object.keys(this.attributes).length === 0) {
+            // this.attributes['endedSessionCount'] = 0;
+            this.response.speak('Willkommen zu Lerne UML. Möchtest du das Wörterbuch, das Quiz oder das Spiel öffnen?')
+            .listen('Sage zum Beispiel Wörterbuch oder Öffne Wörterbuch, um diesen Skill zu öffnen.');
+            //You have played this.attributes['gamesPlayed'].toString() +
+            this.emit(':responseReady');
         }
-        else {
-            this.emit('ChooseSkillIntent');
-        }
+        // change state to __ 
+        // this.handler.state = states.STARTMODE;
+        this.response.speak('Möchtest du das Wörterbuch, das Quiz oder das Spiel öffnen?')
+            .listen('Sage zum Beispiel Quiz oder Öffne Quiz, um diesen Skill zu öffnen.');
+            //You have played this.attributes['gamesPlayed'].toString() +
+        this.emit(':responseReady');
     },
-    
-    'AMAZON.HelpIntent': function () {
-        const speechOutput = this.t('HELP_MESSAGE');
-        const reprompt = this.t('HELP_MESSAGE');
-        this.emit(':ask', speechOutput, reprompt);
+    "AMAZON.StopIntent": function() {
+      this.response.speak("Auf Wiedersehen!");
+      this.emit(':responseReady');
     },
-    'AMAZON.CancelIntent': function () {
-        this.emit(':tell', this.t('STOP_MESSAGE'));
+    "AMAZON.CancelIntent": function() {
+        this.response.speak("Tschüss!");
+        this.emit(':responseReady');
     },
-    'AMAZON.StopIntent': function () {
-        this.emit(':tell', this.t('STOP_MESSAGE'));
-    },
-    'SessionEndedRequest': function() {
-        console.log('session ended!'); 
-        this.emit(':saveState', true); 
+    'SessionEndedRequest': function () {
+        console.log('session ended!');
+        //this.attributes['endedSessionCount'] += 1;
+        this.response.speak("Machs gut!");
+        this.emit(':responseReady');
     }
 };
 
-exports.handler = function(event, context, callback){
-  var alexa = Alexa.handler(event, context);
-    alexa.registerHandlers(handlers);
-    alexa.execute();
-};
+const startDictionaryHandler = Alexa.CreateStateHandler(states.STARTDICTIONARYMODE, {
+    'NewSession': function () {
+        this.emit('NewSession'); // Uses the handler in newSessionHandlers
+    },
+    'OpenDictionaryIntent': function() {
+        const message = 'Gib mir einen Fachterm, den ich dir definieren soll';
+        const remessage = 'Welchen Fachterm soll ich definieren?';
+        this.handler.state = states.CONSULTDICTIONARYMODE;
+        this.response.speak(message).listen(remessage);
+        this.emit(':responseReady');
+    },
+
+    // we need a help intent
+    
+    'AMAZON.YesIntent': function() {
+        this.handler.state = states.CONSULTDICTIONARYMODE;
+        this.response.speak('Großartig! ' + 'Gib mir einen weiteren Term.').listen('Sage zum Beispiel Definiere Aggregation.');
+        this.emit(':responseReady');
+    },
+    'AMAZON.NoIntent': function() {
+        // weiterleiten zur Skill Auswahl!?!??!
+        console.log("NOINTENT");
+        this.handler.state = "";
+        this.response.speak('Ok, noch einen schönen Tag!');
+        this.emit(':responseReady');
+    },
+
+    "AMAZON.StopIntent": function() {
+      console.log("STOPINTENT");
+      this.response.speak("Auf Wiedersehen!");
+      this.emit(':responseReady');
+    },
+    "AMAZON.CancelIntent": function() {
+      console.log("CANCELINTENT");
+      this.response.speak("Tschüss!");
+      this.emit(':responseReady');
+    },
+    'SessionEndedRequest': function () {
+        console.log("SESSIONENDEDREQUEST");
+        //this.attributes['endedSessionCount'] += 1;
+        this.response.speak("Machs gut!");
+        this.emit(':responseReady');
+    },
+    'Unhandled': function() {
+        console.log("UNHANDLED");
+        const message = 'Gib mir ein Schlagwort, um es zu definieren oder schließe den Skill mit Alexa Stop';
+        this.response.speak(message).listen(message);
+        this.emit(':responseReady');
+    }
+
+});
+
+const consultDictionaryHandler = Alexa.CreateStateHandler(states.CONSULTDICTIONARYMODE, {
+    'ConsultDictionaryIntent' : function () {
+        const term = this.event.request.intent.slots.wordsInDictionary.value;
+        console.log('user asks for: ' + term);
+        this.handler.state = states.STARTDICTIONARYHANDLER;
+        this.response.speak('Die Definition des Terms ' + term + 'lautet: ' + 'Test test test test' + 
+        + 'Möchtest du einen weiteren Begriff definiert haben, so antworte mit Ja').listen('Antworte bitte mit ja oder nein.');
+        this.emit(':responseReady');
+    },
+    "AMAZON.StopIntent": function() {
+        console.log("STOPINTENT");
+      this.response.speak("Auf Wiedersehen!");
+      this.emit(':responseReady');
+    },
+    "AMAZON.CancelIntent": function() {
+        console.log("Tschüss");
+    },
+    'SessionEndedRequest': function () {
+        console.log("SESSIONENDEDREQUEST");
+        this.attributes['endedSessionCount'] += 1;
+        this.response.speak("Machs gut!");
+        this.emit(':responseReady');
+    },
+    'Unhandled': function() {
+        console.log("UNHANDLED");
+        this.response.speak('Sorry, das habe ich nicht verstanden. Versuche, mir einen Term zu sagen.')
+        .listen('Versuche, mir einen Term zu sagen.');
+        this.emit(':responseReady');
+    }
+});
+
+
+const startQuizHandler = Alexa.CreateStateHandler(states.STARTQUIZMODE,  {
+
+
+});
+
+
+const startGameHandler = Alexa.CreateStateHandler(states.STARTGAMEMODE,  {
+
+
+});
+// These handlers are not bound to a state
+//const myTestHandler = {
+//}
+
