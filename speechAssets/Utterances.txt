@@ -1,0 +1,65 @@
+{
+    "name": "ConsultDictionaryIntent",
+    "samples": [
+        "Was bedeutet {wordsInDictionary}",
+        "Was heißt {wordsInDictionary}",
+        "Nenne mir die Definition von {wordsInDictionary}",
+        "Definiere {wordsInDictionary}",
+        "Was ist ein {wordsInDictionary}",
+        "Was sind {wordsInDictionary}",
+        "Wie lautet die Definition von {wordsInDictionary}",
+        "Öffne das Dictionary. {wordsInDictionary}",
+        "Öffne das Wörterbuch. {wordsInDictionary}",
+        "Schlage nach {wordsInDictionary}"
+    ],
+    "slots": [
+        {
+            "name": "wordsInDictionary",
+            "type": "wordsInDictionary"
+        }
+    ]
+},
+{
+    "name": "OpenDictionaryIntent",
+    "samples": [
+        "Öffne das Wörterbuch",
+        "Wörterbuch",
+        "Wörterbuch öffnen",
+        "Dictionary",
+        "Open the dictionary",
+        "Kannst du das Wörterbuch öffnen",
+        "Öffne bitte das Wörterbuch",
+        "Ich möchte ein Wort nachschlagen",
+        "Nachschlagen",
+        "Nachschlagwerk",
+        "Lexikon",
+        "Verzeichnis",
+        "Wörterverzeichnis",
+        "Vokabular",
+        "Öffne Wörterbuch"
+    ],
+    "slots": []
+},
+{
+    "name": "OpenQuizIntent",
+    "samples": [
+        "Öffne das Quiz",
+        "Quiz",
+        "Wörterbuch öffnen",
+        "Open Quiz",
+        "Kannst du das Quiz öffnen",
+        "Öffne bitte das Quiz",
+        "Ich möchte ein Quiz spielen",
+        "Ratespiel",
+        "Quizduell"
+        ],
+    "slots": []
+},
+{
+    "name": "OpenGameIntent",
+    "samples": [
+        "Lass uns ein Spiel spielen",
+        "Spiel"
+        ],
+    "slots": []
+}
