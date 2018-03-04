@@ -1,7 +1,7 @@
 // metadata for quizData.json
 
-// TODO: U M L instead of UML
-// TODO: sentence ending w/ or wo/ "."
+// TODO: json: U M L instead of UML
+// TODO: json: sentence ending w/ or wo/ "."
 
 var test = {
 	"questions": [
