@@ -1,157 +1,151 @@
 'use strict';
-const Alexa = require("alexa-sdk");
-const appId = 'amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277';
 
-exports.handler = function(event, context, callback) {
-    const alexa = Alexa.handler(event, context);
+const Alexa = require('alexa-sdk');
+const appId = 'amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277';
+var currentQuestionId = 0;
+
+// Load quiz data sync:
+var fs = require('fs');
+var quizData = JSON.parse(fs.readFileSync('./quizData.json', 'utf8'));
+
+// Load async:
+/*
+var fs = require('fs');
+var obj;
+fs.readFile('file', 'utf8', function (err, data) {
+  if (err) throw err;
+  obj = JSON.parse(data);
+});
+*/
+
+// Test output to console
+var jsQuizObject = JSON.stringify(quizData, null, 4);
+console.log(jsQuizObject); // Logs output to dev tools console.
+
+// get length of questions array 
+var quizDataLength = Object.keys(quizData.questions).length;
+console.log('Loaded question arrray length: ' + quizDataLength);
+
+var handlers = {
+    'LaunchRequest': function()
+    {
+        console.log('LaunchRequest aufgerufen');
+
+        if (Object.keys(this.attributes).length === 0)
+        {
+            console.log('Skill das erste Mal aufgerufen');
+            this.attributes.Score = {
+                    'gamesPlayed': 0,
+                    'gamesWon': 0,
+                    'percentage': 0
+                },
+                this.response.speak('Willkommen zum Lerne U M L Skill. Sage öffne Quiz oder öffne Wörterbuch').listen(' Sage öffne Quiz oder öffne Wörterbuch');
+        }
+        else
+        {
+            // var currentGamesPlayed = this.attributes.Score.gamesPlayed;
+            // var currentGamesWon = this.attributes.Score.gamesWon;
+            // var percentage = this.attributes.Score.percentage;
+            console.log('Skill zum n-ten Mal aufgerufen');
+            this.response.speak('Willkommen zurück zum Lerne U M L Skill. Sage öffne Quiz oder öffne Wörterbuch oder Öffne Score').listen(' Sage öffne Quiz oder öffne Wörterbuch oder Öffne Score');
+        }
+        this.emit(':responseReady');
+    },
+
+    // User says "Öffne Quiz"
+    'OpenQuizIntent': function()
+    {
+        console.log('OpenQuizIntent wurde gestartet mit Array: ' + quizDataLength);
+        currentQuestionId = Math.floor(Math.random() * (quizDataLength));
+
+        /* short: 
+        var rand = myArray[Math.floor(Math.random() * myArray.length)]; */
+
+        console.log('currentQuestionId = ' + currentQuestionId + 'Länge Array = ' + quizDataLength);
+        var currentQuestion = quizData.questions[currentQuestionId].question;
+        console.log("currentQuestion = " + currentQuestion);
+        this.response.speak('Okay, ich stelle dir eine Frage. ' + currentQuestion + ". " +
+            'Antworte  mit wahr oder falsch.').listen(' Antworte immer mit wahr oder falsch');
+        this.emit(':responseReady');
+    },
+
+    // User gives an answer to the quiz -> wahr or falsch are slots
+    'AnswerQuizIntent': function()
+    {
+        console.log('AnswerQuizIntent wurde gestartet');
+        var userAnswer = this.event.request.intent.slots.answerQuizSlot.value;
+        var correctAnswer = quizData.questions[currentQuestionId].answer;
+        console.log('Wird currrentQuestionsID mitgenommen?: ' + currentQuestionId);
+        console.log('Muss antworten mit: ' + correctAnswer);
+        console.log('Hat geantwortet mit:' + userAnswer);
+
+        if (userAnswer === correctAnswer)
+        {
+            console.log('AnswerQuizIntent korrekte Antwort');
+            this.attributes.gamesWon++;
+            this.response.speak('Nice Job! Du liegst richtig. ' + ' Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
+        }
+        else
+        {
+            console.log('AnswerQuizIntent falsche Antwort');
+            var tellTruth = quizData.questions[currentQuestionId].correction;
+            this.response.speak('Sorry, die korrekte Antwort lautet ' + tellTruth + '. Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
+        }
+        this.attributes.gamesPlayed++;
+        this.emit(':responseReady');
+    },
+
+    // Routing from OpenQuizIntent, AnswerQuizIntent and OpenScoreIntent
+    /*'AskQuestion': function() {
+        console.log('AskQuestion ist aufgerufen');
+        currentQuestionId = 1;
+        // Math.floor(Math.random() * (quizData.length);
+        var currentQuestion = quizData[currentQuestionId].question;
+        this.response.listen(currentQuestion, 'Antworte immer mit wahr oder falsch');
+    },*/
+
+    // User says "Öffne Score" 
+    'OpenScoreIntent': function()
+    {
+        console.log('OpenScoreIntent wurde aufgerufen');
+        var currentGamesPlayed = this.attributes.Score.gamesPlayed;
+        var currentGamesWon = this.attributes.Score.gamesWon;
+        var score = currentGamesPlayed + currentGamesWon * 3;
+        var currentPercentage = this.attributes.Score.percentage = (currentGamesWon / currentGamesPlayed) * 100;
+        this.response.speak('Dein aktueller Score liegt bei ' + score + ' Punkten. Du hast ' + currentPercentage + ' Prozent deiner Spiele gewonnen.' +
+            'Hier ist schon deine nächste Frage');
+        this.emit(':responseReady');
+        //this.emit('OpenQuizIntent');
+    },
+
+    // Stop
+    'AMAZON.StopIntent': function()
+    {
+        this.response.speak('Ok, schön die Ohren steif halten, lieber Studierender.');
+        this.emit(':responseReady');
+    },
+
+    // Cancel
+    'AMAZON.CancelIntent': function()
+    {
+        this.response.speak('Ok, mach es gut, fleißiger Studierender.');
+        this.emit(':responseReady');
+    },
+
+    // Save state
+    'SessionEndedRequest': function()
+    {
+        console.log('session ended!');
+        this.emit(':saveState', true);
+    }
+
+};
+
+exports.handler = function(event, context, callback)
+{
+    var alexa = Alexa.handler(event, context, callback);
     alexa.appId = appId;
-    // alexa.dynamoDBTableName = 'highLowGuessUsers';
-    alexa.registerHandlers(newSessionHandlers, startDictionaryHandler, consultDictionaryHandler, startQuizHandler, startGameHandler);
+    alexa.dynamoDBTableName = 'LerneUMLScore';
+    alexa.registerHandlers(handlers);
     alexa.execute();
 };
-
-const states = {	
-    STARTMODE: 'START_GENERAL_MODE',                    
-    
-    STARTDICTIONARYMODE: 'START_DICTIONARY_MODE',       // User selected dictionary skill out of skill set or has answered 'new quiz' with yes
-    CONSULTDICTIONARYMODE: '_CONSULT_DICTIONARY_MODE',  // Prompt the user to start or restart the dictionary.
-
-    STARTQUIZMODE: '_START_QUIZ_MODE',				    // User selected quiz skill out of skill set or has answered 'new quiz' with yes
-    CONSULTQUIZMODE: '_CONSULT_QUIZ_MODE',              // Prompt the user to start or restart the quiz.
-
-    STARTGAMEMODE: '_START_GAME_MODE',				    // User selected game skill out of skill set or has answered 'new quiz' with yes 
-    CONSULTGAMEMODE: '_CONSULT_GAME_MODE',              // Prompt the user to start or restart the game.
-
-};
-
-const newSessionHandlers = { 
-    'NewSession': function() {
-        // check if the skill session is new
-        if(Object.keys(this.attributes).length === 0) {
-            // this.attributes['endedSessionCount'] = 0;
-            this.response.speak('Willkommen zu Lerne UML. Möchtest du das Wörterbuch, das Quiz oder das Spiel öffnen?')
-            .listen('Sage zum Beispiel Wörterbuch oder Öffne Wörterbuch, um diesen Skill zu öffnen.');
-            //You have played this.attributes['gamesPlayed'].toString() +
-            this.emit(':responseReady');
-        }
-        // change state to __ 
-        // this.handler.state = states.STARTMODE;
-        this.response.speak('Möchtest du das Wörterbuch, das Quiz oder das Spiel öffnen?')
-            .listen('Sage zum Beispiel Quiz oder Öffne Quiz, um diesen Skill zu öffnen.');
-            //You have played this.attributes['gamesPlayed'].toString() +
-        this.emit(':responseReady');
-    },
-    "AMAZON.StopIntent": function() {
-      this.response.speak("Auf Wiedersehen!");
-      this.emit(':responseReady');
-    },
-    "AMAZON.CancelIntent": function() {
-        this.response.speak("Tschüss!");
-        this.emit(':responseReady');
-    },
-    'SessionEndedRequest': function () {
-        console.log('session ended!');
-        //this.attributes['endedSessionCount'] += 1;
-        this.response.speak("Machs gut!");
-        this.emit(':responseReady');
-    }
-};
-
-const startDictionaryHandler = Alexa.CreateStateHandler(states.STARTDICTIONARYMODE, {
-    'NewSession': function () {
-        this.emit('NewSession'); // Uses the handler in newSessionHandlers
-    },
-    'OpenDictionaryIntent': function() {
-        const message = 'Gib mir einen Fachterm, den ich dir definieren soll';
-        const remessage = 'Welchen Fachterm soll ich definieren?';
-        this.handler.state = states.CONSULTDICTIONARYMODE;
-        this.response.speak(message).listen(remessage);
-        this.emit(':responseReady');
-    },
-
-    // we need a help intent
-    
-    'AMAZON.YesIntent': function() {
-        this.handler.state = states.CONSULTDICTIONARYMODE;
-        this.response.speak('Großartig! ' + 'Gib mir einen weiteren Term.').listen('Sage zum Beispiel Definiere Aggregation.');
-        this.emit(':responseReady');
-    },
-    'AMAZON.NoIntent': function() {
-        // weiterleiten zur Skill Auswahl!?!??!
-        console.log("NOINTENT");
-        this.handler.state = "";
-        this.response.speak('Ok, noch einen schönen Tag!');
-        this.emit(':responseReady');
-    },
-
-    "AMAZON.StopIntent": function() {
-      console.log("STOPINTENT");
-      this.response.speak("Auf Wiedersehen!");
-      this.emit(':responseReady');
-    },
-    "AMAZON.CancelIntent": function() {
-      console.log("CANCELINTENT");
-      this.response.speak("Tschüss!");
-      this.emit(':responseReady');
-    },
-    'SessionEndedRequest': function () {
-        console.log("SESSIONENDEDREQUEST");
-        //this.attributes['endedSessionCount'] += 1;
-        this.response.speak("Machs gut!");
-        this.emit(':responseReady');
-    },
-    'Unhandled': function() {
-        console.log("UNHANDLED");
-        const message = 'Gib mir ein Schlagwort, um es zu definieren oder schließe den Skill mit Alexa Stop';
-        this.response.speak(message).listen(message);
-        this.emit(':responseReady');
-    }
-
-});
-
-const consultDictionaryHandler = Alexa.CreateStateHandler(states.CONSULTDICTIONARYMODE, {
-    'ConsultDictionaryIntent' : function () {
-        const term = this.event.request.intent.slots.wordsInDictionary.value;
-        console.log('user asks for: ' + term);
-        this.handler.state = states.STARTDICTIONARYHANDLER;
-        this.response.speak('Die Definition des Terms ' + term + 'lautet: ' + 'Test test test test' + 
-        + 'Möchtest du einen weiteren Begriff definiert haben, so antworte mit Ja').listen('Antworte bitte mit ja oder nein.');
-        this.emit(':responseReady');
-    },
-    "AMAZON.StopIntent": function() {
-        console.log("STOPINTENT");
-      this.response.speak("Auf Wiedersehen!");
-      this.emit(':responseReady');
-    },
-    "AMAZON.CancelIntent": function() {
-        console.log("Tschüss");
-    },
-    'SessionEndedRequest': function () {
-        console.log("SESSIONENDEDREQUEST");
-        this.attributes['endedSessionCount'] += 1;
-        this.response.speak("Machs gut!");
-        this.emit(':responseReady');
-    },
-    'Unhandled': function() {
-        console.log("UNHANDLED");
-        this.response.speak('Sorry, das habe ich nicht verstanden. Versuche, mir einen Term zu sagen.')
-        .listen('Versuche, mir einen Term zu sagen.');
-        this.emit(':responseReady');
-    }
-});
-
-
-const startQuizHandler = Alexa.CreateStateHandler(states.STARTQUIZMODE,  {
-
-
-});
-
-
-const startGameHandler = Alexa.CreateStateHandler(states.STARTGAMEMODE,  {
-
-
-});
-// These handlers are not bound to a state
-//const myTestHandler = {
-//}
-

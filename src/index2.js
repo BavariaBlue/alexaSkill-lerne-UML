@@ -10,8 +10,8 @@ var handlers = {
     // new Intent because after getting e.g. a definition, 
     // user wants new skill and so doesn't need to get a welcome message
     'ChooseSkillIntent' : function () {
-        this.response.speak('Welchen Skill möchtest du öffnen?').listen('Du kannst zwischen ' +
-        'Wörterbuch, Quiz oder Spiel auswählen.');
+        this.response.speak('Welchen Modus möchtest du öffnen?').listen('Du kannst zwischen ' +
+        'Wörterbuch, Quiz oder Score auswählen.');
         this.emit(':responseReady');
         // skill = subskill
     },
@@ -28,7 +28,9 @@ var handlers = {
             */
             
         // bei jedem Aufruf:
-        this.emit(':ask', 'Welchen Begriff möchtest du definiert haben?');
+        
+        this.response.speak("Willkommen zum Wörterbuch-Skill. Welchen Begriff möchtest du definiert haben?").listen('Sage zum Beispiel. Definiere Klassendiagramm.');
+        this.emit(':responseReady');
     },
     
     // only consult dictionary, more modal. 

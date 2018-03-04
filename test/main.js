@@ -72,7 +72,7 @@ sts.assumeRole({
         // CHANGE THIS STRING TO THE TEST FILE YOU GENERATED
         // BY COPYING OUT OF THE SERVICE SIMULATOR INTO A NEW JSON FILE
         // e.g. event = require('./sayOpenDictionary.json');
-        var event = require('./input.json');
+        var event = require('./openDictionary.json');
         lambda.handler(event, context());
     }
 });
