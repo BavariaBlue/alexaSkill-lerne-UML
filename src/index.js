@@ -3,6 +3,9 @@
 const Alexa = require('alexa-sdk');
 const appId = 'amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277';
 var currentQuestionId = 0;
+var currentQuestion = "";
+var quizDataLength = 0;
+//var dictionaryDataLength = 0;
 
 // Load quiz data sync:
 var fs = require('fs');
@@ -23,7 +26,7 @@ var jsQuizObject = JSON.stringify(quizData, null, 4);
 console.log(jsQuizObject); // Logs output to dev tools console.
 
 // get length of questions array 
-var quizDataLength = Object.keys(quizData.questions).length;
+quizDataLength = Object.keys(quizData.questions).length;
 console.log('Loaded question arrray length: ' + quizDataLength);
 
 var handlers = {
@@ -61,8 +64,8 @@ var handlers = {
         /* short: 
         var rand = myArray[Math.floor(Math.random() * myArray.length)]; */
 
-        console.log('currentQuestionId = ' + currentQuestionId + 'Länge Array = ' + quizDataLength);
-        var currentQuestion = quizData.questions[currentQuestionId].question;
+        console.log('currentQuestionId = ' + currentQuestionId + ' Länge Array = ' + quizDataLength);
+        currentQuestion = quizData.questions[currentQuestionId].question;
         console.log("currentQuestion = " + currentQuestion);
         this.response.speak('Okay, ich stelle dir eine Frage. ' + currentQuestion + ". " +
             'Antworte  mit wahr oder falsch.').listen(' Antworte immer mit wahr oder falsch');
@@ -77,21 +80,28 @@ var handlers = {
         var correctAnswer = quizData.questions[currentQuestionId].answer;
         console.log('Wird currrentQuestionsID mitgenommen?: ' + currentQuestionId);
         console.log('Muss antworten mit: ' + correctAnswer);
-        console.log('Hat geantwortet mit:' + userAnswer);
+        console.log('Hat geantwortet mit: ' + userAnswer);
 
+        // said falsch == falsch or said wahr == wahr
         if (userAnswer === correctAnswer)
         {
             console.log('AnswerQuizIntent korrekte Antwort');
-            this.attributes.gamesWon++;
+            this.attributes.Score.gamesWon++;
             this.response.speak('Nice Job! Du liegst richtig. ' + ' Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
         }
-        else
+        // said wahr != falsch --> correct
+        else if (userAnswer == "wahr" && correctAnswer == "falsch")
         {
-            console.log('AnswerQuizIntent falsche Antwort');
-            var tellTruth = quizData.questions[currentQuestionId].correction;
-            this.response.speak('Sorry, die korrekte Antwort lautet ' + tellTruth + '. Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
+            console.log('AnswerQuizIntent combination: said "wahr", but is "falsch"');
+            var correct = quizData.questions[currentQuestionId].correction;
+            this.response.speak('Sorry, die korrekte Antwort lautet ' + correct + '. Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
         }
-        this.attributes.gamesPlayed++;
+        // said falsch != wahr --> repeat question
+        else {
+            console.log('AnswerQuizIntent combination: said "falsch", but is "wahr"');
+            this.response.speak('Sorry, die Aussage: ' + currentQuestion + ', ist wahr. Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
+        }        
+        this.attributes.Score.gamesPlayed++;
         this.emit(':responseReady');
     },
 
@@ -111,12 +121,36 @@ var handlers = {
         var currentGamesPlayed = this.attributes.Score.gamesPlayed;
         var currentGamesWon = this.attributes.Score.gamesWon;
         var score = currentGamesPlayed + currentGamesWon * 3;
-        var currentPercentage = this.attributes.Score.percentage = (currentGamesWon / currentGamesPlayed) * 100;
-        this.response.speak('Dein aktueller Score liegt bei ' + score + ' Punkten. Du hast ' + currentPercentage + ' Prozent deiner Spiele gewonnen.' +
-            'Hier ist schon deine nächste Frage');
+        // TODO: currentGamesPlayed may be 0 (user starts skill, doesn't play quiz, only dictionary!)
+        var currentPercentage;
+        if  (currentGamesPlayed === 0)
+        {
+            currentPercentage = 0;
+        }
+        else {
+            currentPercentage = this.attributes.Score.percentage = Math.round((currentGamesWon / currentGamesPlayed) * 100);   
+        }
+        this.response.speak('Dein aktueller Score liegt bei ' + score + ' Punkten. Du hast ' + currentPercentage + ' Prozent deiner Spiele gewonnen. ' +
+            'Was möchtest du nun tun?').listen(" Sage öffne Quiz, um deinen Score zu verbessern.");
+        // hier ist schon deine nächste Frage
         this.emit(':responseReady');
         //this.emit('OpenQuizIntent');
     },
+
+    // User says "Öffne Quiz"
+    'OpenDictionaryIntent': function()
+    {
+        console.log('OpenDictionaryIntent wurde gestartet');
+        this.response.speak('Okay, welchen Term soll ich dir definieren. Sage zum Beispiel: Definiere Klassendiagramm ').listen('Sage zum Beispiel: Definiere Klassendiagramm');
+        this.emit(':responseReady');
+    },
+    'AnswerDictionaryIntent' : function ()
+    {
+        console.log('AskDictionaryIntent wurde gestartet');
+        var userQuestion = this.event.request.intent.slots.answerDictionarySlot.value;
+
+    },
+
 
     // Stop
     'AMAZON.StopIntent': function()
@@ -135,10 +169,11 @@ var handlers = {
     // Save state
     'SessionEndedRequest': function()
     {
+        // delete this.attributes.gamesPlayed;
+        // delete this.attributes.gamesWon;
         console.log('session ended!');
         this.emit(':saveState', true);
     }
-
 };
 
 exports.handler = function(event, context, callback)

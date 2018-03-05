@@ -2,87 +2,87 @@
     "questions":[
         {
             "question": "Profildiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level ": 1
         },
         {
             
             "question": "Klassendiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Kompositionsstrukturdiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Komponentendiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Verteilungsdiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Objektdiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Paketdiagramme gehören zu den Strukturdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
 
         {
             "question": "Aktivitätsdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Sequenzdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Kommunikationsdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Interaktionsübersichtsdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Zeitverlaufsdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Anwendungsfalldiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Zustandsdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
@@ -125,7 +125,7 @@
         },
         {
             "question": "Paketdiagramme gehören zu den Verhaltensdiagrammen",
-            "answer": "richtig",
+            "answer": "falsch",
             "correction": "Paketdiagramme gehören zu den Strukturdiagrammen",
             "level": 1
         },
@@ -176,25 +176,25 @@
 
         {
             "question": "Sequenzdiagramme gehören zu den Interaktionsdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Kommunikationsdiagramme gehören zu den Interaktionsdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Interaktionsübersichtsdiagramme gehören zu den Interaktionsdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "Zeitverlaufsdiagramme gehören zu den Interaktionsdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
@@ -265,13 +265,13 @@
 
 
         {
-            "question": "Die Diagramme in U M L lassen sich in zwei Hauptgruppen aufteilen: Strukturdiagrammen und Verhaltensdiagrammen",
-            "answer": "richtig",
-            "correction": "Zustandsdiagramme gehören zu den Verhaltensdiagrammen",
+            "question": "Die Diagramme in U M L lassen sich in zwei Hauptgruppen aufteilen: Strukturdiagramme und Verhaltensdiagramme",
+            "answer": "wahr",
+            "correction": "",
             "level": 1
         },
         {
-            "question": "Die Diagramme in U M L lassen sich in zwei Hauptgruppen aufteilen: Interaktionsdiagrammen und Verhaltensdiagrammen",
+            "question": "Die Diagramme in U M L lassen sich in zwei Hauptgruppen aufteilen: Interaktionsdiagramme und Verhaltensdiagramme",
             "answer": "falsch",
             "correction": "In U M L wird grob zwischen Strukturdiagrammen und Verhaltensdiagrammen unterschieden",
             "level": 1
@@ -280,7 +280,7 @@
 
         {
             "question": "Interaktionsdiagrammen sind eine Teilgruppe der Verhaltensdiagramme",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
@@ -318,43 +318,43 @@
 
         {
             "question": "U M L heißt ausgeschrieben Unified Modeling Language",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "U M L bietet Strukturdiagramme, Verhaltensdiagramme und als Teilgruppe Interaktionsdiagrammen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "U M L ist eine grafische Modellierungssprache zur Spezifikation, Konstruktion und Dokumentation von Software-Teilen und anderen Systemen",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "U M L  wird von der Object Management Group - kurz O M G - entwickelt",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "U M L wird von der Object Management Group als auch von der I S O genormt",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "U M L ist heute die dominierende Sprache für die Softwaresystem-Modellierung",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
         {
             "question": "U M L wird von der Object Management Group  als auch von der I S O genormt",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 1
         },
@@ -362,7 +362,7 @@
 
         {
             "question": "Das Austauschformat der U M L basiert auf der Auszeichnungssprache XML und heißt XML Metadata Interchange",
-            "answer": "richtig",
+            "answer": "wahr",
             "correction": "",
             "level": 2
 
