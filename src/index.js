@@ -151,6 +151,10 @@ var handlers = {
 
     },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ad58259c3c9df166b1cd1f102f4f17d6d7adf970
     // Stop
     'AMAZON.StopIntent': function()
     {
