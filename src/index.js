@@ -151,7 +151,6 @@ var handlers = {
 
     },
 
-
     // Stop
     'AMAZON.StopIntent': function()
     {
