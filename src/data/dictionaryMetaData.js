@@ -1,4 +1,8 @@
 // meta data for dictionaryData.json
+// √ explained: 
+// first: written in json file with all parameters
+// second: written in intentSchema with all synonyms
+// third: randomly tested
 
 // first group: UML general
 

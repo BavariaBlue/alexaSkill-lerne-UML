@@ -151,25 +151,49 @@ var handlers = {
     {
         console.log('AnswerDictionaryIntent wurde gestartet');
         var userQuestion = this.event.request.intent.slots.answerDictionarySlot.value;
-        console.log("Loaded userQuestion: " + userQuestion);
+        console.log("Loaded userQuestion = " + userQuestion);
 
-        // probably wrong :)
-        var currentDefinitionId = dictionaryData.definitions.indexOf(userQuestion);
-        console.log("currentDefinitionId = " + currentDefinitionId )
+        // var currentDefinitionId = myArray.map((el) => el.color).indexOf('blue');
+        // match userQuestion  with term or synonyms in dictionaryData
+        var currentDefinitionId;
+        if(dictionaryData.definitions.map((el) => el.term).indexOf(userQuestion) !== -1){
+            currentDefinitionId = dictionaryData.definitions.map((el) => el.term).indexOf(userQuestion);
+            // tellDefinition();
+        }
+        else if(dictionaryData.definitions.map((el) => el.synonym).indexOf(userQuestion) !== -1){
+            currentDefinitionId = dictionaryData.definitions.map((el) => el.synonym).indexOf(userQuestion);
+            // tellDefinition();
+        }
+        else if (dictionaryData.definitions.map((el) => el.synonym1).indexOf(userQuestion) !== -1){
+            currentDefinitionId = dictionaryData.definitions.map((el) => el.synonym1).indexOf(userQuestion);  
+            // tellDefinition();
+        } 
+        else {
+            currentDefinitionId = -1; // not needed
+            console.log("userQuestion" + userQuestion + "not found in dictionaryData.json");
+            this.response.speak('Sorry. Für den Term ' + userQuestion + ' , gibt es derzeit keine Definition ').listen(' ');
+            this.emit(':responseReady');
+            // TODO: QS: write all missing definitions in json file!
+        }
 
-        // Nil?
-        if (userQuestion != ""){
+        if(currentDefinitionId !== -1){
+            console.log("ID: currentDefinitionId = " + currentDefinitionId)
             console.log("userQuestion found in dictionaryData. Loading definition: ");
             this.response.speak('Okay, die Definition von: ' + userQuestion + ', lautet: '
              + dictionaryData.definitions[currentDefinitionId].definition + ' ').listen(' Was möchtest du nun tun? ');
-        } 
-        else {
-            console.log("userQuestion" + userQuestion + "not found in dictionaryData.json");
-            this.response.speak('Sorry. Für den Term ' + userQuestion + ' . gibt es derzeit keine Definition ').listen(' ');
-            // TODO: QS: write all missing definitions in json file!
+             this.emit(':responseReady');
+             // right now: output tells synonym, not term!
         }
-        this.emit(':responseReady');
 
+        // error: can't do response.speak in function? add parameter??
+        /*function tellDefinition() {
+            console.log("Tell Definiton: ID: currentDefinitionId = " + currentDefinitionId)
+            console.log("Tell Definition: userQuestion found in dictionaryData. Loading definition: ");
+            this.response.speak('Okay, die Definition von: ' + userQuestion + ', lautet: '
+             + dictionaryData.definitions[currentDefinitionId].definition + ' ').listen(' Was möchtest du nun tun? ');
+             this.emit(':responseReady');
+        }
+        */
     },
 
     // Stop
