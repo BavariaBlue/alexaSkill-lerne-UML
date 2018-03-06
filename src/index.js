@@ -9,7 +9,8 @@ var quizDataLength = 0;
 
 // Load quiz data sync:
 var fs = require('fs');
-var quizData = JSON.parse(fs.readFileSync('./quizData.json', 'utf8'));
+var quizData = JSON.parse(fs.readFileSync('./data/quizData.json', 'utf8'));
+var dictionaryData = JSON.parse(fs.readFileSync('./data/dictionaryData.json', 'utf8'));
 
 // Load async:
 /*
@@ -46,9 +47,6 @@ var handlers = {
         }
         else
         {
-            // var currentGamesPlayed = this.attributes.Score.gamesPlayed;
-            // var currentGamesWon = this.attributes.Score.gamesWon;
-            // var percentage = this.attributes.Score.percentage;
             console.log('Skill zum n-ten Mal aufgerufen');
             this.response.speak('Willkommen zurück zum Lerne U M L Skill. Sage öffne Quiz oder öffne Wörterbuch oder Öffne Score').listen(' Sage öffne Quiz oder öffne Wörterbuch oder Öffne Score');
         }
@@ -105,15 +103,6 @@ var handlers = {
         this.emit(':responseReady');
     },
 
-    // Routing from OpenQuizIntent, AnswerQuizIntent and OpenScoreIntent
-    /*'AskQuestion': function() {
-        console.log('AskQuestion ist aufgerufen');
-        currentQuestionId = 1;
-        // Math.floor(Math.random() * (quizData.length);
-        var currentQuestion = quizData[currentQuestionId].question;
-        this.response.listen(currentQuestion, 'Antworte immer mit wahr oder falsch');
-    },*/
-
     // User says "Öffne Score" 
     'OpenScoreIntent': function()
     {
@@ -137,7 +126,7 @@ var handlers = {
         //this.emit('OpenQuizIntent');
     },
 
-    // User says "Öffne Quiz"
+    // User says "Öffne Wörterbuch"
     'OpenDictionaryIntent': function()
     {
         console.log('OpenDictionaryIntent wurde gestartet');
@@ -149,12 +138,9 @@ var handlers = {
         console.log('AskDictionaryIntent wurde gestartet');
         var userQuestion = this.event.request.intent.slots.answerDictionarySlot.value;
 
+
     },
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ad58259c3c9df166b1cd1f102f4f17d6d7adf970
     // Stop
     'AMAZON.StopIntent': function()
     {
