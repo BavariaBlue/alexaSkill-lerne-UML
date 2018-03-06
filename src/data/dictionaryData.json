@@ -1,0 +1,48 @@
+{
+    "definitions" : [
+    {
+        "term" : "UML",
+        "definition" : "Die Unified Modeling Language dient zur Modellierung, Dokumentation, Spezialisierung und Visualisierung komplexer Systeme, unabhängig von deren Fach­ und Reali­sierungsgebiet. ",
+        "definition1" : "Sie liefert die Notationselemente gleichermaßen für die statischen und dynamischen Modelle von Analyse, Design und Architektur und unterstützt insbesondere objektorientierte Vorgehensweisen. "
+    },
+    {
+        "term" : "Diagrammtyp",
+        "definition" : "Die Modellelemente der U M L werden nach Diagrammtypen gegliedert. Die U M L besitzt 14 Diagrammtypen. Jedem Diagrammtyp liegt eine bestimmte Betrachtungsweise eines Softwaresystems zu Grunde. ",
+        "definition1" : "Die einzelnen Diagramme lassen sich nach diesen Betrachtungsweisen in vier Bereiche gliedern: Requirements. Statische Sicht. Dynamische Sicht. Implementierung. "
+    },
+    
+    {
+        "term" : "Sichten",
+        "definition" : "Die U M L­ Spezifikation unterstützt bewusst ein Sichtenkonzept, das es ermöglicht, ein und dasselbe U M L­ Element, das genau einmal im Modell vorkommt, auf ganz unterschiedliche Weise für unterschiedliche Sichten und Lesergruppen mehrfach darzustellen. ",
+        "definition1" : ""
+    },
+    {
+        "term" : "Statische Sicht",
+        "definition" : "Die statische Sicht betrachtet den logischen Aufbau des System. Hierzu gehören das Klassendiagramm, das Paketdiagramm und das Kollaborationsdiagramm. ",
+        "definition1" : ""
+    }, 
+    {
+        "term" : "Dynamische Sicht",
+        "definition" : "Die dynamische Sicht bringt Interaktionen und Abläufe des Systems in Verbindung. Hierzu gehören das Aktivitätsdiagramm, das Paketdiagramm und das Kollaborationsdiagramm. ",
+        "definition1" : ""
+    },
+
+    {
+        "term" : "Strukturdiagramme",
+        "definition" : "Die erste große Gruppe bilden die Strukturdiagramme. Sie bilden die statischen Strukturaspekte eine Systems ab. Die U M L stellt zur Strukturmodellierung sieben Diagrammtypen bereit. ",
+        "definition1" : "Zu den Strukturdiagrammen gehören: Klassendiagramm. Paketdiagramm. Objektdiagramm. Kompositionsstrukturdiagramm. Komponentendiagramm. Verteilungsdiagramm. Profildiagramm. "
+    },
+
+    {
+        "term" : "Verhaltensdiagramme",
+        "definition" : "Die zweite große Gruppe bilden die Verhaltensdiagramme. Sie bilden dynamische Situationen im Programmablauf ab. Die U M L stellt zur Verhaltensmodellierung sieben Diagrammtypen bereit, welche verschiedene Sichten auf das zu spezifizierende Verhalten legen. ",
+        "definition1" : "Zu den Verhaltensdiagrammen gehören Use­ Case­ Diagramm. Aktivitätsdiagramm. Zustandsautomat sowie alle Interaktionsdiagramme. "
+    },
+
+    {
+        "term" : "Interaktionsdiagramme",
+        "definition" : "Interaktionsdiagramme dienen dazu, Interaktionen zwischen Objekten zu spezifizieren beziehungsweise zu illustrieren. Eine Interaktion ist dabei eine Folge von Operationsaufrufen innerhalb einer bestimmten Gruppierung von Objekten. Von den sieben Verhaltensdiagrammen ordnet man vier Diagramme den Interaktionsdiagrammen zu. ",
+        "definition1" : " Zu den Interaktionsdiagrammen gehören das Sequenzdiagramm. Kommunikationsdiagramm. Timingdiagramm. und Interaktionsübersichtsdiagramm. "
+    }
+    ]
+}

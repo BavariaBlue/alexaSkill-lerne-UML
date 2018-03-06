@@ -370,9 +370,9 @@
 
 
         {
-            "question": "",
-            "answer": "",
-            "correction": "",
+            "question": "template",
+            "answer": "wahr",
+            "correction": "template",
             "level": 2
 
         },
