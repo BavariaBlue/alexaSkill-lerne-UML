@@ -79,8 +79,22 @@ var handlers = {
         console.log('Wird currrentQuestionsID mitgenommen?: ' + currentQuestionId);
         console.log('Muss antworten mit: ' + correctAnswer);
         console.log('Hat geantwortet mit: ' + userAnswer);
+        
+        // normalize input -> "inkorrekt" -> falsch or "richtig" -> "wahr"
+        var correctArray = ["korrekt", "richtig", "wahr"];
+        var incorrectArray = ["falsch", "unwahr", "inkorrekt"];
+        if (correctArray.indexOf(userAnswer) !== -1){
+            userAnswer = "wahr";
+            console.log("userAnswer was set 'wahr'. ");
+        } 
+        else if (incorrectArray.indexOf(userAnswer) !== -1) {
+            userAnswer = "falsch";
+            console.log("userAnswer was set 'falsch'. ");
+        }
+        else {
+            console.log("user said: " + userAnswer + " which will throw an error.");
+        }
 
-        // said falsch == falsch or said wahr == wahr
         if (userAnswer === correctAnswer)
         {
             console.log('AnswerQuizIntent korrekte Antwort');
@@ -120,7 +134,7 @@ var handlers = {
             currentPercentage = this.attributes.Score.percentage = Math.round((currentGamesWon / currentGamesPlayed) * 100);   
         }
         this.response.speak('Dein aktueller Score liegt bei ' + score + ' Punkten. Du hast ' + currentPercentage + ' Prozent deiner Spiele gewonnen. ' +
-            'Was möchtest du nun tun?').listen(" Sage öffne Quiz, um deinen Score zu verbessern.");
+            'Was möchtest du nun tun?').listen(' Sage öffne Quiz, um deinen Score zu verbessern. ');
         // hier ist schon deine nächste Frage
         this.emit(':responseReady');
         //this.emit('OpenQuizIntent');
@@ -130,14 +144,31 @@ var handlers = {
     'OpenDictionaryIntent': function()
     {
         console.log('OpenDictionaryIntent wurde gestartet');
-        this.response.speak('Okay, welchen Term soll ich dir definieren. Sage zum Beispiel: Definiere Klassendiagramm ').listen('Sage zum Beispiel: Definiere Klassendiagramm');
+        this.response.speak('Okay, welchen Term soll ich dir definieren. Sage immer die Floskel: Definiere, und deinen Term. ').listen('Sage zum Beispiel: Definiere Klassendiagramm. ');
         this.emit(':responseReady');
     },
     'AnswerDictionaryIntent' : function ()
     {
-        console.log('AskDictionaryIntent wurde gestartet');
+        console.log('AnswerDictionaryIntent wurde gestartet');
         var userQuestion = this.event.request.intent.slots.answerDictionarySlot.value;
+        console.log("Loaded userQuestion: " + userQuestion);
 
+        // probably wrong :)
+        var currentDefinitionId = dictionaryData.definitions.indexOf(userQuestion);
+        console.log("currentDefinitionId = " + currentDefinitionId )
+
+        // Nil?
+        if (userQuestion != ""){
+            console.log("userQuestion found in dictionaryData. Loading definition: ");
+            this.response.speak('Okay, die Definition von: ' + userQuestion + ', lautet: '
+             + dictionaryData.definitions[currentDefinitionId].definition + ' ').listen(' Was möchtest du nun tun? ');
+        } 
+        else {
+            console.log("userQuestion" + userQuestion + "not found in dictionaryData.json");
+            this.response.speak('Sorry. Für den Term ' + userQuestion + ' . gibt es derzeit keine Definition ').listen(' ');
+            // TODO: QS: write all missing definitions in json file!
+        }
+        this.emit(':responseReady');
 
     },
 
