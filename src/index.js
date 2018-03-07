@@ -5,26 +5,11 @@ const appId = 'amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277';
 var currentQuestionId = 0;
 var currentQuestion = "";
 var quizDataLength = 0;
-//var dictionaryDataLength = 0;
 
 // Load quiz data sync:
 var fs = require('fs');
 var quizData = JSON.parse(fs.readFileSync('./data/quizData.json', 'utf8'));
 var dictionaryData = JSON.parse(fs.readFileSync('./data/dictionaryData.json', 'utf8'));
-
-// Load async:
-/*
-var fs = require('fs');
-var obj;
-fs.readFile('file', 'utf8', function (err, data) {
-  if (err) throw err;
-  obj = JSON.parse(data);
-});
-*/
-
-// Test output to console
-var jsQuizObject = JSON.stringify(quizData, null, 4);
-console.log(jsQuizObject); // Logs output to dev tools console.
 
 // get length of questions array 
 quizDataLength = Object.keys(quizData.questions).length;
@@ -58,13 +43,10 @@ var handlers = {
     {
         console.log('OpenQuizIntent wurde gestartet mit Array: ' + quizDataLength);
         currentQuestionId = Math.floor(Math.random() * (quizDataLength));
-
-        /* short: 
-        var rand = myArray[Math.floor(Math.random() * myArray.length)]; */
-
         console.log('currentQuestionId = ' + currentQuestionId + ' Länge Array = ' + quizDataLength);
         currentQuestion = quizData.questions[currentQuestionId].question;
         console.log("currentQuestion = " + currentQuestion);
+
         this.response.speak('Okay, ich stelle dir eine Frage. ' + currentQuestion + ". " +
             'Antworte  mit wahr oder falsch.').listen(' Antworte immer mit wahr oder falsch');
         this.emit(':responseReady');
@@ -95,20 +77,21 @@ var handlers = {
             console.log("user said: " + userAnswer + " which will throw an error.");
         }
 
+        // correct
         if (userAnswer === correctAnswer)
         {
             console.log('AnswerQuizIntent korrekte Antwort');
             this.attributes.Score.gamesWon++;
             this.response.speak('Nice Job! Du liegst richtig. ' + ' Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
         }
-        // said wahr != falsch --> correct
+        // said wahr != falsch --> correction
         else if (userAnswer == "wahr" && correctAnswer == "falsch")
         {
             console.log('AnswerQuizIntent combination: said "wahr", but is "falsch"');
             var correct = quizData.questions[currentQuestionId].correction;
             this.response.speak('Sorry, die korrekte Antwort lautet ' + correct + '. Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
         }
-        // said falsch != wahr --> repeat question
+        // said falsch != wahr --> repeat statement
         else {
             console.log('AnswerQuizIntent combination: said "falsch", but is "wahr"');
             this.response.speak('Sorry, die Aussage: ' + currentQuestion + ', ist wahr. Was möchtest du nun tun?').listen(' Sage öffne Wörterbuch, Quiz oder Score');
@@ -124,8 +107,8 @@ var handlers = {
         var currentGamesPlayed = this.attributes.Score.gamesPlayed;
         var currentGamesWon = this.attributes.Score.gamesWon;
         var score = currentGamesPlayed + currentGamesWon * 3;
-        // TODO: currentGamesPlayed may be 0 (user starts skill, doesn't play quiz, only dictionary!)
         var currentPercentage;
+
         if  (currentGamesPlayed === 0)
         {
             currentPercentage = 0;
@@ -133,6 +116,7 @@ var handlers = {
         else {
             currentPercentage = this.attributes.Score.percentage = Math.round((currentGamesWon / currentGamesPlayed) * 100);   
         }
+
         this.response.speak('Dein aktueller Score liegt bei ' + score + ' Punkten. Du hast ' + currentPercentage + ' Prozent deiner Spiele gewonnen. ' +
             'Was möchtest du nun tun?').listen(' Sage öffne Quiz, um deinen Score zu verbessern. ');
         // hier ist schon deine nächste Frage
@@ -141,12 +125,16 @@ var handlers = {
     },
 
     // User says "Öffne Wörterbuch"
+    // only for beginner
     'OpenDictionaryIntent': function()
     {
         console.log('OpenDictionaryIntent wurde gestartet');
         this.response.speak('Okay, welchen Term soll ich dir definieren. Sage immer die Floskel: Definiere, und deinen Term. ').listen('Sage zum Beispiel: Definiere Klassendiagramm. ');
         this.emit(':responseReady');
     },
+
+    // User says "definiere ___" or "was ist eine ___" or "was ist ein ___" or "schlage ___ nach" or "erkläre ___"
+    // quick routine allowed -> Welcome -> Definiere -> AnswerDictionaryIntent
     'AnswerDictionaryIntent' : function ()
     {
         console.log('AnswerDictionaryIntent wurde gestartet');
@@ -171,7 +159,7 @@ var handlers = {
         else {
             currentDefinitionId = -1; // not needed
             console.log("userQuestion" + userQuestion + "not found in dictionaryData.json");
-            this.response.speak('Sorry. Für den Term ' + userQuestion + ' , gibt es derzeit keine Definition ').listen(' ');
+            this.response.speak('Sorry. Für den Term ' + userQuestion + ' , gibt es derzeit keine Definition. Was möchtest du nun tun').listen(' Sage zum Beispiel: Definiere und einen Term, oder: öffne Quiz. ');
             this.emit(':responseReady');
             // TODO: QS: write all missing definitions in json file!
         }
@@ -180,20 +168,11 @@ var handlers = {
             console.log("ID: currentDefinitionId = " + currentDefinitionId)
             console.log("userQuestion found in dictionaryData. Loading definition: ");
             this.response.speak('Okay, die Definition von: ' + userQuestion + ', lautet: '
-             + dictionaryData.definitions[currentDefinitionId].definition + ' ').listen(' Was möchtest du nun tun? ');
+             + dictionaryData.definitions[currentDefinitionId].definition + ' Was möchtest du nun tun? ').listen(' Sage zum Beispiel: Definiere und einen Term, oder: öffne Quiz. ');
              this.emit(':responseReady');
              // right now: output tells synonym, not term!
         }
-
         // error: can't do response.speak in function? add parameter??
-        /*function tellDefinition() {
-            console.log("Tell Definiton: ID: currentDefinitionId = " + currentDefinitionId)
-            console.log("Tell Definition: userQuestion found in dictionaryData. Loading definition: ");
-            this.response.speak('Okay, die Definition von: ' + userQuestion + ', lautet: '
-             + dictionaryData.definitions[currentDefinitionId].definition + ' ').listen(' Was möchtest du nun tun? ');
-             this.emit(':responseReady');
-        }
-        */
     },
 
     // Stop
@@ -228,3 +207,15 @@ exports.handler = function(event, context, callback)
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
+// Load async:
+/*
+var fs = require('fs');
+var obj;
+fs.readFile('file', 'utf8', function (err, data) {
+  if (err) throw err;
+  obj = JSON.parse(data);
+});
+*/
+// Test output to console
+// var jsQuizObject = JSON.stringify(quizData, null, 4);
+//console.log(jsQuizObject); // Logs output to dev tools console.
