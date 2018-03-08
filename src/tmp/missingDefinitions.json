@@ -1,0 +1,11 @@
+{
+	"missing": [{
+			"term": "Klassendiagramm",
+			"count": 1
+		},
+		{
+			"term": "Verteilungsdiagramm",
+			"count": 2
+		}
+	]
+}
