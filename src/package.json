@@ -1,26 +1,29 @@
 {
-  "name": "skill-sample-nodejs-highlowgame",
+  "name": "alexaskill-lerne-uml",
   "version": "1.0.0",
-  "description": "High-low number guessing game for Alexa",
+  "description": "An Alexa Skill for Learning UML Basics as a Student",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexa/skill-sample-nodejs-highlowgame.git"
+    "url": "git+https://github.com/BavariaBlue/alexaSkill-lerne-UML.git"
   },
   "keywords": [
     "Alexa",
     "education",
-    "skill"
+    "skill",
+    "uml",
+    "dictionary",
+    "quiz"
   ],
-  "author": "Amazon.com",
-  "license": "Apache-2.0",
+  "author": "Johannes Rottenkolber | BavariaBlue",
+  "license": "MIT",
   "bugs": {
     "url": "https://insertLinkHere"
   },
-  "homepage": "https://github.com/insertGitLinkToReadMeHere",
+  "homepage": "https://github.com/BavariaBlue/alexaSkill-lerne-UML/blob/master/README.md",
   "dependencies": {
     "alexa-sdk": "^1.0.20"
   }
