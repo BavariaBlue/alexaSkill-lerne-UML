@@ -4,29 +4,65 @@
 // second: written in intentSchema with all synonyms
 // third: randomly tested
 
-// first group: UML general
+// first group: UML general (3) -> 3
 
-    // UML √ √
-    // Diagrammtyp √ √
+    // UML                                      √ √
+    // OMG                                      √ √
+    // Diagrammtyp                              √ √
 
-// second group: UML sichten
-    // Sichten √ √ 
-    // Statische Sicht √ √
-    // Dynamische Sicht √ √ 
+// second group: UML sichten (7) -> 10
+    // Sichten                                  √ √ 
+    // Statische Sicht                          √ √
+    // Dynamische Sicht                         √ √ 
+    // Laufzeitschicht                          √ √ 
+    // Modellsicht                              √ √ 
+    // Meta Modellschicht                       √ √ 
+    // Meta-Metamodellschicht                   √ √
 
+// third group: UML diagrams types - general (3) -> 13
 
-// third group: UML diagrams types - general
+    // Strukturdiagramme                        √ √
+    // Verhaltensdiagramme                      √ √
+    // Interaktionsdiagramme                    √ √ 
 
-    // Strukturdiagramme √ √
-    // Verhaltensdiagramme √ √
-    // Interaktionsdiagramme √ √ 
+// fourth group: UML diagrams types - narrow (14) -> 27
 
-// fourth group: UML diagrams types - narrow
+    // Profil                                   √ √
+    // Klassen                                  √ √
+    // Kompositionsstruktur                     √ √
+    // Komponenten                              √ √
+    // Verteilungs                              √ √
+    // Objekt                                   √ √
+    // Paket                                    √ √
 
-    //
+    // Sequenz                                  √ √
+    // Kommunikations                           √ √
+    // Interaktionsübersichts                   √ √  
+    // Zeitverlauf                              √ √
 
-// fifth group: UML diagram types elements
+    // Aktivitäts                               √ √
+    // Anwendungsfall                           √ √
+    // Zustands                                 √ √
 
-    //
+// fifth group: UML diagram general elements (11) -> 38
 
+    // Rahmen                                   √
+    // Rahmenkopf                               √
+    // Modell                                   √
+    // Kommentar                                √
+    // Ausdruck                                 √
+    // Randbedingung                            √
+    // Classifier                               √
+    // Datentyp                                 √
+    // Primitiver Typ                           √
+    // Aufzählungstyp                           √
+    // Literal                                  √
+    
 // sixth group.....
+
+
+// last group: big picture:
+    // Requirements Engineering
+    // Objektorientierte Analyse
+    // Designphase
+    // Software Engineering
