@@ -269,6 +269,134 @@
         "synonym1" : "Literale",
         "definition" : "Buchstabensymbole oder Literale werden in der U M L verwandt, um Werte zu notie­ren. Die UML definiert sechs verschiedene Typen von Literalen, korrespondierend zu den Datentypen. Literale werden in Abhängigkeit der Werte beziehungsweise der Datentypen notiert, welche sie spezifizieren. ",
         "definition1" : "Es gibt das Literal boolean integer, null, real, string und unlimited natural. "
+    },
+    {
+        "term" : "Requirements Engineering",
+        "synonym" : "R E",
+        "synonym1" : "Anforderungsanalyse",
+        "definition" : "Requirements Engineering ist der Prozess des Herausfindens, Analysierens, Dokumentierens und Überprüfens der Dienste und Beschränkungen eines zu erstellenden Systems. ",
+        "definition1" : "Das Requirements Engineering ist ein kooperativer, iterativer und inkrementeller Prozess. Er gewährleistet, dass alle relevanten Anforderungen bekannt sind und Stakeholdern eingebunden werden. "
+    },
+    {
+        "term" : "Objektorientiere Analyse",
+        "synonym" : "O O A",
+        "synonym1" : "",
+        "definition" : "Die objektorientierte Analyse beinhaltet die Ermittlung und Beschreibung der Anforderungen an ein Software System mittels objektorientierter Konzepte und Notationen. Das Ergebnis ist ein O O A Modell. ",
+        "definition1" : "Aus der objektorientierten Analyse folgt das Produktmodell. "
+    },
+    {
+        "term" : "Designphase",
+        "synonym" : "Entwurfsprozess",
+        "synonym1" : "Entwurf",
+        "definition" : "Nach der Analyse und Modellierung der in Software abzubildenden Prozesse werden vor der eigentlichen Implementierung weitere vorbereitende Schritte unternommen, um eine passende Software zu erstellen. ",
+        "definition1" : "Das Softwaredesign kann in die Bereiche Grobentwurf und Feinentwurf aufgeteilt werden. Der Entwurfsprozess generiert in mehreren Teilschritten die softwaretechnische Lösung im Sinne einer Softwarearchitektur. "
+    },
+    {
+        "term" : "Software Engineering",
+        "synonym" : "S E",
+        "synonym1" : "Softwaretechnik",
+        "definition" : "Software Engineering zielt auf die ingenieurmäßige Entwicklung, Anpassung und Weiterentwicklung großer Softwaresysteme unter Verwendung bewährter systematischer Vorgehensweisen, Prinzipien, Methoden und Werkzeuge. ",
+        "definition1" : "Software Engineering ist die zielorientierte Bereitstellung und systematische Verwendung von Prinzipien, Methoden und Werkzeugen für die arbeitsteilige, ingenieurmäßige Entwicklung und Anwendung von umfangreichen Softwaresystemen. "
+    },
+    {
+        "term" : "Softwarearchitektur",
+        "synonym" : "S A",
+        "synonym1" : "Software Architektur",
+        "definition" : "Die Softwarearchitektur eines Programms oder eines Computersystems ist die Struktur oder sind die Strukturen des Systems, die die Softwareelemente, die extern sichtbaren Eigenschaften dieser Elemente und die Verbindung zwischen diesen Elementen umfasst. ",
+        "definition1" : "Eine Softwarearchitektur beschreibt die Strukturen eines Softwaresystems durch Architekturbausteine und ihre Beziehungen und Interaktionen untereinander sowie ihre physikalische Verteilung. Die extern sichtbaren Eigenschaften eines Architekturbausteins werden durch Schnittstellen spezifiziert. "
+    },
+    {
+        "term" : "Feindesign",
+        "synonym" : "",
+        "synonym1" : "",
+        "definition" : "Im Prozess des Feindesign wird eine Verknüpfung der logischen Architektur mit den softwaretechnischen Infrastrukturen definiert. ",
+        "definition1" : "Für das Feindesign müssen die vier Sichten Kontext, Statik, Laufzeit und Verteilung modelliert werden. Entwurfspattern spielen hier eine große Rolle. "
+    },
+    {
+        "term" : "Grobdesign",
+        "synonym" : "",
+        "synonym1" : "",
+        "definition" : "Der Grobentwurf dient als Basis für die Auslegung der softwaretechnischen Infrastruktur, weil sich mit dessen Hilfe die erforderten Infrastrukturkomponenten identifizieren lassen. Basis für die Architektur im Großen sind Architekturmuster. ",
+        "definition1" : "Architekturmuster beschreiben Systemstrukturen, die die Gesamtarchitektur eines Systems festlegen. Sie spezifizieren, wie Subsysteme zusammenarbeiten. "
+    },
+    {
+        "term" : "Anforderung",
+        "synonym" : "Anforderungen",
+        "synonym1" : "Requirements",
+        "definition" : "Eine Anforderung ist eine übermittelte Eigenschaft oder Fähigkeit, die zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird und gegebenenfalls aufgrund eines formellen Dokuments erfüllt werden muss. ",
+        "definition1" : ""
+    },
+    {
+        "term" : "Qualitätsanforderung",
+        "synonym" : "Qualitätsanforderungen",
+        "synonym1" : "nicht funktionale Anforderungen",
+        "definition" : "Qualitätsanforderungen sind Aspekte, die typischerweise mehrere oder alle funktionalen Anforderungen betreffen beziehungsweise überschneiden. ",
+        "definition1" : "Eine Qualitätsanforderung legt eine qualitative und oder quantitative Eigenschaft des Softwaresystems oder einer seiner Komponenten fest. "
+    },
+    {
+        "term" : "funktionale Anforderung",
+        "synonym" : "funktionale Anforderungen",
+        "synonym1" : "",
+        "definition" : "Die funktionalen Anforderungen können umschrieben werden als die Kernaufgaben, die ein System erfüllen muss. ",
+        "definition1" : "Die funktionale Anforderung wird definiert als die Festlegung einer vom Softwaresystem oder einer seiner Komponenten bereitzustellende Funktion oder bereitzustellenden Service. "
+    },
+    {
+        "term" : "Stakeholder",
+        "synonym" : "",
+        "synonym1" : "",
+        "definition" : "Ein Stakeholder ist ein Individuum, eine Gruppe von Personen oder eine Organisation, die ein indirektes oder direktes Interesse an einem System und somit Einfluss auf die Ziele, Anforderungen und Randbedingungen des betrachteten Systems haben. ",
+        "definition1" : ""
+    },
+    {
+        "term" : "Systemziel",
+        "synonym" : "Ziele",
+        "synonym1" : "Ziel",
+        "definition" : "Ausgehend von einer Vision dienen Ziele dazu, die Vision zu verfeinern und zu operationalisieren. ",
+        "definition1" : "Ziele sind die intentionale Beschreibung eines von Stakeholdern gewünschten charakteristischen Merkmals des zu entwickelnden Systems beziehungsweise des zugehörigen Entwicklungsprojekts. "
+    },
+    {
+        "term" : "Produktvision",
+        "synonym" : "Vision",
+        "synonym1" : "",
+        "definition" : "Eine Vision ist eine realitätsnahe Vorstellung der gewünschten Zukunft. Sie beschreibt, was erreicht werden soll, sagt aber nicht wie. ",
+        "definition1" : "Eine Vision dient als Leitgedanke für alle Stakeholder. "
+    },
+    {
+        "term" : "Rahmenbedingungen",
+        "synonym" : "Rahmenbedingung",
+        "synonym1" : "",
+        "definition" : "Eine Rahmenbedingung legt organisatorische und oder technische Restriktionen für das Softwaresystem und oder den Entwicklungsprozess fest. ",
+        "definition1" : "In der Literatur wird zwischen technischen und organisatorischen Randbedingungen beziehungsweise Rahmenbedingungen und Konventionen abgegrenzt, wobei die Begrifflichkeiten nicht konsistent verwendet werden. "
+    },
+    {
+        "term" : "Kontextabgrenzung",
+        "synonym" : "Abgrenzung",
+        "synonym1" : "",
+        "definition" : "Im Rahmen der Systemanalyse muss die Umgebung und der genaue Umfang des Systems definiert werden. Dafür werden die Systemgrenze und die Kontextgrenze gezogen. ",
+        "definition1" : ""
+    },
+    {
+        "term" : "Systemgrenze",
+        "synonym" : "",
+        "synonym1" : "",
+        "definition" : "Die Systemgrenze zieht einen Strich zwischen dem System und dessen Umgebung. Das System kann Teile außerhalb dieser Grenze nicht durch den Entwicklungsprozess verändern. ",
+        "definition1" : ""
+    },
+    {
+        "term" : "Kontextgrenze",
+        "synonym" : "",
+        "synonym1" : "",
+        "definition" : "Die Kontextgrenze trennt den relevanten Teil eines geplanten Systems vom irrelevanten Teil, das heißt dem Teil der Umgebung, der keinen Einfluss auf das geplante System und dessen Anforderungen hat. ",
+        "definition1" : ""
+    },
+    {
+        "term" : "Kontext",
+        "synonym" : "Systemkontext",
+        "synonym1" : "",
+        "definition" : "Der Systemkontext befindet sich zwischen Systemgrenze und Kontextgrenze. Er unmfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind, und die nicht im Rahmen der Entwicklung dieses Systems gestaltet werden können. ",
+        "definition1" : "Der Systemkontext, auch Systemumfang genannt, besteht aus allen materiellen und immateriellen Objekten, die eine Beziehung zu dem System haben. "
     }
+    
+
     ]
 }

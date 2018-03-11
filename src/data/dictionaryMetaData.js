@@ -4,13 +4,13 @@
 // second: written in intentSchema with all synonyms
 // third: randomly tested
 
-// first group: UML general (3) -> 3
+// first group: UML general                     (3) -> 3
 
     // UML                                      √ √
     // OMG                                      √ √
     // Diagrammtyp                              √ √
 
-// second group: UML sichten (7) -> 10
+// second group: UML sichten                    (7) -> 10
     // Sichten                                  √ √ 
     // Statische Sicht                          √ √
     // Dynamische Sicht                         √ √ 
@@ -19,13 +19,13 @@
     // Meta Modellschicht                       √ √ 
     // Meta-Metamodellschicht                   √ √
 
-// third group: UML diagrams types - general (3) -> 13
+// third group: UML diagrams types - general    (3) -> 13
 
     // Strukturdiagramme                        √ √
     // Verhaltensdiagramme                      √ √
     // Interaktionsdiagramme                    √ √ 
 
-// fourth group: UML diagrams types - narrow (14) -> 27
+// fourth group: UML diagrams types - narrow    (14) -> 27
 
     // Profil                                   √ √
     // Klassen                                  √ √
@@ -44,25 +44,39 @@
     // Anwendungsfall                           √ √
     // Zustands                                 √ √
 
-// fifth group: UML diagram general elements (11) -> 38
+// fifth group: UML diagram general elements    (11) -> 38
 
-    // Rahmen                                   √
-    // Rahmenkopf                               √
-    // Modell                                   √
-    // Kommentar                                √
-    // Ausdruck                                 √
-    // Randbedingung                            √
-    // Classifier                               √
-    // Datentyp                                 √
-    // Primitiver Typ                           √
-    // Aufzählungstyp                           √
-    // Literal                                  √
+    // Rahmen                                   √ √
+    // Rahmenkopf                               √ √
+    // Modell                                   √ √
+    // Kommentar                                √ √
+    // Ausdruck                                 √ √
+    // Randbedingung                            √ √
+    // Classifier                               √ √
+    // Datentyp                                 √ √
+    // Primitiver Typ                           √ √
+    // Aufzählungstyp                           √ √
+    // Literal                                  √ √
     
 // sixth group.....
 
 
-// last group: big picture:
-    // Requirements Engineering
-    // Objektorientierte Analyse
-    // Designphase
-    // Software Engineering
+// last group: big picture                      (18) -> 56         
+    // Requirements Engineering                 √ √
+    // Objektorientierte Analyse                √ √
+    // Designphase                              √ √
+    // Software Engineering                     √ √
+    // Software Architektur                     √ √
+    // Feindesign                               √ √                  
+    // Grobdesign                               √ √
+    // Anforderung                              √ √
+    // Qualitätsanforderungen                   √ √
+    // funktionale Anforderungen                √ √
+    // Stakeholder                              √ √ 
+    // Systemziel                               √ √ 
+    // Produktvision                            √ √ 
+    // Rahmenbedingungen                        √ √
+    // Kontextabgrenzung                        √ √
+    // Systemgrenze                             √ √
+    // Kontextgrenze                            √ √
+    // Kontext                                  √ √                        
