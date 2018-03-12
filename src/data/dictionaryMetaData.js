@@ -57,7 +57,7 @@
     // Primitiver Typ                           √ √
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
-    
+
 // sixth group.....
 
 

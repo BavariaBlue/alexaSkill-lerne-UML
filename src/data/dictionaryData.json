@@ -1,402 +1,396 @@
 {
-    "definitions":[
-    {
-        "term" : "UML",
-        "synonym" : "U M L",
-        "synonym1" : "Unified Modeling Language",
-        "definition" : "Die Unified Modeling Language dient zur Modellierung, Dokumentation, Spezialisierung und Visualisierung komplexer Systeme, unabhängig von deren Fach­ und Reali­sierungsgebiet. ",
-        "definition1" : "Sie liefert die Notationselemente gleichermaßen für die statischen und dynamischen Modelle von Analyse, Design und Architektur und unterstützt insbesondere objektorientierte Vorgehensweisen. "
-    },
-    {
-        "term" : "OMG",
-        "synonym" : "O M G",
-        "synonym1" : "Object Management Group",
-        "definition" : "Die Object Management Group ist ein 1989 gegründetes Konsortium, das sich mit der Entwicklung von Standards für die herstellerunabhängige systemübergreifende objektorientierte Programmierung beschäftigt. ",
-        "definition1" : "Die Object Management Group hat derzeit über 800 Mitglieder. Namhafte Unternehmen, wie Apple, Microsoft oder IBM, sind vertreten. Die O M G entwickelt zum Beispiel die U M L, C O R B A oder B P M N. "
-    },
-    {
-        "term" : "Diagrammtyp",
-        "synonym" : "Diagrammtypen",
-        "synonym1" : "",
-        "definition" : "Die Modellelemente der U M L werden nach Diagrammtypen gegliedert. Die U M L besitzt 14 Diagrammtypen. Jedem Diagrammtyp liegt eine bestimmte Betrachtungsweise eines Softwaresystems zu Grunde. ",
-        "definition1" : "Die einzelnen Diagramme lassen sich nach diesen Betrachtungsweisen in vier Bereiche gliedern: Requirements. Statische Sicht. Dynamische Sicht. Implementierung. "
-    },
-
-    {
-        "term" : "Sichten",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Die U M L­ Spezifikation unterstützt bewusst ein Sichtenkonzept, das es ermöglicht, ein und dasselbe U M L­ Element, das genau einmal im Modell vorkommt, auf ganz unterschiedliche Weise für unterschiedliche Sichten und Lesergruppen mehrfach darzustellen. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Statische Sicht",
-        "synonym" : "Statik",
-        "synonym1" : "",
-        "definition" : "Die statische Sicht betrachtet den logischen Aufbau des Systems. Hierzu gehören das Klassendiagramm, das Paketdiagramm und das Kollaborationsdiagramm. ",
-        "definition1" : ""
-    }, 
-    {
-        "term" : "Dynamische Sicht",
-        "synonym" : "Dynamik",
-        "synonym1" : "",
-        "definition" : "Die dynamische Sicht bringt Interaktionen und Abläufe des Systems in Verbindung. Hierzu gehören das Aktivitätsdiagramm, das Paketdiagramm und das Kollaborationsdiagramm. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Laufzeitschicht",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Die Laufzeitschicht ist die unterste Schicht und stellt die Realität dar. Sie beschreibt die reale Basis von Modellen, oder umgekehrt: aus ihr werden Modelle erstellt. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Modellschicht",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Die Realität aus der untersten Schicht der Laufzeitschicht wird in der Modellschicht bewusst abstrahiert. Das heißt, sich auf das Wesentliche zu konzentrieren. ",
-        "definition1" : "Ein Beispiel für die Bildung eines Modells ist die Klasse Auto im Klassendiagramm mit entsprechenden Attributen und Assoziationen. "
-    },
-    {
-        "term" : "Meta Modellschicht",
-        "synonym" : "Metamodellschicht",
-        "synonym1" : "Metamodell",
-        "definition" : "Ein Modell, das ein Modell beschreibt. Das Metamodell gibt die Regeln für das Modell aus der Modellschicht vor. ",
-        "definition1" : "Das Metamodell beschreibt zum Beispiel, dass Klassen beliebig viele Attribute und Operationen haben dürfen. "
-    },
-    {
-        "term" : "Meta-Metamodellschicht",
-        "synonym" : "Meta Meta Modellschicht",
-        "synonym1" : "",
-        "definition" : "Die Meta-Metamodellschicht ist die oberste Eben im 4-Schichten Modell der U M L. Es ist die Grundlage der Metamodellebenen. ",
-        "definition1" : "Diese Schicht beschreibt, welche Elemente ein technisch Belesener einem Metamodell hinzufügen darf. "
-    },
-
-    {
-        "term" : "Strukturdiagramme",
-        "synonym" : "Strukturdiagramm",
-        "synonym1" : "",
-        "definition" : "Die erste große Gruppe bilden die Strukturdiagramme. Sie bilden die statischen Strukturaspekte eines Systems ab. Die U M L stellt zur Strukturmodellierung sieben Diagrammtypen bereit. ",
-        "definition1" : "Zu den Strukturdiagrammen gehören: Klassendiagramm. Paketdiagramm. Objektdiagramm. Kompositionsstrukturdiagramm. Komponentendiagramm. Verteilungsdiagramm. Profildiagramm. "
-    },
-
-    {
-        "term" : "Verhaltensdiagramme",
-        "synonym" : "Verhaltensdiagramm",
-        "synonym1" : "",
-        "definition" : "Die zweite große Gruppe bilden die Verhaltensdiagramme. Sie bilden dynamische Situationen im Programmablauf ab. Die U M L stellt zur Verhaltensmodellierung sieben Diagrammtypen bereit, welche verschiedene Sichten auf das zu spezifizierende Verhalten legen. ",
-        "definition1" : "Zu den Verhaltensdiagrammen gehören Use­ Case­ Diagramm. Aktivitätsdiagramm. Zustandsautomat sowie alle Interaktionsdiagramme. "
-    },
-
-    {
-        "term" : "Interaktionsdiagramme",
-        "synonym" : "Interaktionsdiagramm",
-        "synonym1" : "",
-        "definition" : "Interaktionsdiagramme dienen dazu, Interaktionen zwischen Objekten zu spezifizieren beziehungsweise zu illustrieren. Eine Interaktion ist dabei eine Folge von Operationsaufrufen innerhalb einer bestimmten Gruppierung von Objekten. Von den sieben Verhaltensdiagrammen ordnet man vier Diagramme den Interaktionsdiagrammen zu. ",
-        "definition1" : " Zu den Interaktionsdiagrammen gehören das Sequenzdiagramm. Kommunikationsdiagramm. Timingdiagramm. und Interaktionsübersichtsdiagramm. "
-    },
-    {
-        "term" : "Profildiagramme",
-        "synonym" : "Profildiagramm",
-        "synonym1" : "",
-        "definition" : "Das Profildiagramm ist ein Diagrammtyp, der nicht in der operativen Phase der Erstellung von Modellen eingesetzt wird. Mit dem Profildiagramm werden die für ein Projekt benötigten Anpassungen dokumentiert. ",
-        "definition1" : "So entsteht ein porjektspezifisches Profil. "
-    },
-    {
-        "term" : "Klassendiagramme",
-        "synonym" : "Klassendiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Klassendiagramms ist es, herauszufinden, aus welchen Klassen das zu entwickelnde System besteht und wie diese untereinander in Beziehung stehen werden. ",
-        "definition1" : "Das Klassendiagramm beschreibt die statische Struktur des zu entwerfenden Systems. Es enthält alle relevanten Strukturzusammenhänge und Datentypen und bildet die Brücke zu den dynamischen Diagrammen. "
-    },
-    {
-        "term" : "Kompositionsstrukturdiagramme",
-        "synonym" : "Kompositionsstrukturdiagramm",
-        "synonym1" : "Kompositionsstruktur Diagramm",
-        "definition" : "Zentrale Frage des Kompositionsstrukturdiagramms ist es, herauszufinden, wie das Innenleben einer Klasse, einer Komponente, eines Systemteils aussieht. Es ist ideal zur Top-Down-Modellierung. ",
-        "definition1" : "Das Kompositionsstrukturdiagramm fordert mittlere Detailtiefe, denn es zeigt Teile eines Gesamtelements und deren Mengenverhältnisse. "
-    },
-    {
-        "term" : "Komponentendiagramme",
-        "synonym" : "Komponentendiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Komponentendiagramms ist es, herauszufinden, wie Klassen zu wiederverwendbaren, verwaltbaren Komponenten zusammengefasst werden und wie diese in Beziehung stehen. ",
-        "definition1" : "Das Komponentendiagramm zeigt die Organisation und Abhängigkeiten einzelner technischer Systemkomponenten. Eine Modellierung angebotener und benötigter Schnittstellen ist möglich. "
-    },
-    {
-        "term" : "Verteilungsdiagramme",
-        "synonym" : "Verteilungsdiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Verteilungsdiagramms ist es, herauszufinden, wie das Einsatzumfeld, also Hardware, Software oder Datenbanken, des Systems aussieht. Die Frage, wie die Komponenten zur Laufzeit wohin verteilt werden, wird beantwortet. ",
-        "definition1" : "Das Verteilungsdiagramm teift das Laufzeitumfeld des Systems mit den greifbaren Systemteilen. Es fordert ein hohes Abstraktionsniveau."
-    },
-    {
-        "term" : "Objektdiagramme",
-        "synonym" : "Objektdiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Objektdiagramms ist es, herauszufinden, welche innere Struktur das System zu einem bestimmten Zeitpunkt zur Laufzeit besitzt. ",
-        "definition1" : "Das Objektdiagramm zeigt Objekte und deren Attributsbelegungen zu einem bestimten Zeitpunkt. Es wird nur beispielhaft zur Veranschaulichung verwendet. "
-    },
-    {
-        "term" : "Paketdiagramme",
-        "synonym" : "Paketdiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Paketdiagramms ist es, herauszufinden, wie das Modell so geschnitten werden kann, dass der Überblick bewahrt wird. ",
-        "definition1" : "Das Paketdiagramm organisiert das Systemmodell in größere Einheiten durch logische Zusammenfassung von Modellelementen. Es werden Abhängigkeiten modelliert.   "
-    },
-    {
-        "term" : "Sequenzdiagramme",
-        "synonym" : "Sequenzdiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Sequenzdiagramms ist es, herauszufinden, wer mit wem welche Informationen in welcher Reihenfolge austauscht. ",
-        "definition1" : "Das Sequenzdiagramm stellt den zeitlichen Ablauf des Informationsaustausches zwischen Kommunikationspartner dar. Schachtelungen und Flusssteuerung sind möglich. "
-    },
-    {
-        "term" : "Kommunikationsdiagramme",
-        "synonym" : "Kommunikationsdiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Kommunikationsdiagramms ist es, herauszufinden, wer mit wem kommuniziert. Die Frage, wer im System zusammenarbeitet, wird beantwortet. ",
-        "definition1" : "Das Kommunikationsdiagramm  stellt den Informationsaustausch zwischen Kommunikationspartnern dar. Der Überblick steht hierbei im Vordergrund. "
-    },
-    {
-        "term" : "Interaktionsübersichtsdiagramme",
-        "synonym" : "Interaktionsübersichtsdiagramm",
-        "synonym1" : "Interaktionsübersicht",
-        "definition" : "Zentrale Frage des Interaktionsübersichtsdiagramms ist es, herauszufinden, wann welche Interaktion abläuft. ",
-        "definition1" : "Das Interaktionsübersichtsdiagramm verbindet und strukturiert Interaktionsdiagramme auf Top Level Ebene. Es fordert ein hohes Abstraktionsniveau. "
-    },
-    {
-        "term" : "Zeitverlaufdiagramme",
-        "synonym" : "Zeitverlaufdiagramm",
-        "synonym1" : "Timingdiagramm",
-        "definition" : "Zentrale Frage des Zeitverlaufdiagramms ist es, herauszufinden, wann sich verschiedene Interaktionspartner in welchem Zustand befinden. ",
-        "definition1" : "Das Zeitverlaufsdiagramm visualisiert das exakte zeitliche Verhalten von Klassen, Schnittstellen und so weiter. Es ist geeignet für Detailbetrachtungen, bei denen es wichtig ist, dass ein Ereignis zum richtigen Zeitpunkt eintritt. "
-    },
-    {
-        "term" : "Aktivitätsdiagramme",
-        "synonym" : "Aktivitätsdiagramm",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Aktivitätsdiagramms ist es, herauszufinden, wie ein betimmter flussorientierter Prozess oder ein Algorithmmus abläuft. ",
-        "definition1" : "Das Aktivitätsdiagramm visualisiert sehr detailliert Abläufe mit Bedingungen, Schleifen und Verzweigungen. Eine Parallelisierung und Synchronisation ist möglich. "
-    },
-    {
-        "term" : "Anwendungsfalldiagramme",
-        "synonym" : "Anwendungsfalldiagramm",
-        "synonym1" : "Use Case Diagramm",
-        "definition" : "Zentrale Frage des Anwendungsfalldiagramms ist es, herauszufinden, was ein System für seine Umwelt, wie Nachbarsysteme, Stakeholder, leistet. ",
-        "definition1" : "Das Anwendungsfalldiagramm präsentiert die Außensicht auf das System. Es ist zur Kontextabgrenzung geeignet und fordert ein hohes Abstraktionsniveau mit einfachen Notationselementen. "
-    },
-    {
-        "term" : "Zustandsdiagramme",
-        "synonym" : "Zustandsdiagramme",
-        "synonym1" : "",
-        "definition" : "Zentrale Frage des Zustandsdiagramms ist es, herauszufinden, welche Zustände ein Objekt, eine Schnittstelle, ein Use Case bei welchen Ereignissen annehmen kann. ",
-        "definition1" : "Das Zustandsdiagramm ist eine präzise Abbildung eines Zustandsmodells mit Zuständen, Ereignissen, Nebenläufigkeiten, Bedingungen, Eintrittsaktionen sowie Austrittsaktionen. "
-    },
-    {
-        "term" : "Rahmen",
-        "synonym" : "Frame",
-        "synonym1" : "",
-        "definition" : "Optional und für bestimmte Fälle sieht die U M L einen Rahmen, auch Frame genannt, vor, der bestimmte Modellelemente umschließt. ",
-        "definition1" : "Dabei muss mindestens ein Name für die dargestellten Inhalte im Rahmenkopf, einem Fünfeck im Rahmen, stehen. Daneben können optional der Typ und zusätzliche Parameter eingetragen werden. "
-    },
-    {
-        "term" : "Rahmenkopf",
-        "synonym" : "Heading",
-        "synonym1" : "",
-        "definition" : "Der Rahmenkopf, auch Heading genannt, ist ein eingezeichnetes Fünfeck im meist linken oberen Eck des Rahmens. ",
-        "definition1" : "Im Rahmenkopf können optional der Typ und zusätzliche Parameter eingetragen werden. Typen sind class, package, component, deployment, use case, activity, state machine und interaction. "
-    },
-    {
-        "term" : "Modell",
-        "synonym" : "Modelle",
-        "synonym1" : "",
-        "definition" : "Eigenschaften eines Modells sind: Ein Modell versammelt eine hierarchisch strukturierte Menge von Elementen. Die Menge von Elementen beschreibt auf einer abstrakten Ebene das System zu einem bestimmten Zweck, es zeigt nur eine Sicht auf das System. Das Modell beschreibt das System aus dieser Sicht vollständig. ",
-        "definition1" : "A model captures a view of a system. It is an abstraction of the system, with a certain pur­pose. This purpose determines what is to be included in the model and what is irrelevant. Thus the model completely describes those aspects of the system that are relevant to the purpose of the model, at the appropriate level of detail. "
-    },
-    {
-        "term" : "Kommentar",
-        "synonym" : "Comment",
-        "synonym1" : "Kommentare",
-        "definition" : "Mit Hilfe eines Kommentars können beliebige Informationen, die relevant erscheinen, an ein Modellelement angebracht werden. Ein Kommentar wird durch ein Rechteck mit umgeknickter rechter oberer Ecke repräsentiert. Der Kommentartext selbst befindet sich innerhalb des Rechtecks. Der Kommentar ist durch eine gestrichelte Linie mit dem annotierten Element verbunden. Diese Linie kann auch weggelassen werden, wenn die Verbindung mit dem Element aus dem Zusammenhang klar ersichtlich ist. ",
-        "definition1" : "A comment is a textual annotation that can be attached to a set of elements. "
-    },
-    {
-        "term" : "Ausdruck",
-        "synonym" : "Expression",
-        "synonym1" : "Ausdrücke",
-        "definition" : "Formal stellt ein Ausdruck, in Englisch: expression, einen Knoten in einem Baum mit Ausdrücken dar, der durch ein Symbol repräsentiert wird. ",
-        "definition1" : "An expression is a structured tree of symbols that denotes a set of values when evaluated in a context. "
-    },
-    {
-        "term" : "Randbedingung",
-        "synonym" : "Constraint",
-        "synonym1" : "Randbedingungen",
-        "definition" : "Eine Randbedingung, zu Englisch Constraint genannt, ist immer ein boolescher Ausdruck, der zur Präzisierung der Semantik eines oder mehrerer Modellelemente dient. ",
-        "definition1" : "A constraint is a condition or restriction expressed in natural language text or in a machine readable language for the purpose of declaring some of the semantics of an element. "
-    },
-    {
-        "term" : "Classifier",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Der Classifier ist kein Sprachelement, welches dem Modellierer direkt in einem U M L­ Diagramm zur Modellierung zur Verfügung steht, sondern der Classifier ist eine abstrakte Metaklasse, deren Instanzen modelliert werden. Die Notation eines Classifier ist ein einfaches Rechteck mit dem Namen des Classifier. ",
-        "definition1" : "A classifier is a classification of instances, it describes a set of instances that have features in common. "
-    },
-    {
-        "term" : "Datentyp",
-        "synonym" : "Datatype",
-        "synonym1" : "Datentypen",
-        "definition" : "In der U M L wird ein Datentyp verwendet, um mögliche Wertebereiche einzu­grenzen. Die U M L definiert einige wenige Typen, wie der Aufzählungstyp, auch Enumeration genannt, sowie der Primitive Typ mit seinen Subtypen. ",
-        "definition1" : "Ein Datentyp wird durch das Rechteckssymbol mit dem ihn identifizierenden Schlüsselwort notiert, also datatype für einen Datentyp, enumeration oder primitive für die spe­ziellen Datentypen Primitiver Typ und Aufzählungstyp. "
-    },
-    {
-        "term" : "Primitiver Datentyp",
-        "synonym" : "primitive type",
-        "synonym1" : "Primitive Datentypen",
-        "definition" : "Ein primitiver Typ ist insofern ein besonderer Datentyp, als dass er weder Attri­bute noch Operationen beziehungsweise allgemein keine Unterstruktur enthält. ",
-        "definition1" : "Typische Vertreter der primitiven Typen sind Zahlen, für die meist außerhalb der U M L bereits Regeln, das heißt eine Algebra, existieren. Beispiele sind der boolesche Typ, der Integer, der String und die natürlichen Zahlen. "
-    },
-    {
-        "term" : "Aufzählungstyp",
-        "synonym" : "enumeration",
-        "synonym1" : "Aufzählungstypen",
-        "definition" : "Aufzählungstypen sind spezielle Datentypen mit einer endlichen Menge benutzerdefinierter, diskreter Werte. Ein solcher Wert heißt Aufzählungswert und spezi­fiziert einen Wert, den ein Element mit dem Aufzählungstyp zur Laufzeit annehmen darf. ",
-        "definition1" : "Aufzählungstypen werden notiert wie Datentypen und mit dem Schlüsselwort: enumeration , gekennzeichnet. "
-    },
-    {
-        "term" : "Literal",
-        "synonym" : "literal",
-        "synonym1" : "Literale",
-        "definition" : "Buchstabensymbole oder Literale werden in der U M L verwandt, um Werte zu notie­ren. Die UML definiert sechs verschiedene Typen von Literalen, korrespondierend zu den Datentypen. Literale werden in Abhängigkeit der Werte beziehungsweise der Datentypen notiert, welche sie spezifizieren. ",
-        "definition1" : "Es gibt das Literal boolean integer, null, real, string und unlimited natural. "
-    },
-    {
-        "term" : "Requirements Engineering",
-        "synonym" : "R E",
-        "synonym1" : "Anforderungsanalyse",
-        "definition" : "Requirements Engineering ist der Prozess des Herausfindens, Analysierens, Dokumentierens und Überprüfens der Dienste und Beschränkungen eines zu erstellenden Systems. ",
-        "definition1" : "Das Requirements Engineering ist ein kooperativer, iterativer und inkrementeller Prozess. Er gewährleistet, dass alle relevanten Anforderungen bekannt sind und Stakeholdern eingebunden werden. "
-    },
-    {
-        "term" : "Objektorientiere Analyse",
-        "synonym" : "O O A",
-        "synonym1" : "",
-        "definition" : "Die objektorientierte Analyse beinhaltet die Ermittlung und Beschreibung der Anforderungen an ein Software System mittels objektorientierter Konzepte und Notationen. Das Ergebnis ist ein O O A Modell. ",
-        "definition1" : "Aus der objektorientierten Analyse folgt das Produktmodell. "
-    },
-    {
-        "term" : "Designphase",
-        "synonym" : "Entwurfsprozess",
-        "synonym1" : "Entwurf",
-        "definition" : "Nach der Analyse und Modellierung der in Software abzubildenden Prozesse werden vor der eigentlichen Implementierung weitere vorbereitende Schritte unternommen, um eine passende Software zu erstellen. ",
-        "definition1" : "Das Softwaredesign kann in die Bereiche Grobentwurf und Feinentwurf aufgeteilt werden. Der Entwurfsprozess generiert in mehreren Teilschritten die softwaretechnische Lösung im Sinne einer Softwarearchitektur. "
-    },
-    {
-        "term" : "Software Engineering",
-        "synonym" : "S E",
-        "synonym1" : "Softwaretechnik",
-        "definition" : "Software Engineering zielt auf die ingenieurmäßige Entwicklung, Anpassung und Weiterentwicklung großer Softwaresysteme unter Verwendung bewährter systematischer Vorgehensweisen, Prinzipien, Methoden und Werkzeuge. ",
-        "definition1" : "Software Engineering ist die zielorientierte Bereitstellung und systematische Verwendung von Prinzipien, Methoden und Werkzeugen für die arbeitsteilige, ingenieurmäßige Entwicklung und Anwendung von umfangreichen Softwaresystemen. "
-    },
-    {
-        "term" : "Softwarearchitektur",
-        "synonym" : "S A",
-        "synonym1" : "Software Architektur",
-        "definition" : "Die Softwarearchitektur eines Programms oder eines Computersystems ist die Struktur oder sind die Strukturen des Systems, die die Softwareelemente, die extern sichtbaren Eigenschaften dieser Elemente und die Verbindung zwischen diesen Elementen umfasst. ",
-        "definition1" : "Eine Softwarearchitektur beschreibt die Strukturen eines Softwaresystems durch Architekturbausteine und ihre Beziehungen und Interaktionen untereinander sowie ihre physikalische Verteilung. Die extern sichtbaren Eigenschaften eines Architekturbausteins werden durch Schnittstellen spezifiziert. "
-    },
-    {
-        "term" : "Feindesign",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Im Prozess des Feindesign wird eine Verknüpfung der logischen Architektur mit den softwaretechnischen Infrastrukturen definiert. ",
-        "definition1" : "Für das Feindesign müssen die vier Sichten Kontext, Statik, Laufzeit und Verteilung modelliert werden. Entwurfspattern spielen hier eine große Rolle. "
-    },
-    {
-        "term" : "Grobdesign",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Der Grobentwurf dient als Basis für die Auslegung der softwaretechnischen Infrastruktur, weil sich mit dessen Hilfe die erforderten Infrastrukturkomponenten identifizieren lassen. Basis für die Architektur im Großen sind Architekturmuster. ",
-        "definition1" : "Architekturmuster beschreiben Systemstrukturen, die die Gesamtarchitektur eines Systems festlegen. Sie spezifizieren, wie Subsysteme zusammenarbeiten. "
-    },
-    {
-        "term" : "Anforderung",
-        "synonym" : "Anforderungen",
-        "synonym1" : "Requirements",
-        "definition" : "Eine Anforderung ist eine übermittelte Eigenschaft oder Fähigkeit, die zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird und gegebenenfalls aufgrund eines formellen Dokuments erfüllt werden muss. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Qualitätsanforderung",
-        "synonym" : "Qualitätsanforderungen",
-        "synonym1" : "nicht funktionale Anforderungen",
-        "definition" : "Qualitätsanforderungen sind Aspekte, die typischerweise mehrere oder alle funktionalen Anforderungen betreffen beziehungsweise überschneiden. ",
-        "definition1" : "Eine Qualitätsanforderung legt eine qualitative und oder quantitative Eigenschaft des Softwaresystems oder einer seiner Komponenten fest. "
-    },
-    {
-        "term" : "funktionale Anforderung",
-        "synonym" : "funktionale Anforderungen",
-        "synonym1" : "",
-        "definition" : "Die funktionalen Anforderungen können umschrieben werden als die Kernaufgaben, die ein System erfüllen muss. ",
-        "definition1" : "Die funktionale Anforderung wird definiert als die Festlegung einer vom Softwaresystem oder einer seiner Komponenten bereitzustellende Funktion oder bereitzustellenden Service. "
-    },
-    {
-        "term" : "Stakeholder",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Ein Stakeholder ist ein Individuum, eine Gruppe von Personen oder eine Organisation, die ein indirektes oder direktes Interesse an einem System und somit Einfluss auf die Ziele, Anforderungen und Randbedingungen des betrachteten Systems haben. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Systemziel",
-        "synonym" : "Ziele",
-        "synonym1" : "Ziel",
-        "definition" : "Ausgehend von einer Vision dienen Ziele dazu, die Vision zu verfeinern und zu operationalisieren. ",
-        "definition1" : "Ziele sind die intentionale Beschreibung eines von Stakeholdern gewünschten charakteristischen Merkmals des zu entwickelnden Systems beziehungsweise des zugehörigen Entwicklungsprojekts. "
-    },
-    {
-        "term" : "Produktvision",
-        "synonym" : "Vision",
-        "synonym1" : "",
-        "definition" : "Eine Vision ist eine realitätsnahe Vorstellung der gewünschten Zukunft. Sie beschreibt, was erreicht werden soll, sagt aber nicht wie. ",
-        "definition1" : "Eine Vision dient als Leitgedanke für alle Stakeholder. "
-    },
-    {
-        "term" : "Rahmenbedingungen",
-        "synonym" : "Rahmenbedingung",
-        "synonym1" : "",
-        "definition" : "Eine Rahmenbedingung legt organisatorische und oder technische Restriktionen für das Softwaresystem und oder den Entwicklungsprozess fest. ",
-        "definition1" : "In der Literatur wird zwischen technischen und organisatorischen Randbedingungen beziehungsweise Rahmenbedingungen und Konventionen abgegrenzt, wobei die Begrifflichkeiten nicht konsistent verwendet werden. "
-    },
-    {
-        "term" : "Kontextabgrenzung",
-        "synonym" : "Abgrenzung",
-        "synonym1" : "",
-        "definition" : "Im Rahmen der Systemanalyse muss die Umgebung und der genaue Umfang des Systems definiert werden. Dafür werden die Systemgrenze und die Kontextgrenze gezogen. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Systemgrenze",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Die Systemgrenze zieht einen Strich zwischen dem System und dessen Umgebung. Das System kann Teile außerhalb dieser Grenze nicht durch den Entwicklungsprozess verändern. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Kontextgrenze",
-        "synonym" : "",
-        "synonym1" : "",
-        "definition" : "Die Kontextgrenze trennt den relevanten Teil eines geplanten Systems vom irrelevanten Teil, das heißt dem Teil der Umgebung, der keinen Einfluss auf das geplante System und dessen Anforderungen hat. ",
-        "definition1" : ""
-    },
-    {
-        "term" : "Kontext",
-        "synonym" : "Systemkontext",
-        "synonym1" : "",
-        "definition" : "Der Systemkontext befindet sich zwischen Systemgrenze und Kontextgrenze. Er unmfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind, und die nicht im Rahmen der Entwicklung dieses Systems gestaltet werden können. ",
-        "definition1" : "Der Systemkontext, auch Systemumfang genannt, besteht aus allen materiellen und immateriellen Objekten, die eine Beziehung zu dem System haben. "
-    }
-    
-
+    "definitions": [
+        {
+            "term": "UML",
+            "synonym": "U M L",
+            "synonym1": "Unified Modeling Language",
+            "definition": "Die Unified Modeling Language dient zur Modellierung, Dokumentation, Spezialisierung und Visualisierung komplexer Systeme, unabhängig von deren Fach­ und Reali­sierungsgebiet. ",
+            "definition1": "Sie liefert die Notationselemente gleichermaßen für die statischen und dynamischen Modelle von Analyse, Design und Architektur und unterstützt insbesondere objektorientierte Vorgehensweisen. "
+        },
+        {
+            "term": "OMG",
+            "synonym": "O M G",
+            "synonym1": "Object Management Group",
+            "definition": "Die Object Management Group ist ein 1989 gegründetes Konsortium, das sich mit der Entwicklung von Standards für die herstellerunabhängige systemübergreifende objektorientierte Programmierung beschäftigt. ",
+            "definition1": "Die Object Management Group hat derzeit über 800 Mitglieder. Namhafte Unternehmen, wie Apple, Microsoft oder IBM, sind vertreten. Die O M G entwickelt zum Beispiel die U M L, C O R B A oder B P M N. "
+        },
+        {
+            "term": "Diagrammtyp",
+            "synonym": "Diagrammtypen",
+            "synonym1": "",
+            "definition": "Die Modellelemente der U M L werden nach Diagrammtypen gegliedert. Die U M L besitzt 14 Diagrammtypen. Jedem Diagrammtyp liegt eine bestimmte Betrachtungsweise eines Softwaresystems zu Grunde. ",
+            "definition1": "Die einzelnen Diagramme lassen sich nach diesen Betrachtungsweisen in vier Bereiche gliedern: Requirements. Statische Sicht. Dynamische Sicht. Implementierung. "
+        },
+        {
+            "term": "Sichten",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Die U M L­ Spezifikation unterstützt bewusst ein Sichtenkonzept, das es ermöglicht, ein und dasselbe U M L­ Element, das genau einmal im Modell vorkommt, auf ganz unterschiedliche Weise für unterschiedliche Sichten und Lesergruppen mehrfach darzustellen. ",
+            "definition1": ""
+        },
+        {
+            "term": "Statische Sicht",
+            "synonym": "Statik",
+            "synonym1": "",
+            "definition": "Die statische Sicht betrachtet den logischen Aufbau des Systems. Hierzu gehören das Klassendiagramm, das Paketdiagramm und das Kollaborationsdiagramm. ",
+            "definition1": ""
+        },
+        {
+            "term": "Dynamische Sicht",
+            "synonym": "Dynamik",
+            "synonym1": "",
+            "definition": "Die dynamische Sicht bringt Interaktionen und Abläufe des Systems in Verbindung. Hierzu gehören das Aktivitätsdiagramm, das Paketdiagramm und das Kollaborationsdiagramm. ",
+            "definition1": ""
+        },
+        {
+            "term": "Laufzeitschicht",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Die Laufzeitschicht ist die unterste Schicht und stellt die Realität dar. Sie beschreibt die reale Basis von Modellen, oder umgekehrt: aus ihr werden Modelle erstellt. ",
+            "definition1": ""
+        },
+        {
+            "term": "Modellschicht",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Die Realität aus der untersten Schicht der Laufzeitschicht wird in der Modellschicht bewusst abstrahiert. Das heißt, sich auf das Wesentliche zu konzentrieren. ",
+            "definition1": "Ein Beispiel für die Bildung eines Modells ist die Klasse Auto im Klassendiagramm mit entsprechenden Attributen und Assoziationen. "
+        },
+        {
+            "term": "Meta Modellschicht",
+            "synonym": "Metamodellschicht",
+            "synonym1": "Metamodell",
+            "definition": "Ein Modell, das ein Modell beschreibt. Das Metamodell gibt die Regeln für das Modell aus der Modellschicht vor. ",
+            "definition1": "Das Metamodell beschreibt zum Beispiel, dass Klassen beliebig viele Attribute und Operationen haben dürfen. "
+        },
+        {
+            "term": "Meta-Metamodellschicht",
+            "synonym": "Meta Meta Modellschicht",
+            "synonym1": "",
+            "definition": "Die Meta-Metamodellschicht ist die oberste Eben im 4-Schichten Modell der U M L. Es ist die Grundlage der Metamodellebenen. ",
+            "definition1": "Diese Schicht beschreibt, welche Elemente ein technisch Belesener einem Metamodell hinzufügen darf. "
+        },
+        {
+            "term": "Strukturdiagramme",
+            "synonym": "Strukturdiagramm",
+            "synonym1": "",
+            "definition": "Die erste große Gruppe bilden die Strukturdiagramme. Sie bilden die statischen Strukturaspekte eines Systems ab. Die U M L stellt zur Strukturmodellierung sieben Diagrammtypen bereit. ",
+            "definition1": "Zu den Strukturdiagrammen gehören: Klassendiagramm. Paketdiagramm. Objektdiagramm. Kompositionsstrukturdiagramm. Komponentendiagramm. Verteilungsdiagramm. Profildiagramm. "
+        },
+        {
+            "term": "Verhaltensdiagramme",
+            "synonym": "Verhaltensdiagramm",
+            "synonym1": "",
+            "definition": "Die zweite große Gruppe bilden die Verhaltensdiagramme. Sie bilden dynamische Situationen im Programmablauf ab. Die U M L stellt zur Verhaltensmodellierung sieben Diagrammtypen bereit, welche verschiedene Sichten auf das zu spezifizierende Verhalten legen. ",
+            "definition1": "Zu den Verhaltensdiagrammen gehören Use­ Case­ Diagramm. Aktivitätsdiagramm. Zustandsautomat sowie alle Interaktionsdiagramme. "
+        },
+        {
+            "term": "Interaktionsdiagramme",
+            "synonym": "Interaktionsdiagramm",
+            "synonym1": "",
+            "definition": "Interaktionsdiagramme dienen dazu, Interaktionen zwischen Objekten zu spezifizieren beziehungsweise zu illustrieren. Eine Interaktion ist dabei eine Folge von Operationsaufrufen innerhalb einer bestimmten Gruppierung von Objekten. Von den sieben Verhaltensdiagrammen ordnet man vier Diagramme den Interaktionsdiagrammen zu. ",
+            "definition1": " Zu den Interaktionsdiagrammen gehören das Sequenzdiagramm. Kommunikationsdiagramm. Timingdiagramm. und Interaktionsübersichtsdiagramm. "
+        },
+        {
+            "term": "Profildiagramme",
+            "synonym": "Profildiagramm",
+            "synonym1": "",
+            "definition": "Das Profildiagramm ist ein Diagrammtyp, der nicht in der operativen Phase der Erstellung von Modellen eingesetzt wird. Mit dem Profildiagramm werden die für ein Projekt benötigten Anpassungen dokumentiert. ",
+            "definition1": "So entsteht ein porjektspezifisches Profil. "
+        },
+        {
+            "term": "Klassendiagramme",
+            "synonym": "Klassendiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Klassendiagramms ist es, herauszufinden, aus welchen Klassen das zu entwickelnde System besteht und wie diese untereinander in Beziehung stehen werden. ",
+            "definition1": "Das Klassendiagramm beschreibt die statische Struktur des zu entwerfenden Systems. Es enthält alle relevanten Strukturzusammenhänge und Datentypen und bildet die Brücke zu den dynamischen Diagrammen. "
+        },
+        {
+            "term": "Kompositionsstrukturdiagramme",
+            "synonym": "Kompositionsstrukturdiagramm",
+            "synonym1": "Kompositionsstruktur Diagramm",
+            "definition": "Zentrale Frage des Kompositionsstrukturdiagramms ist es, herauszufinden, wie das Innenleben einer Klasse, einer Komponente, eines Systemteils aussieht. Es ist ideal zur Top-Down-Modellierung. ",
+            "definition1": "Das Kompositionsstrukturdiagramm fordert mittlere Detailtiefe, denn es zeigt Teile eines Gesamtelements und deren Mengenverhältnisse. "
+        },
+        {
+            "term": "Komponentendiagramme",
+            "synonym": "Komponentendiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Komponentendiagramms ist es, herauszufinden, wie Klassen zu wiederverwendbaren, verwaltbaren Komponenten zusammengefasst werden und wie diese in Beziehung stehen. ",
+            "definition1": "Das Komponentendiagramm zeigt die Organisation und Abhängigkeiten einzelner technischer Systemkomponenten. Eine Modellierung angebotener und benötigter Schnittstellen ist möglich. "
+        },
+        {
+            "term": "Verteilungsdiagramme",
+            "synonym": "Verteilungsdiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Verteilungsdiagramms ist es, herauszufinden, wie das Einsatzumfeld, also Hardware, Software oder Datenbanken, des Systems aussieht. Die Frage, wie die Komponenten zur Laufzeit wohin verteilt werden, wird beantwortet. ",
+            "definition1": "Das Verteilungsdiagramm teift das Laufzeitumfeld des Systems mit den greifbaren Systemteilen. Es fordert ein hohes Abstraktionsniveau."
+        },
+        {
+            "term": "Objektdiagramme",
+            "synonym": "Objektdiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Objektdiagramms ist es, herauszufinden, welche innere Struktur das System zu einem bestimmten Zeitpunkt zur Laufzeit besitzt. ",
+            "definition1": "Das Objektdiagramm zeigt Objekte und deren Attributsbelegungen zu einem bestimten Zeitpunkt. Es wird nur beispielhaft zur Veranschaulichung verwendet. "
+        },
+        {
+            "term": "Paketdiagramme",
+            "synonym": "Paketdiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Paketdiagramms ist es, herauszufinden, wie das Modell so geschnitten werden kann, dass der Überblick bewahrt wird. ",
+            "definition1": "Das Paketdiagramm organisiert das Systemmodell in größere Einheiten durch logische Zusammenfassung von Modellelementen. Es werden Abhängigkeiten modelliert.   "
+        },
+        {
+            "term": "Sequenzdiagramme",
+            "synonym": "Sequenzdiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Sequenzdiagramms ist es, herauszufinden, wer mit wem welche Informationen in welcher Reihenfolge austauscht. ",
+            "definition1": "Das Sequenzdiagramm stellt den zeitlichen Ablauf des Informationsaustausches zwischen Kommunikationspartner dar. Schachtelungen und Flusssteuerung sind möglich. "
+        },
+        {
+            "term": "Kommunikationsdiagramme",
+            "synonym": "Kommunikationsdiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Kommunikationsdiagramms ist es, herauszufinden, wer mit wem kommuniziert. Die Frage, wer im System zusammenarbeitet, wird beantwortet. ",
+            "definition1": "Das Kommunikationsdiagramm  stellt den Informationsaustausch zwischen Kommunikationspartnern dar. Der Überblick steht hierbei im Vordergrund. "
+        },
+        {
+            "term": "Interaktionsübersichtsdiagramme",
+            "synonym": "Interaktionsübersichtsdiagramm",
+            "synonym1": "Interaktionsübersicht",
+            "definition": "Zentrale Frage des Interaktionsübersichtsdiagramms ist es, herauszufinden, wann welche Interaktion abläuft. ",
+            "definition1": "Das Interaktionsübersichtsdiagramm verbindet und strukturiert Interaktionsdiagramme auf Top Level Ebene. Es fordert ein hohes Abstraktionsniveau. "
+        },
+        {
+            "term": "Zeitverlaufdiagramme",
+            "synonym": "Zeitverlaufdiagramm",
+            "synonym1": "Timingdiagramm",
+            "definition": "Zentrale Frage des Zeitverlaufdiagramms ist es, herauszufinden, wann sich verschiedene Interaktionspartner in welchem Zustand befinden. ",
+            "definition1": "Das Zeitverlaufsdiagramm visualisiert das exakte zeitliche Verhalten von Klassen, Schnittstellen und so weiter. Es ist geeignet für Detailbetrachtungen, bei denen es wichtig ist, dass ein Ereignis zum richtigen Zeitpunkt eintritt. "
+        },
+        {
+            "term": "Aktivitätsdiagramme",
+            "synonym": "Aktivitätsdiagramm",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Aktivitätsdiagramms ist es, herauszufinden, wie ein betimmter flussorientierter Prozess oder ein Algorithmmus abläuft. ",
+            "definition1": "Das Aktivitätsdiagramm visualisiert sehr detailliert Abläufe mit Bedingungen, Schleifen und Verzweigungen. Eine Parallelisierung und Synchronisation ist möglich. "
+        },
+        {
+            "term": "Anwendungsfalldiagramme",
+            "synonym": "Anwendungsfalldiagramm",
+            "synonym1": "Use Case Diagramm",
+            "definition": "Zentrale Frage des Anwendungsfalldiagramms ist es, herauszufinden, was ein System für seine Umwelt, wie Nachbarsysteme, Stakeholder, leistet. ",
+            "definition1": "Das Anwendungsfalldiagramm präsentiert die Außensicht auf das System. Es ist zur Kontextabgrenzung geeignet und fordert ein hohes Abstraktionsniveau mit einfachen Notationselementen. "
+        },
+        {
+            "term": "Zustandsdiagramme",
+            "synonym": "Zustandsdiagramme",
+            "synonym1": "",
+            "definition": "Zentrale Frage des Zustandsdiagramms ist es, herauszufinden, welche Zustände ein Objekt, eine Schnittstelle, ein Use Case bei welchen Ereignissen annehmen kann. ",
+            "definition1": "Das Zustandsdiagramm ist eine präzise Abbildung eines Zustandsmodells mit Zuständen, Ereignissen, Nebenläufigkeiten, Bedingungen, Eintrittsaktionen sowie Austrittsaktionen. "
+        },
+        {
+            "term": "Rahmen",
+            "synonym": "Frame",
+            "synonym1": "",
+            "definition": "Optional und für bestimmte Fälle sieht die U M L einen Rahmen, auch Frame genannt, vor, der bestimmte Modellelemente umschließt. ",
+            "definition1": "Dabei muss mindestens ein Name für die dargestellten Inhalte im Rahmenkopf, einem Fünfeck im Rahmen, stehen. Daneben können optional der Typ und zusätzliche Parameter eingetragen werden. "
+        },
+        {
+            "term": "Rahmenkopf",
+            "synonym": "Heading",
+            "synonym1": "",
+            "definition": "Der Rahmenkopf, auch Heading genannt, ist ein eingezeichnetes Fünfeck im meist linken oberen Eck des Rahmens. ",
+            "definition1": "Im Rahmenkopf können optional der Typ und zusätzliche Parameter eingetragen werden. Typen sind class, package, component, deployment, use case, activity, state machine und interaction. "
+        },
+        {
+            "term": "Modell",
+            "synonym": "Modelle",
+            "synonym1": "",
+            "definition": "Eigenschaften eines Modells sind: Ein Modell versammelt eine hierarchisch strukturierte Menge von Elementen. Die Menge von Elementen beschreibt auf einer abstrakten Ebene das System zu einem bestimmten Zweck, es zeigt nur eine Sicht auf das System. Das Modell beschreibt das System aus dieser Sicht vollständig. ",
+            "definition1": "A model captures a view of a system. It is an abstraction of the system, with a certain pur­pose. This purpose determines what is to be included in the model and what is irrelevant. Thus the model completely describes those aspects of the system that are relevant to the purpose of the model, at the appropriate level of detail. "
+        },
+        {
+            "term": "Kommentar",
+            "synonym": "Comment",
+            "synonym1": "Kommentare",
+            "definition": "Mit Hilfe eines Kommentars können beliebige Informationen, die relevant erscheinen, an ein Modellelement angebracht werden. Ein Kommentar wird durch ein Rechteck mit umgeknickter rechter oberer Ecke repräsentiert. Der Kommentartext selbst befindet sich innerhalb des Rechtecks. Der Kommentar ist durch eine gestrichelte Linie mit dem annotierten Element verbunden. Diese Linie kann auch weggelassen werden, wenn die Verbindung mit dem Element aus dem Zusammenhang klar ersichtlich ist. ",
+            "definition1": "A comment is a textual annotation that can be attached to a set of elements. "
+        },
+        {
+            "term": "Ausdruck",
+            "synonym": "Expression",
+            "synonym1": "Ausdrücke",
+            "definition": "Formal stellt ein Ausdruck, in Englisch: expression, einen Knoten in einem Baum mit Ausdrücken dar, der durch ein Symbol repräsentiert wird. ",
+            "definition1": "An expression is a structured tree of symbols that denotes a set of values when evaluated in a context. "
+        },
+        {
+            "term": "Randbedingung",
+            "synonym": "Constraint",
+            "synonym1": "Randbedingungen",
+            "definition": "Eine Randbedingung, zu Englisch Constraint genannt, ist immer ein boolescher Ausdruck, der zur Präzisierung der Semantik eines oder mehrerer Modellelemente dient. ",
+            "definition1": "A constraint is a condition or restriction expressed in natural language text or in a machine readable language for the purpose of declaring some of the semantics of an element. "
+        },
+        {
+            "term": "Classifier",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Der Classifier ist kein Sprachelement, welches dem Modellierer direkt in einem U M L­ Diagramm zur Modellierung zur Verfügung steht, sondern der Classifier ist eine abstrakte Metaklasse, deren Instanzen modelliert werden. Die Notation eines Classifier ist ein einfaches Rechteck mit dem Namen des Classifier. ",
+            "definition1": "A classifier is a classification of instances, it describes a set of instances that have features in common. "
+        },
+        {
+            "term": "Datentyp",
+            "synonym": "Datatype",
+            "synonym1": "Datentypen",
+            "definition": "In der U M L wird ein Datentyp verwendet, um mögliche Wertebereiche einzu­grenzen. Die U M L definiert einige wenige Typen, wie der Aufzählungstyp, auch Enumeration genannt, sowie der Primitive Typ mit seinen Subtypen. ",
+            "definition1": "Ein Datentyp wird durch das Rechteckssymbol mit dem ihn identifizierenden Schlüsselwort notiert, also datatype für einen Datentyp, enumeration oder primitive für die spe­ziellen Datentypen Primitiver Typ und Aufzählungstyp. "
+        },
+        {
+            "term": "Primitiver Datentyp",
+            "synonym": "primitive type",
+            "synonym1": "Primitive Datentypen",
+            "definition": "Ein primitiver Typ ist insofern ein besonderer Datentyp, als dass er weder Attri­bute noch Operationen beziehungsweise allgemein keine Unterstruktur enthält. ",
+            "definition1": "Typische Vertreter der primitiven Typen sind Zahlen, für die meist außerhalb der U M L bereits Regeln, das heißt eine Algebra, existieren. Beispiele sind der boolesche Typ, der Integer, der String und die natürlichen Zahlen. "
+        },
+        {
+            "term": "Aufzählungstyp",
+            "synonym": "enumeration",
+            "synonym1": "Aufzählungstypen",
+            "definition": "Aufzählungstypen sind spezielle Datentypen mit einer endlichen Menge benutzerdefinierter, diskreter Werte. Ein solcher Wert heißt Aufzählungswert und spezi­fiziert einen Wert, den ein Element mit dem Aufzählungstyp zur Laufzeit annehmen darf. ",
+            "definition1": "Aufzählungstypen werden notiert wie Datentypen und mit dem Schlüsselwort: enumeration , gekennzeichnet. "
+        },
+        {
+            "term": "Literal",
+            "synonym": "literal",
+            "synonym1": "Literale",
+            "definition": "Buchstabensymbole oder Literale werden in der U M L verwandt, um Werte zu notie­ren. Die UML definiert sechs verschiedene Typen von Literalen, korrespondierend zu den Datentypen. Literale werden in Abhängigkeit der Werte beziehungsweise der Datentypen notiert, welche sie spezifizieren. ",
+            "definition1": "Es gibt das Literal boolean integer, null, real, string und unlimited natural. "
+        },
+        {
+            "term": "Requirements Engineering",
+            "synonym": "R E",
+            "synonym1": "Anforderungsanalyse",
+            "definition": "Requirements Engineering ist der Prozess des Herausfindens, Analysierens, Dokumentierens und Überprüfens der Dienste und Beschränkungen eines zu erstellenden Systems. ",
+            "definition1": "Das Requirements Engineering ist ein kooperativer, iterativer und inkrementeller Prozess. Er gewährleistet, dass alle relevanten Anforderungen bekannt sind und Stakeholdern eingebunden werden. "
+        },
+        {
+            "term": "Objektorientiere Analyse",
+            "synonym": "O O A",
+            "synonym1": "",
+            "definition": "Die objektorientierte Analyse beinhaltet die Ermittlung und Beschreibung der Anforderungen an ein Software System mittels objektorientierter Konzepte und Notationen. Das Ergebnis ist ein O O A Modell. ",
+            "definition1": "Aus der objektorientierten Analyse folgt das Produktmodell. "
+        },
+        {
+            "term": "Designphase",
+            "synonym": "Entwurfsprozess",
+            "synonym1": "Entwurf",
+            "definition": "Nach der Analyse und Modellierung der in Software abzubildenden Prozesse werden vor der eigentlichen Implementierung weitere vorbereitende Schritte unternommen, um eine passende Software zu erstellen. ",
+            "definition1": "Das Softwaredesign kann in die Bereiche Grobentwurf und Feinentwurf aufgeteilt werden. Der Entwurfsprozess generiert in mehreren Teilschritten die softwaretechnische Lösung im Sinne einer Softwarearchitektur. "
+        },
+        {
+            "term": "Software Engineering",
+            "synonym": "S E",
+            "synonym1": "Softwaretechnik",
+            "definition": "Software Engineering zielt auf die ingenieurmäßige Entwicklung, Anpassung und Weiterentwicklung großer Softwaresysteme unter Verwendung bewährter systematischer Vorgehensweisen, Prinzipien, Methoden und Werkzeuge. ",
+            "definition1": "Software Engineering ist die zielorientierte Bereitstellung und systematische Verwendung von Prinzipien, Methoden und Werkzeugen für die arbeitsteilige, ingenieurmäßige Entwicklung und Anwendung von umfangreichen Softwaresystemen. "
+        },
+        {
+            "term": "Softwarearchitektur",
+            "synonym": "S A",
+            "synonym1": "Software Architektur",
+            "definition": "Die Softwarearchitektur eines Programms oder eines Computersystems ist die Struktur oder sind die Strukturen des Systems, die die Softwareelemente, die extern sichtbaren Eigenschaften dieser Elemente und die Verbindung zwischen diesen Elementen umfasst. ",
+            "definition1": "Eine Softwarearchitektur beschreibt die Strukturen eines Softwaresystems durch Architekturbausteine und ihre Beziehungen und Interaktionen untereinander sowie ihre physikalische Verteilung. Die extern sichtbaren Eigenschaften eines Architekturbausteins werden durch Schnittstellen spezifiziert. "
+        },
+        {
+            "term": "Feindesign",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Im Prozess des Feindesign wird eine Verknüpfung der logischen Architektur mit den softwaretechnischen Infrastrukturen definiert. ",
+            "definition1": "Für das Feindesign müssen die vier Sichten Kontext, Statik, Laufzeit und Verteilung modelliert werden. Entwurfspattern spielen hier eine große Rolle. "
+        },
+        {
+            "term": "Grobdesign",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Der Grobentwurf dient als Basis für die Auslegung der softwaretechnischen Infrastruktur, weil sich mit dessen Hilfe die erforderten Infrastrukturkomponenten identifizieren lassen. Basis für die Architektur im Großen sind Architekturmuster. ",
+            "definition1": "Architekturmuster beschreiben Systemstrukturen, die die Gesamtarchitektur eines Systems festlegen. Sie spezifizieren, wie Subsysteme zusammenarbeiten. "
+        },
+        {
+            "term": "Anforderung",
+            "synonym": "Anforderungen",
+            "synonym1": "Requirements",
+            "definition": "Eine Anforderung ist eine übermittelte Eigenschaft oder Fähigkeit, die zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird und gegebenenfalls aufgrund eines formellen Dokuments erfüllt werden muss. ",
+            "definition1": ""
+        },
+        {
+            "term": "Qualitätsanforderung",
+            "synonym": "Qualitätsanforderungen",
+            "synonym1": "nicht funktionale Anforderungen",
+            "definition": "Qualitätsanforderungen sind Aspekte, die typischerweise mehrere oder alle funktionalen Anforderungen betreffen beziehungsweise überschneiden. ",
+            "definition1": "Eine Qualitätsanforderung legt eine qualitative und oder quantitative Eigenschaft des Softwaresystems oder einer seiner Komponenten fest. "
+        },
+        {
+            "term": "funktionale Anforderung",
+            "synonym": "funktionale Anforderungen",
+            "synonym1": "",
+            "definition": "Die funktionalen Anforderungen können umschrieben werden als die Kernaufgaben, die ein System erfüllen muss. ",
+            "definition1": "Die funktionale Anforderung wird definiert als die Festlegung einer vom Softwaresystem oder einer seiner Komponenten bereitzustellende Funktion oder bereitzustellenden Service. "
+        },
+        {
+            "term": "Stakeholder",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Ein Stakeholder ist ein Individuum, eine Gruppe von Personen oder eine Organisation, die ein indirektes oder direktes Interesse an einem System und somit Einfluss auf die Ziele, Anforderungen und Randbedingungen des betrachteten Systems haben. ",
+            "definition1": ""
+        },
+        {
+            "term": "Systemziel",
+            "synonym": "Ziele",
+            "synonym1": "Ziel",
+            "definition": "Ausgehend von einer Vision dienen Ziele dazu, die Vision zu verfeinern und zu operationalisieren. ",
+            "definition1": "Ziele sind die intentionale Beschreibung eines von Stakeholdern gewünschten charakteristischen Merkmals des zu entwickelnden Systems beziehungsweise des zugehörigen Entwicklungsprojekts. "
+        },
+        {
+            "term": "Produktvision",
+            "synonym": "Vision",
+            "synonym1": "",
+            "definition": "Eine Vision ist eine realitätsnahe Vorstellung der gewünschten Zukunft. Sie beschreibt, was erreicht werden soll, sagt aber nicht wie. ",
+            "definition1": "Eine Vision dient als Leitgedanke für alle Stakeholder. "
+        },
+        {
+            "term": "Rahmenbedingungen",
+            "synonym": "Rahmenbedingung",
+            "synonym1": "",
+            "definition": "Eine Rahmenbedingung legt organisatorische und oder technische Restriktionen für das Softwaresystem und oder den Entwicklungsprozess fest. ",
+            "definition1": "In der Literatur wird zwischen technischen und organisatorischen Randbedingungen beziehungsweise Rahmenbedingungen und Konventionen abgegrenzt, wobei die Begrifflichkeiten nicht konsistent verwendet werden. "
+        },
+        {
+            "term": "Kontextabgrenzung",
+            "synonym": "Abgrenzung",
+            "synonym1": "",
+            "definition": "Im Rahmen der Systemanalyse muss die Umgebung und der genaue Umfang des Systems definiert werden. Dafür werden die Systemgrenze und die Kontextgrenze gezogen. ",
+            "definition1": ""
+        },
+        {
+            "term": "Systemgrenze",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Die Systemgrenze zieht einen Strich zwischen dem System und dessen Umgebung. Das System kann Teile außerhalb dieser Grenze nicht durch den Entwicklungsprozess verändern. ",
+            "definition1": ""
+        },
+        {
+            "term": "Kontextgrenze",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Die Kontextgrenze trennt den relevanten Teil eines geplanten Systems vom irrelevanten Teil, das heißt dem Teil der Umgebung, der keinen Einfluss auf das geplante System und dessen Anforderungen hat. ",
+            "definition1": ""
+        },
+        {
+            "term": "Kontext",
+            "synonym": "Systemkontext",
+            "synonym1": "",
+            "definition": "Der Systemkontext befindet sich zwischen Systemgrenze und Kontextgrenze. Er unmfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind, und die nicht im Rahmen der Entwicklung dieses Systems gestaltet werden können. ",
+            "definition1": "Der Systemkontext, auch Systemumfang genannt, besteht aus allen materiellen und immateriellen Objekten, die eine Beziehung zu dem System haben. "
+        }
     ]
 }
