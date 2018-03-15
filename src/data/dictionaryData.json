@@ -267,6 +267,118 @@
             "definition1": "Es gibt das Literal boolean integer, null, real, string und unlimited natural. "
         },
         {
+            "term": "Klasse",
+            "synonym": "Klassen",
+            "synonym1": "Class",
+            "definition": "Unter Klasse versteht die U M L eine Sammlung von Exemplaren, die über gemeinsame Eigen­schaften, Einschränkungen und Semantik verfügen. ",
+            "definition1": "Eine Klasse wird durch ein Rechteck mit durchgezogener Linie dargestellt. Der Name der Klasse steht in Fettdruck und mittig innerhalb des Rechtecks. Der Klassenname wird großgeschrieben. "
+        },
+        {
+            "term": "Abstrakte Klasse",
+            "synonym": "Abstrakte Klassen",
+            "synonym1": "Abstract Class",
+            "definition": "Oftmals ergibt sich der Bedarf, innerhalb der Modellierung Elemente einzuführen, die ledig­lich der Strukturierung und Vereinfachung dienen. Ein solches Element ist die abstrakte Klasse. ",
+            "definition1": "Abstrakte Klassen sind nicht instanziierbar. Der Klassenname wird kursiv gesetzt oder es wird in geschweiften Klammern das Schlagwort: abstract hinzugefügt. "
+        },
+        {
+            "term": "Compartments",
+            "synonym": "Compartment",
+            "synonym1": "",
+            "definition": "Compartments oder auch Abschnitte können unterhalb des Klassennamens angefügt werden, um zum Beispiel Attribute und Operationen zu definieren. ",
+            "definition1": ""
+        },
+        {
+            "term": "Objekt",
+            "synonym": "Objekte",
+            "synonym1": "Object",
+            "definition": "Im Rahmen der U M L wird eine Klasse als Typ interpretiert, dessen Ausprägungen Objekte heißen. ",
+            "definition1": "Für die U M L ist ein Objekt nichts anderes als die Ausprägung einer Klasse. Die Klasse ist der Typ eines Objekts. Objektnamen werden unterstrichen. "
+        },
+        {
+            "term": "Attribut",
+            "synonym": "Property",
+            "synonym1": "Eigenschaft",
+            "definition": "Ein Klassendiagramm enthält nicht nur Aussagen über die Existenz von Klassen, sondern gibt auch Auskunft über die einzelnen Eigenschaften, die bei den konkret betrachte­ten Exemplaren der Klasse mit konkreten Inhaltswerten belegt werden. Diese Eigenschaften werden als Attribute bezeichnet und beschreiben Charakteristika wie Häufigkeit, Datentyp und weitere Einschränkungen. ",
+            "definition1": "Attribute werden üblicherweise im zweiten Abschnitt des Klassensymbols linksbündig untereinander angeordnet. Attributnamen werden kleingeschrieben und Klassenattribute unterstrichen. Ein Plus vor einem Attribut bedeutet public, ein Minus private, ein Doppelkreuz protected und ein Tilde package scoped. "
+        },
+        {
+            "term": "Operation",
+            "synonym": "Operationen",
+            "synonym1": "",
+            "definition": "Die Klassenmodellierung schlägt die Brücke zur dynamischen Betrachtung des Systems, indem sie die auf den Objekten ausgeführten Operationen beziehungsweise Methoden berücksichtigt. Jede Klasse kann wahlfrei Operationen definieren. Im Verlauf der Implementierung können die einer Operation zugeordneten Methoden ein bestimmtes Verhalten auslösen. ",
+            "definition1": "Eine Operation wird immer durch mindestens ihren Namen sowie weitere Angaben spezi­fiziert. Mehrere Operationen werden dabei vertikal untereinander linksbündig typischer­weise im dritten Abschnitt des Klassensymbols angeschrieben. Abstrakte Operationen sind kursiv gesetzt. Klassenoperationen werden unterstrichen. Der Name der Operation wir im Allgemeinen klein gesetzt. "
+        },
+        {
+            "term": "Schnittstelle",
+            "synonym": "Interface",
+            "synonym1": "",
+            "definition": "Eine Schnittstelle oder Interface genannt, beschreibt eine Menge von öffentlichen Operationen, Merk­malen und Verpflichtungen, die durch einen Classifier, der die Schnittstelle implementiert, zwingend bereitgestellt werden müssen. ",
+            "definition1": "In der Standardnotation wird die Schnittstelle mit einem Klassensymbol dargestellt, das mit dem Schlüsselwort interface versehen ist. "
+        },
+        {
+            "term": "Socket",
+            "synonym": "Ball",
+            "synonym1": "",
+            "definition": "Ein großes, nicht ausgefülltes Kreissymbol kennzeichnet, dass ein Element eine gegebene Schnittstelle implementiert. Dies nennt sich Ball. ",
+            "definition1": "Ein durch das Halbkreissymbol, auch Socket genannt, gekennzeichnetes Element kennzeichnet die Notwendigkeit einer Schnittstelle. "
+        },
+        {
+            "term": "Generalisierung",
+            "synonym": "Generalization",
+            "synonym1": "",
+            "definition": "Eine Generalisierung in der U M L ist eine gerichtete Beziehung zwischen einem speziellen und einem generellen Classifier. Instanzen des speziellen Classifiers sind damit auch Instanzen des generellen Classifiers. Konkret bedeutet dies, dass der spezielle Classifier implizit über alle Merkmale des generellen Classifiers verfügt. ",
+            "definition1": "Die Generalisierungsbeziehung zwischen Classifiern wird mit einem Pfeil mit nicht ausge­füllter dreieckiger Pfeilspitze dargestellt. Er zeigt vom spezialisierten Classifier hin zum allgemeinen oder generalisierten Classifier. "
+        },
+        {
+            "term": "Assoziation",
+            "synonym": "Association",
+            "synonym1": "Assoziationen",
+            "definition": "Eine Assoziation beschreibt eine Beziehung zwischen zwei oder mehr Classifiern, im häufigsten Fall eine Verbindung zwischen genau zwei Klassen. Assoziationen definieren dabei eine Beziehung auf Typebene. Auf Instanzebene nennen sich die konkreten Ausprägungen einer Assoziation Link. ",
+            "definition1": "Die binäre Assoziation wird durch eine durchgezogene Linie dargestellt, die die teilnehmenden Classifier - meist Klassen oder Objekte verbindet. Die wichtigsten Angaben einer Assoziation sind ihr Name und die Beschriftung der Enden mit deren Namen und der Multiplizität. "
+        },
+        {
+            "term": "Assoziationsklasse",
+            "synonym": "association class",
+            "synonym1": "Assoziationsklassen",
+            "definition": "Assoziationsklassen werden in Analysephasen von Prozessmodellen verwendet und später zum Entwurf aufgelöst. Dazu werden entweder die Attribute auf die Klassen der Assoziation verteilt, oder die Assoziation wird aufgeteilt, indem die Assoziationsklasse als eigenständige Klasse eingefügt wird. ",
+            "definition1": "Ein Beispiel ist die Auflösung der Assoziationsklasse Ausleihe in der Beziehung zwischen Leser und Buch zur Klasse Ausleihe mit entsprechenden Multiplizitäten. "
+        },
+        {
+            "term": "Abhängigkeit",
+            "synonym": "Dependency",
+            "synonym1": "Abhängigkeitsbeziehung",
+            "definition": "Eine Abhängigkeitsbeziehung in der U M L ist eine gerichtete Beziehung zwischen einem abhängigen und einem unabhängigen Element. ",
+            "definition1": "Eine Abhängigkeitsbeziehung wird in der U M L durch einen gestrichelten Pfeil dargestellt. Der Pfeil zeigt vom abhängigen auf das unabhängige Modellelement. "
+        },
+        {
+            "term": "Verwendung",
+            "synonym": "Usage",
+            "synonym1": "Verwendungsbeziehung",
+            "definition": "Die Verwendungsbeziehung gibt an, dass das abhängige Element das unabhängige Element benutzt. ",
+            "definition1": "Eine Verwendungsbeziehung wird mit dem Schlüsselwort use dekoriert. "
+        },
+        {
+            "term": "Abstraktion",
+            "synonym": "Abstraction",
+            "synonym1": "Abstraktionsbeziehung",
+            "definition": "Falls ein Element eine Abstraktion eines anderen Elements darstellt, kann zwischen den beiden eine Abstraktionsbeziehung modelliert werden. ",
+            "definition1": "Im allgemeinen Fall ist eine Abstraktionsbeziehung am Schlüsselwort abstract erkennbar. Es werden die Schlüsselwörter derive, trace und refine für besondere Formen der Abstraktion verwendet. "
+        },
+        {
+            "term": "Realisierung",
+            "synonym": "realization",
+            "synonym1": "Realisierungsbeziehung",
+            "definition": "Bei der Realisierungsbeziehung steht das unabhängige Element für eine Spezifikation und das abhängige für eine Realisierung derselben. Oft modelliert diese Beziehung, dass eine Klasse eine Schnittstelle implementiert. Das ist ein Muster, das in Modellen für objektorientierte Software häufig vorkommt. ",
+            "definition1": "Obwohl es sich bei der Realisierungsbeziehung um eine spezielle Form der Abstraktions­beziehung handelt, wird sie anders notiert. Statt mit einer offenen Pfeilspitze wird die Realisierung­ durch ein geschlossenes Dreieck am Ende der gestrichelten Linie gekennzeichnet. "
+        },
+        {
+            "term": "Substitution",
+            "synonym": "Substitutionsbeziehung",
+            "synonym1": "",
+            "definition": "Eine Substitutionbeziehung wird als Abstraktionsbeziehung mit dem Schlüsselwort sub­stitute modelliert. Im Gegensatz zu anderen Abstraktionsbeziehungen können Sie hier nur Classifier, also zum Beispiel Klassen, Komponenten oder Use ­Cases verbinden. ",
+            "definition1": "Bei der Substiutionsbeziehung weist die Richtung des Pfeils auf das Element, das ersetzt wird. "
+        },
+        {
             "term": "Requirements Engineering",
             "synonym": "R E",
             "synonym1": "Anforderungsanalyse",

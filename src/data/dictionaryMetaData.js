@@ -58,7 +58,41 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group.....
+// sixth group: specific terms for diagrams     (tmp: 18) -> 56 (+18) = 74  
+    /* Klassendiagramm  (23)
+    // Klasse                                   √
+    // Abstrakte Klasse                         √
+    // Compartments                             √
+    // Objekt                                   √
+    // Attribut                                 √
+    // METHODEN METHODEN METHODEN METHODEN METHODEN!!!!!!
+    // Operation                                √
+    // Interface                                √
+    // Socket                                   √
+    // Generalisierung                          √
+    // Assoziation                              √
+    // Assoziationsklasse                       √
+    // Abhängigkeit                             √
+    // Verwendungsbeziehung                     √
+    // Abstraktionsbeziehung                    √
+                                // DERIVE TRACE REFINE!!!
+                                // INKLUSION!!!
+                                // Verteilungsbeziehung
+    // Substitutionsbeziehung                   √
+    // Realisierungsbeziehung                   √
+    // Informationsfluss                        √
+    // Informationseinheit                      √
+    // Multiplizität
+    // Kardinalität
+    // Aggregation
+    // Komposition
+    // Vererbung
+    // 
+    */
+
+    /*
+    Objektdiagramm
+    */
 
 
 // last group: big picture                      (18) -> 56         
@@ -79,4 +113,7 @@
     // Kontextabgrenzung                        √ √
     // Systemgrenze                             √ √
     // Kontextgrenze                            √ √
-    // Kontext                                  √ √                        
+    // Kontext                                  √ √         
+    
+    
+    // TODO: 
