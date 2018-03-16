@@ -58,20 +58,22 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 18) -> 56 (+18) = 74  
+// sixth group: specific terms for diagrams     (tmp: 23) -> 61 (+18) = 79  
     /* Klassendiagramm  (23)
     // Klasse                                   √
     // Abstrakte Klasse                         √
     // Compartments                             √
     // Objekt                                   √
     // Attribut                                 √
-    // METHODEN METHODEN METHODEN METHODEN METHODEN!!!!!!
+    // METHODEN METHODEN METHODEN METHODEN !!!!!!
     // Operation                                √
     // Interface                                √
     // Socket                                   √
     // Generalisierung                          √
     // Assoziation                              √
     // Assoziationsklasse                       √
+    // Aggregation                              √
+    // Komposition                              √
     // Abhängigkeit                             √
     // Verwendungsbeziehung                     √
     // Abstraktionsbeziehung                    √
@@ -80,13 +82,11 @@
                                 // Verteilungsbeziehung
     // Substitutionsbeziehung                   √
     // Realisierungsbeziehung                   √
+    // Vererbung                                √
     // Informationsfluss                        √
     // Informationseinheit                      √
-    // Multiplizität
-    // Kardinalität
-    // Aggregation
-    // Komposition
-    // Vererbung
+    // Multiplizität                            √
+    // Kardinalität                             √      
     // 
     */
 
@@ -116,4 +116,4 @@
     // Kontext                                  √ √         
     
     
-    // TODO: 
+    // TODO: PIN (in Mulitplizität verwendet)

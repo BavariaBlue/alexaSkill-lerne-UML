@@ -344,6 +344,20 @@
             "definition1": "Ein Beispiel ist die Auflösung der Assoziationsklasse Ausleihe in der Beziehung zwischen Leser und Buch zur Klasse Ausleihe mit entsprechenden Multiplizitäten. "
         },
         {
+            "term": "Aggregation",
+            "synonym": "Aggregationen",
+            "synonym1": "aggregation",
+            "definition": "Eine Aggregation drückt eine Teile-­Ganzes­-Beziehung aus. Die aggregierten Instanzen einer Klasse sind dabei Teil eines Ganzen, das durch die Klasse am anderen Beziehungsende repräsentiert wird. In Java ist die Aggregation der Normalfall. In C++ wird die Aggregation durch die Verwendung eines Zeigers implementiert. ",
+            "definition1": "Eine ungefüllte Raute an einem Ende der Assoziation wird als Aggregation bezeichnet und drückt aus, dass Objekte der Klasse B zu Objekten der Klasse A gehören, B-Objekte aber auch allein existieren können. "
+        },
+        {
+            "term": "Komposition",
+            "synonym": "composition",
+            "synonym1": "composite aggregation",
+            "definition": "Die Komposition als Sonderfall der Aggregation beschreibt die Beziehung zwischen einem Ganzen und seinen Teilen. Der Unterschied zur Aggregation ist, dass die Existenz eines Objekts, das Teil eines Ganzen ist, von der Existenz des Ganzen abhängig ist. Die Komposition kann in Java nicht direkt abgebildet werden. In C++ ist die Abbildung einer Komposition bei Attributen der Normalfall. ",
+            "definition1": "Eine Komposition beschreibt einen azyklischen gerichteten Graph. Die ausgefüllte Raute am Ende der Assoziation verbildlicht die Komposition. Die Raute befindet sich dabei auf der Seite des dominierenden Elements. "
+        },
+        {
             "term": "Abhängigkeit",
             "synonym": "Dependency",
             "synonym1": "Abhängigkeitsbeziehung",
@@ -365,6 +379,13 @@
             "definition1": "Im allgemeinen Fall ist eine Abstraktionsbeziehung am Schlüsselwort abstract erkennbar. Es werden die Schlüsselwörter derive, trace und refine für besondere Formen der Abstraktion verwendet. "
         },
         {
+            "term": "Substitution",
+            "synonym": "Substitutionsbeziehung",
+            "synonym1": "",
+            "definition": "Eine Substitutionbeziehung wird als Abstraktionsbeziehung mit dem Schlüsselwort sub­stitute modelliert. Im Gegensatz zu anderen Abstraktionsbeziehungen können Sie hier nur Classifier, also zum Beispiel Klassen, Komponenten oder Use ­Cases verbinden. ",
+            "definition1": "Bei der Substiutionsbeziehung weist die Richtung des Pfeils auf das Element, das ersetzt wird. "
+        },
+        {
             "term": "Realisierung",
             "synonym": "realization",
             "synonym1": "Realisierungsbeziehung",
@@ -372,11 +393,39 @@
             "definition1": "Obwohl es sich bei der Realisierungsbeziehung um eine spezielle Form der Abstraktions­beziehung handelt, wird sie anders notiert. Statt mit einer offenen Pfeilspitze wird die Realisierung­ durch ein geschlossenes Dreieck am Ende der gestrichelten Linie gekennzeichnet. "
         },
         {
-            "term": "Substitution",
-            "synonym": "Substitutionsbeziehung",
+            "term": "Vererbung",
+            "synonym": "Inheritance",
+            "synonym1": "Vererbungsbeziehung",
+            "definition": "Eine Vererbungsbeziehung spielt sich rein auf der Klassenebene ab und ist dementsprechend im Objektdiagramm nicht sichtbar. Dies unterscheidet Vererbungen von Assoziationen, die sehr wohl in Objektdiagrammen zu sehen sind. ",
+            "definition1": "Eine Vererbungsbeziehung wird durch eine Linie, die am Ende eine ungefüllte, recht breite Pfeilspitze besitzt, dargestellt. Diese Art der Verbindung darf nicht mit der gerichteten Assoziation verwechselt werden, bei der gefüllte, schmale Pfeilspitzen verwendet werden. "
+        },
+        {
+            "term": "Informationsfluss",
+            "synonym": "information flow",
             "synonym1": "",
-            "definition": "Eine Substitutionbeziehung wird als Abstraktionsbeziehung mit dem Schlüsselwort sub­stitute modelliert. Im Gegensatz zu anderen Abstraktionsbeziehungen können Sie hier nur Classifier, also zum Beispiel Klassen, Komponenten oder Use ­Cases verbinden. ",
-            "definition1": "Bei der Substiutionsbeziehung weist die Richtung des Pfeils auf das Element, das ersetzt wird. "
+            "definition": "Ein Informationsfluss spezifiziert, dass Informationselemente von ihren Quellen zu ihren Zielen zirkulieren. Der Informationfluss benötigt einen Informationskanal, über den die Elemente übertragen werden. ",
+            "definition1": "Ein Informationsfluss wird als Abhängigkeitsbeziehung mit dem Schlüsselwort flow notiert. Der Pfeil zeigt von der Quelle zum Ziel der Informationsübertragung. "
+        },
+        {
+            "term": "Informationseinheit",
+            "synonym": "information item",
+            "synonym1": "",
+            "definition": "Eine Informationseinheit ist eine Abstraktion aller Arten von Informationen, die zwischen Objekten getauscht werden können. Die Informationseinheit ist eine Art Classifier, der die Information auf einem sehr abstrakten Niveau repräsentiert. ",
+            "definition1": "Eine Informationseinheit wird entweder mit einem schwarzen Dreieck in der oberen rechten Ecke oder alternativ als Classifier mit dem Schlüsselwort information gekennzeichnet. "
+        },
+        {
+            "term": "Multiplizität",
+            "synonym": "Multiplizitäten",
+            "synonym1": "Multiplicity",
+            "definition": "Multiplizität bezeichnet ein Intervall von nicht-negativen, ganzen Zahlen in der U M L. Das Intervall ist durch eine untere und eine obere Grenze bestimmt. Für ein Modellelement der U M L, das eine Multiplizität hat, gilt meistens, dass es eine Anzahl Werte oder Objekte halten kann. ",
+            "definition1": "Elemente wie das Attribut, der Parameter, die Assoziationen oder der Pin haben eine Multiplizität. Bei den ersten beiden wird die Multiplizität in eckigen Klammern hinter dem Namen bzw. Typ angegeben. "
+        },
+        {
+            "term": "Kardinalität",
+            "synonym": "Kardinalitäten",
+            "synonym1": "",
+            "definition": "Kardinalitäten sind Mengenangaben, mit denen in der Datenmodellierung für jeden Beziehungstyp festgelegt wird, wie viele Entitäten eines Entitätstyps mit genau einer Entität des anderen am Beziehungstyp beteiligten Entitätstyps und umgekehrt in Beziehung stehen können oder müssen. ",
+            "definition1": "Ein Beispiel: Mitarbeiter arbeitet in Abteilung. Jeder Mitarbeiter arbeitet in genau einer Abteilung; in jeder Abteilung können N Mitarbeiter arbeiten. Die Kardinalität ist hier also N Doppelpunkt Eins. Weitere gängige Kardinalitäten sind Eins zu Eins sowie N zu M Beziehungen. "
         },
         {
             "term": "Requirements Engineering",

@@ -2,6 +2,7 @@
 Alexa Skill for learning UML basics as a student
 
 Including three main features: DICTIONARY, QUIZ and personal SCORE.
+---- German Edition ----
 
 The following utterances are recommended:
 Required pre-actions written in braces ()
