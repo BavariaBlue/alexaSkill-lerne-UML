@@ -58,8 +58,9 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 23) -> 61 (+18) = 79  
-    /* Klassendiagramm  (23)
+// sixth group: specific terms for diagrams     (tmp: 23+4+5+2) = 34 (+ 38) ->  72 (+ 18) = 90 
+    /* 
+    Klassendiagramm             (23)
     // Klasse                                   √
     // Abstrakte Klasse                         √
     // Compartments                             √
@@ -91,16 +92,38 @@
     */
 
     /*
-    Objektdiagramm
+    Objektdiagramm              (4)
+    // Instanzbeschreibung                      √                   
+    // Wertangabe                               √
+    // Link                                     √
+    // Instanz                                  √
     // 
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
+    */
+
+    /*
+    Paketdiagramm               (5)
+    // Paket                                    √
+    // Paket-Imort                              √
+    // Element-Import                           √                
+    // Paket Merge                              √
+    // Namensraum                               √
+    // 
+    */
+
+    /*
+    Komponentendiagramm         (2)
+    // Komponente                               √
+    // Artefakt                                 √
+    // 
+    */
+
+   /*
+   Kompositionsstrukturdiagramm ()
+    // Part
+    // Konnektor
+    // Port
+    // Kollaboration
+    // Kollaborationsanwendung
     // 
     */
 

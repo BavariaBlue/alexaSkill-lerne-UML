@@ -428,6 +428,83 @@
             "definition1": "Ein Beispiel: Mitarbeiter arbeitet in Abteilung. Jeder Mitarbeiter arbeitet in genau einer Abteilung; in jeder Abteilung können N Mitarbeiter arbeiten. Die Kardinalität ist hier also N Doppelpunkt Eins. Weitere gängige Kardinalitäten sind Eins zu Eins sowie N zu M Beziehungen. "
         },
         {
+            "term": "Instanzbeschreibung",
+            "synonym": "instance specification",
+            "synonym1": "",
+            "definition": "Eine Instanz, präziser eine Instanzbeschreibung, beschreibt eine zur Laufzeit vorhanden Einheit des modellierten Systems. In vielen Fällen handelt es sich bei Instanzbeschreibungen um Objekte, also Instanzen von Klassen. ",
+            "definition1": "Für Instanzbeschreibungen sieht die UML kein eigenes Notationselement vor, sondern übernimmt die Notation des Classifiers der Instanz. "
+        },
+        {
+            "term": "Wertangabe",
+            "synonym": "Slot",
+            "synonym1": "Wertangaben",
+            "definition": "Im Objektdiagramm ist es möglich, Werte von Strukturelementen einer Instanz zu einem bestimmten Zeitpunkt zu modellieren. Es handelt sich hierbei beispielsweise um Werte von Attributen einer Klasse. ",
+            "definition1": "Ein Wert wird typischerweise in einer Instanzbeschreibung durch ein Gleichheitszeichen abgetrennt nach dem Namen des Attributs notiert. Auch die Notation über einen Link ist möglich. "
+        },
+        {
+            "term": "Link",
+            "synonym": "",
+            "synonym1": "",
+            "definition": "Der Link stellt eine Instanz der Assoziation dar. Links sind also Beziehungen in Objektdiagrammen, die aus den Assoziationen der Klassendiagrammen hergeleitet werden. ",
+            "definition1": "Ein Link übernimmt weitestgehend die Notation der Assoziation. "
+        },
+        {
+            "term": "Instanz",
+            "synonym": "Instance",
+            "synonym1": "Instanzen",
+            "definition": "Die U M L kennt im Wesentlichen drei Arten von Instanzen. Das Objekt als Instanz einer Klasse, den Link als Instanz einer Assoziation und den Wert eines Attributs oder einfachen Objekts. ",
+            "definition1": ""
+        },
+        {
+            "term": "Paket",
+            "synonym": "package",
+            "synonym1": "",
+            "definition": "Ein Paket fasst mehrere paketierbare Elemente - meist Classifier - zu einer größe­ren Einheit zusammen. Beachten, dass jedes paketierbare Element nur in einem - oder keinem - Paket enthalten sein darf. ",
+            "definition1": "Ein Paket wird durch ein Rechteck dargestellt, das den Bezeichner auf der Lasche oben links trägt. Innerhalb des Rechtecks werden die zugehörigen Elemente eingetragen. Jedem Element kann eine Sicht­barkeit mitgegeben werden. "
+        },
+        {
+            "term": "Paket Import",
+            "synonym": "Import",
+            "synonym1": "package import",
+            "definition": "Ein Paket­-Import wird durch eine gerichtete Beziehung zwischen zwei Paketen definiert. Ein Quellpaket möchte Zugriff auf die Elemente eines anderen Pakets, des Zielpakets, besitzen. ",
+            "definition1": "Ein Paket-Import wird durch einen gestrichelten Pfeil dargestellt. Das Schlüsselwort oberhalb des Pfeils macht diesen als Importpfeil kenntlich. Verwende import für einen public import, access für einen privaten import."
+        },
+        {
+            "term": "Element Import",
+            "synonym": "element import",
+            "synonym1": "Elementimport",
+            "definition": "Ein Element-Import identifiziert ein Element eines anderen Pakets, und erlaubt es, das Element mittels seines Namens statt seines Classifiers zu referenzieren. ",
+            "definition1": "Ein Element-Import wird durch einen gestrichelten Pfeil dargestellt. Das Schlüsselwort oberhalb des Pfeils macht diesen als Importpfeil kenntlich. Verwende import für einen public import, access für einen privaten import."
+        },
+        {
+            "term": "Paket Merge",
+            "synonym": "package merge",
+            "synonym1": "",
+            "definition": "Das Paket­-Merge stellt eine Erweiterung des Paket­-Imports dar. Während durch einen Import lediglich die entsprechenden Classifier verwendet werden dürfen, werden bei einem Paket­-Merge implizit neue, spezialisierte Classifier angelegt, die Sie dann verändern können. ",
+            "definition1": "Ein Paket­-Merge wird durch eine Abhängigkeitsnotation und das Stereotyp merge dar­gestellt."
+        },
+        {
+            "term": "Namensraum",
+            "synonym": "namespace",
+            "synonym1": "Namen Raum",
+            "definition": "Ein Namensraum ist eine Sammelbox für beliebig viele benennbare Elemente. Innerhalb eines Namensraums müssen alle Elemente eindeutig durch ihren Namen identifizierbar sein. Beispiele für Namensräume sind Pakete, Klassen, Komponenten aber auch Zustände, Use­Cases und so weiter. ",
+            "definition1": "Zwei Modellelemente in unterschiedlichen Namensräumen dürfen durchaus den gleichen Namen haben. Sie unterscheiden sich in diesem Fall in ihrem qualifizierten Namen. Der qualifizierte Name eines Modellelements besteht aus dem einfachen Namen, dem die Namen aller umschließenden Namensräume vorangestellt sind. Die einzelnen Segmente des qualifizierten Namens werden mit einem doppelten Doppelpunkt abgetrennt. "
+        },
+        {
+            "term": "Komponente",
+            "synonym": "component",
+            "synonym1": "",
+            "definition": "Unter einer Komponente versteht man einen modularen Systemteil, der seinen Inhalt trans­parent kapselt und so vor dem Nutzer verbirgt. Jede Komponente selbst besteht aus darin eingeschlossenen Modellelementen, wie Klassen oder wiederum Komponenten, die gemeinsam eine klar definierte Funktionalität anbieten. Die Komponente ist nicht nur ein Datenlieferant, sondern eine eigenständige Anwendung. ",
+            "definition1": "Komponenten werden durch ein mit dem Schlüsselwort component versehenes Klassensymbol dargestellt. Einheiten großer Systeme kannst du alternativ zu component auch mit dem Stereotyps sub System kennzeichnen. "
+        },
+        {
+            "term": "Artefakt",
+            "synonym": "artefact",
+            "synonym1": "",
+            "definition": "Das Artefakt stellt eine physische Informationseinheit dar. Hierbei kann es sich um Mo­delle, Quellcode, Skripte, ausführbare Binärdateien, Tabellen innerhalb einer relationalen Datenbank, Dokumente einer Textverarbeitung, E­mails oder andere Dinge handeln, die im Softwareentwicklungsprozess oder zur Laufzeit eines Systems produziert oder konsumiert werden. ",
+            "definition1": "Sinnvolle Stereotypen für Artefakte sind: file, document, executable, source, oder library. Ein Artefakt wird durch ein mit dem Schlüsselwort artifact versehenes Classifier-Symbol dargestellt. Zusätzlich wird in der rechten oberen Ecke ein stilisiertes Dokument symbolisch platziert. "
+        },
+        {
             "term": "Requirements Engineering",
             "synonym": "R E",
             "synonym1": "Anforderungsanalyse",
