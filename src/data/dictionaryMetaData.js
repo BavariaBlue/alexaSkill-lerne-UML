@@ -61,59 +61,59 @@
 // sixth group: specific terms for diagrams     (tmp: 23+4+5+2) = 34 (+ 38) ->  72 (+ 18) = 90 
     /* 
     Klassendiagramm             (23)
-    // Klasse                                   √
-    // Abstrakte Klasse                         √
-    // Compartments                             √
-    // Objekt                                   √
-    // Attribut                                 √
+    // Klasse                                   √ √
+    // Abstrakte Klasse                         √ √
+    // Compartments                             √ √
+    // Objekt                                   √ √
+    // Attribut                                 √ √
     // METHODEN METHODEN METHODEN METHODEN !!!!!!
-    // Operation                                √
-    // Interface                                √
-    // Socket                                   √
-    // Generalisierung                          √
-    // Assoziation                              √
-    // Assoziationsklasse                       √
-    // Aggregation                              √
-    // Komposition                              √
-    // Abhängigkeit                             √
-    // Verwendungsbeziehung                     √
-    // Abstraktionsbeziehung                    √
+    // Operation                                √ √
+    // Interface                                √ √
+    // Socket                                   √ √
+    // Generalisierung                          √ √
+    // Assoziation                              √ √
+    // Assoziationsklasse                       √ √
+    // Aggregation                              √ √
+    // Komposition                              √ √
+    // Abhängigkeit                             √ √
+    // Verwendungsbeziehung                     √ √
+    // Abstraktionsbeziehung                    √ √
                                 // DERIVE TRACE REFINE!!!
                                 // INKLUSION!!!
                                 // Verteilungsbeziehung
-    // Substitutionsbeziehung                   √
-    // Realisierungsbeziehung                   √
-    // Vererbung                                √
-    // Informationsfluss                        √
-    // Informationseinheit                      √
-    // Multiplizität                            √
-    // Kardinalität                             √      
+    // Substitutionsbeziehung                   √ √
+    // Realisierungsbeziehung                   √ √
+    // Vererbung                                √ √
+    // Informationsfluss                        √ √
+    // Informationseinheit                      √ √
+    // Multiplizität                            √ √
+    // Kardinalität                             √ √      
     // 
     */
 
     /*
     Objektdiagramm              (4)
-    // Instanzbeschreibung                      √                   
-    // Wertangabe                               √
-    // Link                                     √
-    // Instanz                                  √
+    // Instanzbeschreibung                      √ √                 
+    // Wertangabe                               √ √
+    // Link                                     √ √
+    // Instanz                                  √ √
     // 
     */
 
     /*
     Paketdiagramm               (5)
-    // Paket                                    √
-    // Paket-Imort                              √
-    // Element-Import                           √                
-    // Paket Merge                              √
-    // Namensraum                               √
+    // Paket                                    √ √
+    // Paket-Imort                              √ √
+    // Element-Import                           √ √               
+    // Paket Merge                              √ √
+    // Namensraum                               √ √
     // 
     */
 
     /*
     Komponentendiagramm         (2)
-    // Komponente                               √
-    // Artefakt                                 √
+    // Komponente                               √ √
+    // Artefakt                                 √ √
     // 
     */
 

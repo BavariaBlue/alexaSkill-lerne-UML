@@ -304,14 +304,14 @@
         {
             "term": "Operation",
             "synonym": "Operationen",
-            "synonym1": "",
+            "synonym1": "operation",
             "definition": "Die Klassenmodellierung schlägt die Brücke zur dynamischen Betrachtung des Systems, indem sie die auf den Objekten ausgeführten Operationen beziehungsweise Methoden berücksichtigt. Jede Klasse kann wahlfrei Operationen definieren. Im Verlauf der Implementierung können die einer Operation zugeordneten Methoden ein bestimmtes Verhalten auslösen. ",
             "definition1": "Eine Operation wird immer durch mindestens ihren Namen sowie weitere Angaben spezi­fiziert. Mehrere Operationen werden dabei vertikal untereinander linksbündig typischer­weise im dritten Abschnitt des Klassensymbols angeschrieben. Abstrakte Operationen sind kursiv gesetzt. Klassenoperationen werden unterstrichen. Der Name der Operation wir im Allgemeinen klein gesetzt. "
         },
         {
             "term": "Schnittstelle",
-            "synonym": "Interface",
-            "synonym1": "",
+            "synonym": "interface",
+            "synonym1": "Interface",
             "definition": "Eine Schnittstelle oder Interface genannt, beschreibt eine Menge von öffentlichen Operationen, Merk­malen und Verpflichtungen, die durch einen Classifier, der die Schnittstelle implementiert, zwingend bereitgestellt werden müssen. ",
             "definition1": "In der Standardnotation wird die Schnittstelle mit einem Klassensymbol dargestellt, das mit dem Schlüsselwort interface versehen ist. "
         },
@@ -324,14 +324,14 @@
         },
         {
             "term": "Generalisierung",
-            "synonym": "Generalization",
-            "synonym1": "",
+            "synonym": "generalization",
+            "synonym1": "Generalisation",
             "definition": "Eine Generalisierung in der U M L ist eine gerichtete Beziehung zwischen einem speziellen und einem generellen Classifier. Instanzen des speziellen Classifiers sind damit auch Instanzen des generellen Classifiers. Konkret bedeutet dies, dass der spezielle Classifier implizit über alle Merkmale des generellen Classifiers verfügt. ",
             "definition1": "Die Generalisierungsbeziehung zwischen Classifiern wird mit einem Pfeil mit nicht ausge­füllter dreieckiger Pfeilspitze dargestellt. Er zeigt vom spezialisierten Classifier hin zum allgemeinen oder generalisierten Classifier. "
         },
         {
             "term": "Assoziation",
-            "synonym": "Association",
+            "synonym": "association",
             "synonym1": "Assoziationen",
             "definition": "Eine Assoziation beschreibt eine Beziehung zwischen zwei oder mehr Classifiern, im häufigsten Fall eine Verbindung zwischen genau zwei Klassen. Assoziationen definieren dabei eine Beziehung auf Typebene. Auf Instanzebene nennen sich die konkreten Ausprägungen einer Assoziation Link. ",
             "definition1": "Die binäre Assoziation wird durch eine durchgezogene Linie dargestellt, die die teilnehmenden Classifier - meist Klassen oder Objekte verbindet. Die wichtigsten Angaben einer Assoziation sind ihr Name und die Beschriftung der Enden mit deren Namen und der Multiplizität. "
@@ -359,21 +359,21 @@
         },
         {
             "term": "Abhängigkeit",
-            "synonym": "Dependency",
+            "synonym": "dependency",
             "synonym1": "Abhängigkeitsbeziehung",
             "definition": "Eine Abhängigkeitsbeziehung in der U M L ist eine gerichtete Beziehung zwischen einem abhängigen und einem unabhängigen Element. ",
             "definition1": "Eine Abhängigkeitsbeziehung wird in der U M L durch einen gestrichelten Pfeil dargestellt. Der Pfeil zeigt vom abhängigen auf das unabhängige Modellelement. "
         },
         {
             "term": "Verwendung",
-            "synonym": "Usage",
+            "synonym": "usage",
             "synonym1": "Verwendungsbeziehung",
             "definition": "Die Verwendungsbeziehung gibt an, dass das abhängige Element das unabhängige Element benutzt. ",
             "definition1": "Eine Verwendungsbeziehung wird mit dem Schlüsselwort use dekoriert. "
         },
         {
             "term": "Abstraktion",
-            "synonym": "Abstraction",
+            "synonym": "abstraction",
             "synonym1": "Abstraktionsbeziehung",
             "definition": "Falls ein Element eine Abstraktion eines anderen Elements darstellt, kann zwischen den beiden eine Abstraktionsbeziehung modelliert werden. ",
             "definition1": "Im allgemeinen Fall ist eine Abstraktionsbeziehung am Schlüsselwort abstract erkennbar. Es werden die Schlüsselwörter derive, trace und refine für besondere Formen der Abstraktion verwendet. "
@@ -381,7 +381,7 @@
         {
             "term": "Substitution",
             "synonym": "Substitutionsbeziehung",
-            "synonym1": "",
+            "synonym1": "substitution",
             "definition": "Eine Substitutionbeziehung wird als Abstraktionsbeziehung mit dem Schlüsselwort sub­stitute modelliert. Im Gegensatz zu anderen Abstraktionsbeziehungen können Sie hier nur Classifier, also zum Beispiel Klassen, Komponenten oder Use ­Cases verbinden. ",
             "definition1": "Bei der Substiutionsbeziehung weist die Richtung des Pfeils auf das Element, das ersetzt wird. "
         },
@@ -394,7 +394,7 @@
         },
         {
             "term": "Vererbung",
-            "synonym": "Inheritance",
+            "synonym": "inheritance",
             "synonym1": "Vererbungsbeziehung",
             "definition": "Eine Vererbungsbeziehung spielt sich rein auf der Klassenebene ab und ist dementsprechend im Objektdiagramm nicht sichtbar. Dies unterscheidet Vererbungen von Assoziationen, die sehr wohl in Objektdiagrammen zu sehen sind. ",
             "definition1": "Eine Vererbungsbeziehung wird durch eine Linie, die am Ende eine ungefüllte, recht breite Pfeilspitze besitzt, dargestellt. Diese Art der Verbindung darf nicht mit der gerichteten Assoziation verwechselt werden, bei der gefüllte, schmale Pfeilspitzen verwendet werden. "
@@ -402,28 +402,28 @@
         {
             "term": "Informationsfluss",
             "synonym": "information flow",
-            "synonym1": "",
+            "synonym1": "Informationsflüsse",
             "definition": "Ein Informationsfluss spezifiziert, dass Informationselemente von ihren Quellen zu ihren Zielen zirkulieren. Der Informationfluss benötigt einen Informationskanal, über den die Elemente übertragen werden. ",
             "definition1": "Ein Informationsfluss wird als Abhängigkeitsbeziehung mit dem Schlüsselwort flow notiert. Der Pfeil zeigt von der Quelle zum Ziel der Informationsübertragung. "
         },
         {
             "term": "Informationseinheit",
             "synonym": "information item",
-            "synonym1": "",
+            "synonym1": "Informationseinheiten",
             "definition": "Eine Informationseinheit ist eine Abstraktion aller Arten von Informationen, die zwischen Objekten getauscht werden können. Die Informationseinheit ist eine Art Classifier, der die Information auf einem sehr abstrakten Niveau repräsentiert. ",
             "definition1": "Eine Informationseinheit wird entweder mit einem schwarzen Dreieck in der oberen rechten Ecke oder alternativ als Classifier mit dem Schlüsselwort information gekennzeichnet. "
         },
         {
             "term": "Multiplizität",
             "synonym": "Multiplizitäten",
-            "synonym1": "Multiplicity",
+            "synonym1": "multiplicity",
             "definition": "Multiplizität bezeichnet ein Intervall von nicht-negativen, ganzen Zahlen in der U M L. Das Intervall ist durch eine untere und eine obere Grenze bestimmt. Für ein Modellelement der U M L, das eine Multiplizität hat, gilt meistens, dass es eine Anzahl Werte oder Objekte halten kann. ",
             "definition1": "Elemente wie das Attribut, der Parameter, die Assoziationen oder der Pin haben eine Multiplizität. Bei den ersten beiden wird die Multiplizität in eckigen Klammern hinter dem Namen bzw. Typ angegeben. "
         },
         {
             "term": "Kardinalität",
             "synonym": "Kardinalitäten",
-            "synonym1": "",
+            "synonym1": "cardinality",
             "definition": "Kardinalitäten sind Mengenangaben, mit denen in der Datenmodellierung für jeden Beziehungstyp festgelegt wird, wie viele Entitäten eines Entitätstyps mit genau einer Entität des anderen am Beziehungstyp beteiligten Entitätstyps und umgekehrt in Beziehung stehen können oder müssen. ",
             "definition1": "Ein Beispiel: Mitarbeiter arbeitet in Abteilung. Jeder Mitarbeiter arbeitet in genau einer Abteilung; in jeder Abteilung können N Mitarbeiter arbeiten. Die Kardinalität ist hier also N Doppelpunkt Eins. Weitere gängige Kardinalitäten sind Eins zu Eins sowie N zu M Beziehungen. "
         },
@@ -443,7 +443,7 @@
         },
         {
             "term": "Link",
-            "synonym": "",
+            "synonym": "link",
             "synonym1": "",
             "definition": "Der Link stellt eine Instanz der Assoziation dar. Links sind also Beziehungen in Objektdiagrammen, die aus den Assoziationen der Klassendiagrammen hergeleitet werden. ",
             "definition1": "Ein Link übernimmt weitestgehend die Notation der Assoziation. "
@@ -458,13 +458,13 @@
         {
             "term": "Paket",
             "synonym": "package",
-            "synonym1": "",
+            "synonym1": "Pakete",
             "definition": "Ein Paket fasst mehrere paketierbare Elemente - meist Classifier - zu einer größe­ren Einheit zusammen. Beachten, dass jedes paketierbare Element nur in einem - oder keinem - Paket enthalten sein darf. ",
             "definition1": "Ein Paket wird durch ein Rechteck dargestellt, das den Bezeichner auf der Lasche oben links trägt. Innerhalb des Rechtecks werden die zugehörigen Elemente eingetragen. Jedem Element kann eine Sicht­barkeit mitgegeben werden. "
         },
         {
             "term": "Paket Import",
-            "synonym": "Import",
+            "synonym": "Paketimport",
             "synonym1": "package import",
             "definition": "Ein Paket­-Import wird durch eine gerichtete Beziehung zwischen zwei Paketen definiert. Ein Quellpaket möchte Zugriff auf die Elemente eines anderen Pakets, des Zielpakets, besitzen. ",
             "definition1": "Ein Paket-Import wird durch einen gestrichelten Pfeil dargestellt. Das Schlüsselwort oberhalb des Pfeils macht diesen als Importpfeil kenntlich. Verwende import für einen public import, access für einen privaten import."
@@ -479,7 +479,7 @@
         {
             "term": "Paket Merge",
             "synonym": "package merge",
-            "synonym1": "",
+            "synonym1": "Paket-Merge",
             "definition": "Das Paket­-Merge stellt eine Erweiterung des Paket­-Imports dar. Während durch einen Import lediglich die entsprechenden Classifier verwendet werden dürfen, werden bei einem Paket­-Merge implizit neue, spezialisierte Classifier angelegt, die Sie dann verändern können. ",
             "definition1": "Ein Paket­-Merge wird durch eine Abhängigkeitsnotation und das Stereotyp merge dar­gestellt."
         },
@@ -493,14 +493,14 @@
         {
             "term": "Komponente",
             "synonym": "component",
-            "synonym1": "",
+            "synonym1": "Komponenten",
             "definition": "Unter einer Komponente versteht man einen modularen Systemteil, der seinen Inhalt trans­parent kapselt und so vor dem Nutzer verbirgt. Jede Komponente selbst besteht aus darin eingeschlossenen Modellelementen, wie Klassen oder wiederum Komponenten, die gemeinsam eine klar definierte Funktionalität anbieten. Die Komponente ist nicht nur ein Datenlieferant, sondern eine eigenständige Anwendung. ",
             "definition1": "Komponenten werden durch ein mit dem Schlüsselwort component versehenes Klassensymbol dargestellt. Einheiten großer Systeme kannst du alternativ zu component auch mit dem Stereotyps sub System kennzeichnen. "
         },
         {
             "term": "Artefakt",
             "synonym": "artefact",
-            "synonym1": "",
+            "synonym1": "Artefakte",
             "definition": "Das Artefakt stellt eine physische Informationseinheit dar. Hierbei kann es sich um Mo­delle, Quellcode, Skripte, ausführbare Binärdateien, Tabellen innerhalb einer relationalen Datenbank, Dokumente einer Textverarbeitung, E­mails oder andere Dinge handeln, die im Softwareentwicklungsprozess oder zur Laufzeit eines Systems produziert oder konsumiert werden. ",
             "definition1": "Sinnvolle Stereotypen für Artefakte sind: file, document, executable, source, oder library. Ein Artefakt wird durch ein mit dem Schlüsselwort artifact versehenes Classifier-Symbol dargestellt. Zusätzlich wird in der rechten oberen Ecke ein stilisiertes Dokument symbolisch platziert. "
         },
@@ -626,7 +626,7 @@
         {
             "term": "Kontext",
             "synonym": "Systemkontext",
-            "synonym1": "",
+            "synonym1": "Context",
             "definition": "Der Systemkontext befindet sich zwischen Systemgrenze und Kontextgrenze. Er unmfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind, und die nicht im Rahmen der Entwicklung dieses Systems gestaltet werden können. ",
             "definition1": "Der Systemkontext, auch Systemumfang genannt, besteht aus allen materiellen und immateriellen Objekten, die eine Beziehung zu dem System haben. "
         }
