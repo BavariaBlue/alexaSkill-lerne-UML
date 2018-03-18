@@ -505,6 +505,83 @@
             "definition1": "Sinnvolle Stereotypen für Artefakte sind: file, document, executable, source, oder library. Ein Artefakt wird durch ein mit dem Schlüsselwort artifact versehenes Classifier-Symbol dargestellt. Zusätzlich wird in der rechten oberen Ecke ein stilisiertes Dokument symbolisch platziert. "
         },
         {
+            "term": "Part",
+            "synonym": "part",
+            "synonym1": "Parts",
+            "definition": "Parts sind Teile eines Classifiers, die bei dessen Instanziierung mit instanziiert werden und danach eine bestimmte Rolle einnehmen. Sie strukturieren den Classifier und stehen mit ihm in Kompositionsbeziehung. Parts können durch Attribute oder andere Classifier gebildet werden. ",
+            "definition1": "Ein Part wird als Rechteck innerhalb eines ihn umgebenden struk­turierten Classifiers beziehungsweise einer Klasse gezeichnet."
+        },
+        {
+            "term": "Konnektor",
+            "synonym": "connector",
+            "synonym1": "Konnektoren",
+            "definition": "Ein Konnektor spezifiziert eine Kommunikationsverbindung zwischen sogenannten verbindbaren Elementen und damit insbesondere zwischen Parts und Parts, Parts und Ports, oder Ports und Ports beziehungsweise genauer zwischen deren Instanzen. Der Unterschied zu einer Assoziation liegt in der Definition und Anwendung von Parts begründet. ",
+            "definition1": "Ein Konnektor wird ähnlich wie eine Assoziation als einfache durchgezogene Linie dargestellt. "
+        },
+        {
+            "term": "Port",
+            "synonym": "port",
+            "synonym1": "Ports",
+            "definition": "Ein Port ist ein Kommunikationspunkt zwischen einem Classifier beziehungsweise einer Klasse oder einem Part und seiner Außenwelt. ",
+            "definition1": "Ein Port wird als kleines Quadrat notiert, das auf der Umrandung eines Classifiers beziehungsweise Parts angebracht ist. "
+        },
+        {
+            "term": "Kollaboration",
+            "synonym": "Collaboration",
+            "synonym1": "Kollaborationen",
+            "definition": "Eine Kollaboration in der U M L ist ein Modellelement, das eine Sicht auf zusammenspie­lende Modellelemente darstellt. Diese arbeiten zusammen, um eine gemeinsame Aufgabe zu bewältigen. ",
+            "definition1": "Eine Kollaboration wird durch eine gestrichelte Ellipse dargestellt, die durch eine weitere gestrichelte Linie in zwei Abschnitte geteilt wird. Im oberen Abschnitt wird der Name der Kollaboration angegeben. Im unteren Abschnitt werden dann die Modellelemente, die in diesem Kollaborationstypen zusammenarbeiten, mit Hilfe von Rollen und Konnektoren angeführt. "
+        },
+        {
+            "term": "Kollaborationsanwendung",
+            "synonym": "collaboration use",
+            "synonym1": "",
+            "definition": "Die Kollaborationsanwendung stellt die Anwendung des durch eine Kollaboration definierten Musters auf das Modell dar. Dadurch wird ersichtlich, welches Element welche Rolle spielt und damit seinen Beitrag zur Erfüllung der Gesamtaufgabe beiträgt. ",
+            "definition1": "Die Anwendung einer Kollaboration wird als gestrichelte Ellipse mit folgender Bezeichnung dargestellt: Name der Kollaborationsanwendung, Doppelpunkt, Kollaboration. Auf die Elemente, die die jeweiligen Rollen der Kollaboration einnehmen, zeigen gestrichelte Pfeile, die in der Nähe des Elements mit dem Rollennamen versehen werden. "
+        },
+        {
+            "term": "Knoten",
+            "synonym": "node",
+            "synonym1": "nodes",
+            "definition": "Ein Knoten repräsentiert eine Ressource, die zum Beispiel zur Installation, Konfiguration, Bereitstellung und Ausführung von Artefakten genutzt werden kann. Knoten können geschachtelt werden. ",
+            "definition1": "Ein Knoten wird mit dem Schlüs­selwort node dargestellt. "
+        },
+        {
+            "term": "Gerät",
+            "synonym": "device",
+            "synonym1": "Geräte",
+            "definition": "Ein Gerät ist eine physische Ressource mit eigener Rechenkapazität. Ein Gerät repräsentiert die Hardware im Verteilungsdiagramm. Artefakte werden auf Geräte verteilt, damit sie ausgeführt werden können. ",
+            "definition1": "Ein Gerät wird als Knoten mit dem Schlüs­selwort: device dargestellt. "
+        },
+        {
+            "term": "Ausführungsumgebung",
+            "synonym": "execution environment",
+            "synonym1": "Ausführungsumgebungen",
+            "definition": "Eine Ausführungsumgebung ist eine Software -Umgebung, in der bestimmte Software­-Komponenten eines Systems ausgeführt werden können. Die Komponenten liegen dabei als ablauffähige Artefakte vor. ",
+            "definition1": "Eine Ausführungsumgebung wird als Knoten mit dem Schlüs­selwort: Execution Environment dargestellt. "
+        },
+        {
+            "term": "Kommunikationspfad",
+            "synonym": "communication path",
+            "synonym1": "Kommunikationspfade",
+            "definition": "Durch Kommunikationspfade können Knoten sowohl auf Typ­ als auch auf Instanz­-Ebene miteinander verbunden werden, um Nachrichten, wie Signale oder Operationsaufrufe, auszutauschen. Kommunikationspfade ermöglichen die Modellierung komplexer Netzwerke. ",
+            "definition1": "Ein Kommunikationspfad ist eine spezielle Art der Assoziation. Die Notation entspricht daher der für Assoziationen. "
+        },
+        {
+            "term": "Verteilungsbeziehung",
+            "synonym": "deployment",
+            "synonym1": "Verteilungsbeziehungen",
+            "definition": "Die Verteilungsbeziehung repräsentiert die Beziehung zwischen einem Artefakt und dem Knoten, auf den das Artefakt verteilt ist. Damit kann zum Beispiel ausgedrückt werden, welcher Teil des Systems auf welcher Ausführungsumgebung ablaufen soll. Im Allgemeinen werden diese Art von Beziehungen zwischen Artefakten und Knoten modelliert. ",
+            "definition1": "Verteilungsbeziehungen werden als gestrichelter und gerichteter Pfeil mit dem Schlüsselwort deploy kenntlich gemacht. "
+        },
+        {
+            "term": "Einsatzspezifikation",
+            "synonym": "deployment specification",
+            "synonym1": "Einsatz",
+            "definition": "Eine Einsatzspezifikation ist eine spezielle Art eines Artefakts. Sie beinhaltet eine Menge von Parametern, die durch Angabe von Werten die Verteilung eines Artefakts auf Knoten regelt. Darüber hinaus können Sie Parameter wie beispielsweise Maximaldauer der Abarbeitung oder Art der Task­-Abarbeitung festlegen, um die Ausführung des Artefakts zu steuern. ",
+            "definition1": "Eine Einsatzspezifikation wird mit dem Classifier ­Symbol und dem Schlüsselwort deploy­ment spec abgebildet. "
+        },
+        {
             "term": "Requirements Engineering",
             "synonym": "R E",
             "synonym1": "Anforderungsanalyse",

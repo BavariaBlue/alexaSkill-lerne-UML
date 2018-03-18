@@ -58,7 +58,7 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 23+4+5+2) = 34 (+ 38) ->  72 (+ 18) = 90 
+// sixth group: specific terms for diagrams     (tmp: 23+4+5+2+5+6) = 45 (+ 38) ->  83 (+ 18) = 101 
     /* 
     Klassendiagramm             (23)
     // Klasse                                   √ √
@@ -117,13 +117,30 @@
     // 
     */
 
-   /*
-   Kompositionsstrukturdiagramm ()
-    // Part
-    // Konnektor
-    // Port
-    // Kollaboration
-    // Kollaborationsanwendung
+    /*
+   Kompositionsstrukturdiagramm (5)
+    // Part                                     √ √
+    // Konnektor                                √ √
+    // Port                                     √ √
+    // Kollaboration                            √ √
+    // Kollaborationsanwendung                  √ √
+    // 
+    */
+
+    /*
+    Profildiagramm              (0)
+    // ??
+    */
+
+
+    /*
+    Verteilungsdiagramm         (6)             √ √
+    // Knoten                                   √ √
+    // Gerät                                    √ √
+    // Ausführungsumgebung                      √ √
+    // Kommunikationspfad                       √ √
+    // Verteilungsbeziehung                     √ √
+    // Einsatzspezifikation                     √ √
     // 
     */
 
