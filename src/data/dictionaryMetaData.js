@@ -58,9 +58,10 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 23+4+5+2+5+6) = 45 (+ 38) ->  83 (+ 18) = 101 
+// sixth group: specific terms for diagrams     (tmp: 45 + 13) =  58 (+ 38) ->  96 (+ 18) = 114 
+    // First type: structure diagrams:
     /* 
-    Klassendiagramm             (23)
+    (1) Klassendiagramm             (23)
     // Klasse                                   √ √
     // Abstrakte Klasse                         √ √
     // Compartments                             √ √
@@ -92,7 +93,7 @@
     */
 
     /*
-    Objektdiagramm              (4)
+    (2) Objektdiagramm              (4)
     // Instanzbeschreibung                      √ √                 
     // Wertangabe                               √ √
     // Link                                     √ √
@@ -101,7 +102,7 @@
     */
 
     /*
-    Paketdiagramm               (5)
+    (3) Paketdiagramm               (5)
     // Paket                                    √ √
     // Paket-Imort                              √ √
     // Element-Import                           √ √               
@@ -111,14 +112,14 @@
     */
 
     /*
-    Komponentendiagramm         (2)
+    (4) Komponentendiagramm         (2)
     // Komponente                               √ √
     // Artefakt                                 √ √
     // 
     */
 
     /*
-   Kompositionsstrukturdiagramm (5)
+   (5) Kompositionsstrukturdiagramm (5)
     // Part                                     √ √
     // Konnektor                                √ √
     // Port                                     √ √
@@ -128,19 +129,45 @@
     */
 
     /*
-    Profildiagramm              (0)
+    (6) Profildiagramm              (0)
     // ??
     */
 
-
     /*
-    Verteilungsdiagramm         (6)             √ √
+    (7) Verteilungsdiagramm         (6)             √ √
     // Knoten                                   √ √
     // Gerät                                    √ √
     // Ausführungsumgebung                      √ √
     // Kommunikationspfad                       √ √
     // Verteilungsbeziehung                     √ √
     // Einsatzspezifikation                     √ √
+    // 
+    */
+    // Second type: behaviour diagrams:
+
+    /*
+    (1) Use Case Diagramme          (6) 
+    // Use Case                                 √        
+    // System                                   √ 
+    // Akteur                                   √ 
+    // include Beziehung                        √ 
+    // extend Beziehung                         √ 
+    // Erweiterungspunkt                        √ 
+    //
+    */
+
+    /*
+    (2) Zustandsdiagramm            (5)
+    // Ereignis                                 √
+    // Zustand                                  √
+    // Zustandsübergang                         √
+    // Startzustand                             √
+    // Endzustand                               √
+    */
+    /*
+    (3) Aktivitätsdiagramm          (2)
+    // Aktivität                                √
+    // Verantwortlichkeitsbereich               √
     // 
     */
 

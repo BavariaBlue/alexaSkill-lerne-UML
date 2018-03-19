@@ -582,6 +582,97 @@
             "definition1": "Eine Einsatzspezifikation wird mit dem Classifier ­Symbol und dem Schlüsselwort deploy­ment spec abgebildet. "
         },
         {
+            "term": "Use-Case",
+            "synonym": "Anwendungsfall",
+            "synonym1": "Use Case",
+            "definition": "Ein Use-­Case beschreibt eine Menge von Aktionen, die, schrittweise ausgeführt, ein spe­zielles Verhalten formen. Ein Use-­Case bildet eine Art Hülle, die auch Sonder­ und Fehlerfall-Aktionen einschließen kann. Ein Use-­Case wird stets von einem Akteur ausgelöst bzw. instanziiert und führt zu einem fachlichen Ergebnis. Die Bezeichnung des Use-­Case spiegelt die Sicht des Akteurs wider und nicht die des Systems. ",
+            "definition1": "Es gibt viele Notationsmöglichkeiten für Use-Cases. Entscheide dich für eine und halten diese bei. In aller Regel wird ein Use-­Case durch eine Ellipse dargestellt. Der Name des Use-­Cases wird dabei inner­- oder unterhalb der Ellipse notiert. "
+        },
+        {
+            "term": "System",
+            "synonym": "subject",
+            "synonym1": "Systeme",
+            "definition": "Das System ist diejenige Einheit, die das Verhalten, welches durch die Use-­Cases beschrie­ben wird, realisiert und anbietet. ",
+            "definition1": "Das System wird als rechteckiger Kasten abgebildet, wobei die Kanten des Systems die Systemgrenzen darstellen. Der Name des Systems wird innerhalb des Kastens angegeben. "
+        },
+        {
+            "term": "Akteur",
+            "synonym": "actor",
+            "synonym1": "Akteure",
+            "definition": "Ein Akteur interagiert mit dem System, steht aber immer außerhalb davon. Beachte zudem, dass ein Akteur lediglich eine Rolle darstellt, die mit dem System interagiert. Ein Akteur muss nicht zwangsläufig eine natürliche Person sein, sondern kann auch ein Sensor, ein Zeitereignis oder ein anderes Gerät sein. ",
+            "definition1": "Die gebräuchlichste Notation für einen Akteur ist das Strichmännchen, mit dem Namen des Akteurs oberhalb oder unterhalb. Vorgeschrieben ist nur, dass der Name in der Umgebung des Strichmännchens stehen muss. "
+        },
+        {
+            "term": "Include Beziehung",
+            "synonym": "include relationship",
+            "synonym1": "include",
+            "definition": "Die include-Beziehung wird durch eine unterbrochene gerichtete Kante mit dem Schlüs­selwort include dargestellt. ",
+            "definition1": "Die include-Beziehung visualisiert, dass ein Use-­Case A, das Verhalten eines anderen Use­ Case B, importiert. "
+        },
+        {
+            "term": "Extend Beziehung",
+            "synonym": "extend relationship",
+            "synonym1": "extend",
+            "definition": "Die extend-Beziehung zeigt an, dass das Verhalten eines Use-Case, A durch einen anderen Use- Case, B erweitert werden kann, aber nicht muss. ",
+            "definition1": "Eine extend-Beziehung ist eine unterbrochene gerichtete Kante mit der Bezeichnung extend vom erweiternden Use­-Case, zum erweiterten Use­-Case. Auch diese Beziehung ist ein Spezialfall der Abhängigkeitsbeziehung. "
+        },
+        {
+            "term": "Erweiterungspunkt",
+            "synonym": "extension point",
+            "synonym1": "Extend Punkt",
+            "definition": "Die Stelle im Ablauf eines Use-­Cases, an dem das Verhalten erweitert werden kann, bezeich­net man als Erweiterungspunkt. Ein Use­-Case darf mehrere Erweite­rungspunkte besitzen. ",
+            "definition1": ""
+        },
+        {
+            "term": "Ereignis",
+            "synonym": "event",
+            "synonym1": "Ereignisse",
+            "definition": "Übergänge von einem Zustand zum nächsten werden durch Ereignisse ausgelöst. Ein Ereignis ist ein zu beachtendes Vorkommnis, das in einem gegebenen Kontext eine Bedeutung hat, sich räumlich und zeitlich lokalisieren läßt, und das einen Zustandsübergang auslöst. ",
+            "definition1": "Ereignisse werden durch Pfeile von einem Zustand zum nächsten notiert. Ein Pfeil kann auch auf den gleichen Zustand zurückführen. Auf den Pfeilen werden die Transitionsbeschreibungen aufgetragen. Ein Ereignis besteht aus einem Namen und einer Liste möglicher Argumente. "
+        },
+        {
+            "term": "Zustand",
+            "synonym": "state",
+            "synonym1": "Zustände",
+            "definition": "Ein Zustand gehört zu genau einer Klasse und stellt eine fachlich motivierte Abstraktion beziehungsweise Zusammenfassung einer Menge von möglichen Attributwerten dar, die die Objekte dieser Klasse einnehmen können. Jeder Zustand kann eine Menge von Zustandsvariablen enthalten. ",
+            "definition1": "Zustände werden durch abgerundete Rechtecke dargestellt. Sie können einen Namen beinhalten und optional durch horizontale Linien in bis zu drei Bereiche geteilt werden. Im obersten Bereich steht der Name des Zustandes. Er kann weggelassen werden, es handelt sich in diesem Fall um einen anonymen Zustand. In einem weiteren Bereich können existierende Zustandsvariablen aufgelistet werden. Der dritte mögliche Bereich innerhalb des Zustandssymbols enthält eine Liste möglicher interner Ereignisse. "
+        },
+        {
+            "term": "Zustandsübergang",
+            "synonym": "state transition",
+            "synonym1": "Zustandsübergänge",
+            "definition": "Zustandsübergänge werden gewöhnlich durch Ereignisse ausgelöst, die auf den Pfeilen zwischen den Zuständen notiert werden. Übergänge ohne Ereignisbeschriftung werden automatisch ausgelöst, sobald die mit einem Zustand verbundenen Aktionen abgeschlossen sind. ",
+            "definition1": "Beim Übergang von einem Zustand zum anderen wird einem Zielobjekt ein Ereignis gesendet. Auf diese Weise lassen sich Zustandsautomaten verschiedener Klassen miteinander verknüpfen. "
+        },
+        {
+            "term": "Startzustand",
+            "synonym": "initial pseudostate",
+            "synonym1": "Start",
+            "definition": "Der Startzustand ist ein besonderer Zustandstyp. Zu einem Startzustand kann kein Übergang stattfinden. Es gibt pro Diagramm immer nur einen Startzustand. ",
+            "definition1": "Ein Startzustand wird als kleiner ausgefüllter Kreis gezeichnet. "
+        },
+        {
+            "term": "Endzustand",
+            "synonym": "terminate pseudostate",
+            "synonym1": "Ende",
+            "definition": "Der Endzustand ist ein besonderer Zustandstyp. Von einem Endzustand führt kein Ereignis mehr weg. Ein Zustandsdiagramm kann mehrere Endzustände beinhalten. ",
+            "definition1": "Die Endzustände werden jeweils durch einen nicht ausgefüllten Kreis, in dem ein kleinerer ausgefüllter Kreis liegt gezeichnet. "
+        },
+        {
+            "term": "Aktivität",
+            "synonym": "activity",
+            "synonym1": "Aktivitäten",
+            "definition": "Eine Aktivität ist ein einzelner Schritt in einem Verarbeitungsablauf. Sie ist ein Zustand mit einer internen Aktion und mindestens einer ausgehenden Transition. Die ausgehende Transition impliziert den Abschluss der internen Aktion. Eine Aktivität kann mehrere ausgehende Transitionen haben, wenn diese durch Bedingungen unterschieden werden können. Aktivitäten können Bestandteil von Zustandsdiagrammen sein, gewöhnlich werden sie jedoch in eigenen Aktivitätsdiagrammen verwendet. ",
+            "definition1": "Dargestellt wird eine Aktivität durch ein grafisches Element mit gerader Ober- und Unterseite und konvex geformten Seiten. Dieses grafische Element enthält eine kurze Aktivitätsbeschreibung, die ein Name, eine frei formulierte Beschreibung, Pseudocode oder Programmiersprachencode sein kann. "
+        },
+        {
+            "term": "Verantwortlichkeitsbereich",
+            "synonym": "swim lanes",
+            "synonym1": "Aktivitätsbereich",
+            "definition": "Aktivitätsdiagramme können in Verantwortlichkeitsbereiche unterteilt werden, mit denen die Aktivitäten anderen Elementen oder Strukturen zugeordnet werden können. Beispielsweise lässt sich damit ausdrücken, zu welcher Klasse oder Komponente die Aktivitäten gehören. ",
+            "definition1": "Verantwortlichkeitsbereiche werden dargestellt und abgeteilt durch senkrechte Linien, die aussehen wie Schwimmbahnen. In der UML-Spezifikation wird daher der Begriff swimlanes verwendet. "
+        },
+        {
             "term": "Requirements Engineering",
             "synonym": "R E",
             "synonym1": "Anforderungsanalyse",
