@@ -58,8 +58,8 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 45 + 13) =  58 (+ 38) ->  96 (+ 18) = 114 
-    // First type: structure diagrams:
+// sixth group: specific terms for diagrams     (tmp: 45 + 13 + 7) =  65 (+ 38) ->  103 (+ 18) = 121 
+    // --- First type: structure diagrams ---
     /* 
     (1) Klassendiagramm             (23)
     // Klasse                                   √ √
@@ -90,6 +90,7 @@
     // Multiplizität                            √ √
     // Kardinalität                             √ √      
     // 
+    // TODO: Kontrollknoten -> wiki
     */
 
     /*
@@ -134,7 +135,7 @@
     */
 
     /*
-    (7) Verteilungsdiagramm         (6)             √ √
+    (7) Verteilungsdiagramm         (6)         
     // Knoten                                   √ √
     // Gerät                                    √ √
     // Ausführungsumgebung                      √ √
@@ -143,33 +144,65 @@
     // Einsatzspezifikation                     √ √
     // 
     */
-    // Second type: behaviour diagrams:
-
+    
+    
+    // --- Second type: behaviour diagrams ---
     /*
     (1) Use Case Diagramme          (6) 
-    // Use Case                                 √        
-    // System                                   √ 
-    // Akteur                                   √ 
-    // include Beziehung                        √ 
-    // extend Beziehung                         √ 
-    // Erweiterungspunkt                        √ 
+    // Use Case                                 √ √       
+    // System                                   √ √ 
+    // Akteur                                   √ √ 
+    // include Beziehung                        √ √ 
+    // extend Beziehung                         √ √ 
+    // Erweiterungspunkt                        √ √ 
     //
     */
 
     /*
     (2) Zustandsdiagramm            (5)
-    // Ereignis                                 √
-    // Zustand                                  √
-    // Zustandsübergang                         √
-    // Startzustand                             √
-    // Endzustand                               √
+    // Ereignis                                 √ √
+    // Zustand                                  √ √
+    // Zustandsübergang                         √ √
+    // Startzustand                             √ √
+    // Endzustand                               √ √
     */
     /*
     (3) Aktivitätsdiagramm          (2)
-    // Aktivität                                √
-    // Verantwortlichkeitsbereich               √
+    // Aktivität                                √ √
+    // Verantwortlichkeitsbereich               √ √ 
     // 
     */
+
+    // --- Third type: interaction diagrams ---
+    /*
+    (1) Sequenz Diagramme          (5) 
+    // Sequenz                                  √ √
+    // Nachricht                                √ √
+    // Synchrone Nachricht                      √ √
+    // Asynchrone Nachricht                     √ √
+    // Lebenslinie                              √ √
+    //
+    */
+
+    /*
+    (2) Kommunikationsdiagramm      (2)
+    // Sequenzausdruck                          √ √
+    // Sequenzterm                              √ √
+    //
+    */
+
+    /*
+    (3) Interaktionsübersicht       (0)
+    // ??
+    */
+
+    /*
+    (4) Zeitdiagramm                (0)
+    // ??
+    //
+    */
+
+
 
 
 // last group: big picture                      (18) -> 56         
@@ -190,7 +223,10 @@
     // Kontextabgrenzung                        √ √
     // Systemgrenze                             √ √
     // Kontextgrenze                            √ √
-    // Kontext                                  √ √         
+    // Kontext                                  √ √   
+    
+    
+    // TODO: Iteration, Schleife, 
     
     
     // TODO: PIN (in Mulitplizität verwendet)

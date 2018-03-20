@@ -584,7 +584,7 @@
         {
             "term": "Use-Case",
             "synonym": "Anwendungsfall",
-            "synonym1": "Use Case",
+            "synonym1": "use case",
             "definition": "Ein Use-­Case beschreibt eine Menge von Aktionen, die, schrittweise ausgeführt, ein spe­zielles Verhalten formen. Ein Use-­Case bildet eine Art Hülle, die auch Sonder­ und Fehlerfall-Aktionen einschließen kann. Ein Use-­Case wird stets von einem Akteur ausgelöst bzw. instanziiert und führt zu einem fachlichen Ergebnis. Die Bezeichnung des Use-­Case spiegelt die Sicht des Akteurs wider und nicht die des Systems. ",
             "definition1": "Es gibt viele Notationsmöglichkeiten für Use-Cases. Entscheide dich für eine und halten diese bei. In aller Regel wird ein Use-­Case durch eine Ellipse dargestellt. Der Name des Use-­Cases wird dabei inner­- oder unterhalb der Ellipse notiert. "
         },
@@ -619,7 +619,7 @@
         {
             "term": "Erweiterungspunkt",
             "synonym": "extension point",
-            "synonym1": "Extend Punkt",
+            "synonym1": "extend Punkt",
             "definition": "Die Stelle im Ablauf eines Use-­Cases, an dem das Verhalten erweitert werden kann, bezeich­net man als Erweiterungspunkt. Ein Use­-Case darf mehrere Erweite­rungspunkte besitzen. ",
             "definition1": ""
         },
@@ -647,14 +647,14 @@
         {
             "term": "Startzustand",
             "synonym": "initial pseudostate",
-            "synonym1": "Start",
+            "synonym1": "Start Zustand",
             "definition": "Der Startzustand ist ein besonderer Zustandstyp. Zu einem Startzustand kann kein Übergang stattfinden. Es gibt pro Diagramm immer nur einen Startzustand. ",
             "definition1": "Ein Startzustand wird als kleiner ausgefüllter Kreis gezeichnet. "
         },
         {
             "term": "Endzustand",
             "synonym": "terminate pseudostate",
-            "synonym1": "Ende",
+            "synonym1": "End-Zustand",
             "definition": "Der Endzustand ist ein besonderer Zustandstyp. Von einem Endzustand führt kein Ereignis mehr weg. Ein Zustandsdiagramm kann mehrere Endzustände beinhalten. ",
             "definition1": "Die Endzustände werden jeweils durch einen nicht ausgefüllten Kreis, in dem ein kleinerer ausgefüllter Kreis liegt gezeichnet. "
         },
@@ -671,6 +671,55 @@
             "synonym1": "Aktivitätsbereich",
             "definition": "Aktivitätsdiagramme können in Verantwortlichkeitsbereiche unterteilt werden, mit denen die Aktivitäten anderen Elementen oder Strukturen zugeordnet werden können. Beispielsweise lässt sich damit ausdrücken, zu welcher Klasse oder Komponente die Aktivitäten gehören. ",
             "definition1": "Verantwortlichkeitsbereiche werden dargestellt und abgeteilt durch senkrechte Linien, die aussehen wie Schwimmbahnen. In der UML-Spezifikation wird daher der Begriff swimlanes verwendet. "
+        },
+        {
+            "term": "Sequenz",
+            "synonym": "sequence",
+            "synonym1": "Sequenzen",
+            "definition": "Eine Sequenz zeigt eine Reihe von Nachrichten, die eine ausgewählte Menge von Objekten in einer zeitlich begrenzten Situation austauscht, wobei der zeitliche Ablauf betont wird. ",
+            "definition1": "In Sequenzdiagrammen werden Objekte durch gestrichelte senkrechte Linien dargestellt. Oberhalb der Linie steht der Name beziehungsweise das Objektsymbol. "
+        },
+        {
+            "term": "Nachricht",
+            "synonym": "message",
+            "synonym1": "Nachrichten",
+            "definition": "Nachrichten sind ein Mechanismus, mit dem Objekte untereinander kommunizieren können. Eine Nachricht überbringt einem Objekt die Information darüber, welche Aktivität von ihm erwartet wird. Das heißt eine Nachricht fordert ein Objekt zur Ausführung einer Operation auf. Die Beteiligten an einer Sequenz kommunizieren über Nachrichten. ",
+            "definition1": "Die Nachrichten werden als waagrechte Pfeile zwischen den Objekt-Linien gezeichnet. Auf ihnen wird die Nachricht in der Form: Nachricht, Klammer auf: Argumente, Klammer zu, notiert. Ähnlich wie beim Kollaborationsdiagramm wird die Antwort in Textform oder als eigener, dann aber gestrichelter Pfeil mit offener Pfeilspitze dargestellt. "
+        },
+        {
+            "term": "Synchrone Nachricht",
+            "synonym": "synchronous message",
+            "synonym1": "Synchrone Nachrichten",
+            "definition": "Bei synchronen Nachrichten erfolgt ein normaler Nachrichtenaufruf und die Kontrolle wird an das gerufene Objekt übergeben. ",
+            "definition1": "Synchrone Nachrichten werden mit einer gefüllten Pfeilspitze gezeichnet. "
+        },
+        {
+            "term": "Asynchrone Nachricht",
+            "synonym": "asynchronous message",
+            "synonym1": "Asynchrone Nachrichten",
+            "definition": "Asynchrone Aufrufe geben anders als der synchrone Aufruf sofort die Kontrolle an das rufende Objekt zurück. Asynchron bedeutet also, dass der Sender der Nachricht nicht auf eine Antwort wartet und nicht blockiert. ",
+            "definition1": "Asynchrone Nachrichten werden mit einer offenen Pfeilspitze gezeichnet. "
+        },
+        {
+            "term": "Lebenslinie",
+            "synonym": "lifeline",
+            "synonym1": "Lebenslinien",
+            "definition": "Beim Sequenzdiagramm steht der zeitliche Verlauf der Nachrichten im Vordergrund. Die Objekte werden lediglich mit senkrechten Lebenslinien gezeigt. Der zeitliche Verlauf der Nachrichten wird dadurch hervorgehoben. Die Zeit verläuft dabei von oben nach unten. ",
+            "definition1": "Die Überlagerung der gestrichelten Lebenslinien durch breite, nichtausgefüllte senkrechte Balken, symbolisiert den Steuerungsfokus. Der Steuerungsfokus gibt an, welches Objekt gerade die Programmkontrolle besitzt, das heißt welches Objekt gerade aktiv ist. "
+        },
+        {
+            "term": "Sequenzausdruck",
+            "synonym": "sequence expressions",
+            "synonym1": "Sequenznummer",
+            "definition": "Die zeitliche Abfolge von Nachrichten wird in Kommunikationsdiagrammen mit Sequenzausdrücken modelliert. Jeder modellierten Nachricht ist ein Sequenzausdruck zugeordnet, aus dem hervorgeht, was die Vorgängernachrichten sind und welche Nachrichten allenfalls parallel ablaufen. ",
+            "definition1": "Ein Sequenzausdruck besteht aus einer Folge von mit einem Punkt getrennten Sequenztermen, gefolgt von einem Doppelpunkt. "
+        },
+        {
+            "term": "Sequenzterm",
+            "synonym": "sequence term",
+            "synonym1": "Sequenzterme",
+            "definition": "Sequenzterme sind Zahlen, zum Beispiel 1, 10 oder 22, die optional von einem Kleinbuchstaben, zum Beispiel A, oder B, gefolgt werden. ",
+            "definition1": "Folgende Zeichenfolgen sind also gültige Sequenzausdrücke: Eins. 1.7, 1 A .6, 1 A .6 C .2."
         },
         {
             "term": "Requirements Engineering",
