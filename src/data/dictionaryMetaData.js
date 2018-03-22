@@ -58,7 +58,7 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 45 + 13 + 7) =  65 (+ 38) ->  103 (+ 18) = 121 
+// sixth group: specific terms for diagrams     (tmp: 45 + 21 + 7) = 73 (+ 38) ->  111 (+ 18) = 129 
     // --- First type: structure diagrams ---
     /* 
     (1) Klassendiagramm             (23)
@@ -120,7 +120,7 @@
     */
 
     /*
-   (5) Kompositionsstrukturdiagramm (5)
+    (5) Kompositionsstrukturdiagramm (5)
     // Part                                     √ √
     // Konnektor                                √ √
     // Port                                     √ √
@@ -167,9 +167,17 @@
     // Endzustand                               √ √
     */
     /*
-    (3) Aktivitätsdiagramm          (2)
+    (3) Aktivitätsdiagramm          (10)
     // Aktivität                                √ √
-    // Verantwortlichkeitsbereich               √ √ 
+    // Verantwortlichkeitsbereich               √ √
+    // Kontrollknoten                           √ √
+    // Startknoten                              √ √
+    // Endknoten                                √ √
+    // Parallelisierungsknoten                  √ √
+    // Synchronisationsknoten                   √ √
+    // Verzweigungsknoten                       √ √
+    // Verbindungsknoten                        √ √
+    // Token                                    √ √
     // 
     */
 
@@ -193,19 +201,16 @@
 
     /*
     (3) Interaktionsübersicht       (0)
-    // ??
     */
 
     /*
     (4) Zeitdiagramm                (0)
-    // ??
     //
     */
 
 
-
-
 // last group: big picture                      (18) -> 56         
+    /* Software Engineering
     // Requirements Engineering                 √ √
     // Objektorientierte Analyse                √ √
     // Designphase                              √ √
@@ -224,9 +229,21 @@
     // Systemgrenze                             √ √
     // Kontextgrenze                            √ √
     // Kontext                                  √ √   
-    
+    //
+    */
+    /*
+    (2) Programming & Object-orientation
+    // Schleife                                 √   
+    // Verzweigung                              √
+    // Kontrollfluss    
+    //
+    //
+    //
+    */
+
     
     // TODO: Iteration, Schleife, 
     
-    
     // TODO: PIN (in Mulitplizität verwendet)
+
+    // TODO: alle Stereotypen: http://www.comelio-medien.com/de/comelio-blog/uml/basis/ -> Stereotypen

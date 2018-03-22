@@ -51,7 +51,7 @@
         },
         {
             "term": "Modellschicht",
-            "synonym": "",
+            "synonym": "model layer",
             "synonym1": "",
             "definition": "Die Realität aus der untersten Schicht der Laufzeitschicht wird in der Modellschicht bewusst abstrahiert. Das heißt, sich auf das Wesentliche zu konzentrieren. ",
             "definition1": "Ein Beispiel für die Bildung eines Modells ist die Klasse Auto im Klassendiagramm mit entsprechenden Attributen und Assoziationen. "
@@ -66,112 +66,112 @@
         {
             "term": "Meta-Metamodellschicht",
             "synonym": "Meta Meta Modellschicht",
-            "synonym1": "",
+            "synonym1": "meta meta model layer",
             "definition": "Die Meta-Metamodellschicht ist die oberste Eben im 4-Schichten Modell der U M L. Es ist die Grundlage der Metamodellebenen. ",
             "definition1": "Diese Schicht beschreibt, welche Elemente ein technisch Belesener einem Metamodell hinzufügen darf. "
         },
         {
             "term": "Strukturdiagramme",
             "synonym": "Strukturdiagramm",
-            "synonym1": "",
+            "synonym1": "structure diagram",
             "definition": "Die erste große Gruppe bilden die Strukturdiagramme. Sie bilden die statischen Strukturaspekte eines Systems ab. Die U M L stellt zur Strukturmodellierung sieben Diagrammtypen bereit. ",
             "definition1": "Zu den Strukturdiagrammen gehören: Klassendiagramm. Paketdiagramm. Objektdiagramm. Kompositionsstrukturdiagramm. Komponentendiagramm. Verteilungsdiagramm. Profildiagramm. "
         },
         {
             "term": "Verhaltensdiagramme",
             "synonym": "Verhaltensdiagramm",
-            "synonym1": "",
+            "synonym1": "behaviour diagram",
             "definition": "Die zweite große Gruppe bilden die Verhaltensdiagramme. Sie bilden dynamische Situationen im Programmablauf ab. Die U M L stellt zur Verhaltensmodellierung sieben Diagrammtypen bereit, welche verschiedene Sichten auf das zu spezifizierende Verhalten legen. ",
             "definition1": "Zu den Verhaltensdiagrammen gehören Use­ Case­ Diagramm. Aktivitätsdiagramm. Zustandsautomat sowie alle Interaktionsdiagramme. "
         },
         {
             "term": "Interaktionsdiagramme",
             "synonym": "Interaktionsdiagramm",
-            "synonym1": "",
+            "synonym1": "interaction diagram",
             "definition": "Interaktionsdiagramme dienen dazu, Interaktionen zwischen Objekten zu spezifizieren beziehungsweise zu illustrieren. Eine Interaktion ist dabei eine Folge von Operationsaufrufen innerhalb einer bestimmten Gruppierung von Objekten. Von den sieben Verhaltensdiagrammen ordnet man vier Diagramme den Interaktionsdiagrammen zu. ",
             "definition1": " Zu den Interaktionsdiagrammen gehören das Sequenzdiagramm. Kommunikationsdiagramm. Timingdiagramm. und Interaktionsübersichtsdiagramm. "
         },
         {
             "term": "Profildiagramme",
             "synonym": "Profildiagramm",
-            "synonym1": "",
+            "synonym1": "profile diagram",
             "definition": "Das Profildiagramm ist ein Diagrammtyp, der nicht in der operativen Phase der Erstellung von Modellen eingesetzt wird. Mit dem Profildiagramm werden die für ein Projekt benötigten Anpassungen dokumentiert. ",
             "definition1": "So entsteht ein porjektspezifisches Profil. "
         },
         {
             "term": "Klassendiagramme",
             "synonym": "Klassendiagramm",
-            "synonym1": "",
+            "synonym1": "class diagram",
             "definition": "Zentrale Frage des Klassendiagramms ist es, herauszufinden, aus welchen Klassen das zu entwickelnde System besteht und wie diese untereinander in Beziehung stehen werden. ",
             "definition1": "Das Klassendiagramm beschreibt die statische Struktur des zu entwerfenden Systems. Es enthält alle relevanten Strukturzusammenhänge und Datentypen und bildet die Brücke zu den dynamischen Diagrammen. "
         },
         {
             "term": "Kompositionsstrukturdiagramme",
             "synonym": "Kompositionsstrukturdiagramm",
-            "synonym1": "Kompositionsstruktur Diagramm",
+            "synonym1": "composite structure diagram",
             "definition": "Zentrale Frage des Kompositionsstrukturdiagramms ist es, herauszufinden, wie das Innenleben einer Klasse, einer Komponente, eines Systemteils aussieht. Es ist ideal zur Top-Down-Modellierung. ",
             "definition1": "Das Kompositionsstrukturdiagramm fordert mittlere Detailtiefe, denn es zeigt Teile eines Gesamtelements und deren Mengenverhältnisse. "
         },
         {
             "term": "Komponentendiagramme",
             "synonym": "Komponentendiagramm",
-            "synonym1": "",
+            "synonym1": "component diagram",
             "definition": "Zentrale Frage des Komponentendiagramms ist es, herauszufinden, wie Klassen zu wiederverwendbaren, verwaltbaren Komponenten zusammengefasst werden und wie diese in Beziehung stehen. ",
             "definition1": "Das Komponentendiagramm zeigt die Organisation und Abhängigkeiten einzelner technischer Systemkomponenten. Eine Modellierung angebotener und benötigter Schnittstellen ist möglich. "
         },
         {
             "term": "Verteilungsdiagramme",
             "synonym": "Verteilungsdiagramm",
-            "synonym1": "",
+            "synonym1": "deployment diagram",
             "definition": "Zentrale Frage des Verteilungsdiagramms ist es, herauszufinden, wie das Einsatzumfeld, also Hardware, Software oder Datenbanken, des Systems aussieht. Die Frage, wie die Komponenten zur Laufzeit wohin verteilt werden, wird beantwortet. ",
             "definition1": "Das Verteilungsdiagramm teift das Laufzeitumfeld des Systems mit den greifbaren Systemteilen. Es fordert ein hohes Abstraktionsniveau."
         },
         {
             "term": "Objektdiagramme",
             "synonym": "Objektdiagramm",
-            "synonym1": "",
+            "synonym1": "object diagram",
             "definition": "Zentrale Frage des Objektdiagramms ist es, herauszufinden, welche innere Struktur das System zu einem bestimmten Zeitpunkt zur Laufzeit besitzt. ",
             "definition1": "Das Objektdiagramm zeigt Objekte und deren Attributsbelegungen zu einem bestimten Zeitpunkt. Es wird nur beispielhaft zur Veranschaulichung verwendet. "
         },
         {
             "term": "Paketdiagramme",
             "synonym": "Paketdiagramm",
-            "synonym1": "",
+            "synonym1": "package diagram",
             "definition": "Zentrale Frage des Paketdiagramms ist es, herauszufinden, wie das Modell so geschnitten werden kann, dass der Überblick bewahrt wird. ",
             "definition1": "Das Paketdiagramm organisiert das Systemmodell in größere Einheiten durch logische Zusammenfassung von Modellelementen. Es werden Abhängigkeiten modelliert.   "
         },
         {
             "term": "Sequenzdiagramme",
             "synonym": "Sequenzdiagramm",
-            "synonym1": "",
+            "synonym1": "sequence diagram",
             "definition": "Zentrale Frage des Sequenzdiagramms ist es, herauszufinden, wer mit wem welche Informationen in welcher Reihenfolge austauscht. ",
             "definition1": "Das Sequenzdiagramm stellt den zeitlichen Ablauf des Informationsaustausches zwischen Kommunikationspartner dar. Schachtelungen und Flusssteuerung sind möglich. "
         },
         {
             "term": "Kommunikationsdiagramme",
             "synonym": "Kommunikationsdiagramm",
-            "synonym1": "",
+            "synonym1": "communication diagram",
             "definition": "Zentrale Frage des Kommunikationsdiagramms ist es, herauszufinden, wer mit wem kommuniziert. Die Frage, wer im System zusammenarbeitet, wird beantwortet. ",
             "definition1": "Das Kommunikationsdiagramm  stellt den Informationsaustausch zwischen Kommunikationspartnern dar. Der Überblick steht hierbei im Vordergrund. "
         },
         {
             "term": "Interaktionsübersichtsdiagramme",
             "synonym": "Interaktionsübersichtsdiagramm",
-            "synonym1": "Interaktionsübersicht",
+            "synonym1": "interaction overview diagram",
             "definition": "Zentrale Frage des Interaktionsübersichtsdiagramms ist es, herauszufinden, wann welche Interaktion abläuft. ",
             "definition1": "Das Interaktionsübersichtsdiagramm verbindet und strukturiert Interaktionsdiagramme auf Top Level Ebene. Es fordert ein hohes Abstraktionsniveau. "
         },
         {
             "term": "Zeitverlaufdiagramme",
             "synonym": "Zeitverlaufdiagramm",
-            "synonym1": "Timingdiagramm",
+            "synonym1": "timing diagram",
             "definition": "Zentrale Frage des Zeitverlaufdiagramms ist es, herauszufinden, wann sich verschiedene Interaktionspartner in welchem Zustand befinden. ",
             "definition1": "Das Zeitverlaufsdiagramm visualisiert das exakte zeitliche Verhalten von Klassen, Schnittstellen und so weiter. Es ist geeignet für Detailbetrachtungen, bei denen es wichtig ist, dass ein Ereignis zum richtigen Zeitpunkt eintritt. "
         },
         {
             "term": "Aktivitätsdiagramme",
             "synonym": "Aktivitätsdiagramm",
-            "synonym1": "",
+            "synonym1": "activity diagram",
             "definition": "Zentrale Frage des Aktivitätsdiagramms ist es, herauszufinden, wie ein betimmter flussorientierter Prozess oder ein Algorithmmus abläuft. ",
             "definition1": "Das Aktivitätsdiagramm visualisiert sehr detailliert Abläufe mit Bedingungen, Schleifen und Verzweigungen. Eine Parallelisierung und Synchronisation ist möglich. "
         },
@@ -185,62 +185,62 @@
         {
             "term": "Zustandsdiagramme",
             "synonym": "Zustandsdiagramme",
-            "synonym1": "",
+            "synonym1": "state machine diagram",
             "definition": "Zentrale Frage des Zustandsdiagramms ist es, herauszufinden, welche Zustände ein Objekt, eine Schnittstelle, ein Use Case bei welchen Ereignissen annehmen kann. ",
             "definition1": "Das Zustandsdiagramm ist eine präzise Abbildung eines Zustandsmodells mit Zuständen, Ereignissen, Nebenläufigkeiten, Bedingungen, Eintrittsaktionen sowie Austrittsaktionen. "
         },
         {
             "term": "Rahmen",
-            "synonym": "Frame",
+            "synonym": "frame",
             "synonym1": "",
             "definition": "Optional und für bestimmte Fälle sieht die U M L einen Rahmen, auch Frame genannt, vor, der bestimmte Modellelemente umschließt. ",
             "definition1": "Dabei muss mindestens ein Name für die dargestellten Inhalte im Rahmenkopf, einem Fünfeck im Rahmen, stehen. Daneben können optional der Typ und zusätzliche Parameter eingetragen werden. "
         },
         {
             "term": "Rahmenkopf",
-            "synonym": "Heading",
+            "synonym": "heading",
             "synonym1": "",
             "definition": "Der Rahmenkopf, auch Heading genannt, ist ein eingezeichnetes Fünfeck im meist linken oberen Eck des Rahmens. ",
             "definition1": "Im Rahmenkopf können optional der Typ und zusätzliche Parameter eingetragen werden. Typen sind class, package, component, deployment, use case, activity, state machine und interaction. "
         },
         {
             "term": "Modell",
-            "synonym": "Modelle",
-            "synonym1": "",
+            "synonym": "model",
+            "synonym1": "Modelle",
             "definition": "Eigenschaften eines Modells sind: Ein Modell versammelt eine hierarchisch strukturierte Menge von Elementen. Die Menge von Elementen beschreibt auf einer abstrakten Ebene das System zu einem bestimmten Zweck, es zeigt nur eine Sicht auf das System. Das Modell beschreibt das System aus dieser Sicht vollständig. ",
             "definition1": "A model captures a view of a system. It is an abstraction of the system, with a certain pur­pose. This purpose determines what is to be included in the model and what is irrelevant. Thus the model completely describes those aspects of the system that are relevant to the purpose of the model, at the appropriate level of detail. "
         },
         {
             "term": "Kommentar",
-            "synonym": "Comment",
+            "synonym": "comment",
             "synonym1": "Kommentare",
             "definition": "Mit Hilfe eines Kommentars können beliebige Informationen, die relevant erscheinen, an ein Modellelement angebracht werden. Ein Kommentar wird durch ein Rechteck mit umgeknickter rechter oberer Ecke repräsentiert. Der Kommentartext selbst befindet sich innerhalb des Rechtecks. Der Kommentar ist durch eine gestrichelte Linie mit dem annotierten Element verbunden. Diese Linie kann auch weggelassen werden, wenn die Verbindung mit dem Element aus dem Zusammenhang klar ersichtlich ist. ",
             "definition1": "A comment is a textual annotation that can be attached to a set of elements. "
         },
         {
             "term": "Ausdruck",
-            "synonym": "Expression",
+            "synonym": "expression",
             "synonym1": "Ausdrücke",
             "definition": "Formal stellt ein Ausdruck, in Englisch: expression, einen Knoten in einem Baum mit Ausdrücken dar, der durch ein Symbol repräsentiert wird. ",
             "definition1": "An expression is a structured tree of symbols that denotes a set of values when evaluated in a context. "
         },
         {
             "term": "Randbedingung",
-            "synonym": "Constraint",
+            "synonym": "constraint",
             "synonym1": "Randbedingungen",
             "definition": "Eine Randbedingung, zu Englisch Constraint genannt, ist immer ein boolescher Ausdruck, der zur Präzisierung der Semantik eines oder mehrerer Modellelemente dient. ",
             "definition1": "A constraint is a condition or restriction expressed in natural language text or in a machine readable language for the purpose of declaring some of the semantics of an element. "
         },
         {
             "term": "Classifier",
-            "synonym": "",
+            "synonym": "classifier",
             "synonym1": "",
             "definition": "Der Classifier ist kein Sprachelement, welches dem Modellierer direkt in einem U M L­ Diagramm zur Modellierung zur Verfügung steht, sondern der Classifier ist eine abstrakte Metaklasse, deren Instanzen modelliert werden. Die Notation eines Classifier ist ein einfaches Rechteck mit dem Namen des Classifier. ",
             "definition1": "A classifier is a classification of instances, it describes a set of instances that have features in common. "
         },
         {
             "term": "Datentyp",
-            "synonym": "Datatype",
+            "synonym": "datatype",
             "synonym1": "Datentypen",
             "definition": "In der U M L wird ein Datentyp verwendet, um mögliche Wertebereiche einzu­grenzen. Die U M L definiert einige wenige Typen, wie der Aufzählungstyp, auch Enumeration genannt, sowie der Primitive Typ mit seinen Subtypen. ",
             "definition1": "Ein Datentyp wird durch das Rechteckssymbol mit dem ihn identifizierenden Schlüsselwort notiert, also datatype für einen Datentyp, enumeration oder primitive für die spe­ziellen Datentypen Primitiver Typ und Aufzählungstyp. "
@@ -276,13 +276,13 @@
         {
             "term": "Abstrakte Klasse",
             "synonym": "Abstrakte Klassen",
-            "synonym1": "Abstract Class",
+            "synonym1": "abstract Class",
             "definition": "Oftmals ergibt sich der Bedarf, innerhalb der Modellierung Elemente einzuführen, die ledig­lich der Strukturierung und Vereinfachung dienen. Ein solches Element ist die abstrakte Klasse. ",
             "definition1": "Abstrakte Klassen sind nicht instanziierbar. Der Klassenname wird kursiv gesetzt oder es wird in geschweiften Klammern das Schlagwort: abstract hinzugefügt. "
         },
         {
             "term": "Compartments",
-            "synonym": "Compartment",
+            "synonym": "compartment",
             "synonym1": "",
             "definition": "Compartments oder auch Abschnitte können unterhalb des Klassennamens angefügt werden, um zum Beispiel Attribute und Operationen zu definieren. ",
             "definition1": ""
@@ -290,13 +290,13 @@
         {
             "term": "Objekt",
             "synonym": "Objekte",
-            "synonym1": "Object",
+            "synonym1": "object",
             "definition": "Im Rahmen der U M L wird eine Klasse als Typ interpretiert, dessen Ausprägungen Objekte heißen. ",
             "definition1": "Für die U M L ist ein Objekt nichts anderes als die Ausprägung einer Klasse. Die Klasse ist der Typ eines Objekts. Objektnamen werden unterstrichen. "
         },
         {
             "term": "Attribut",
-            "synonym": "Property",
+            "synonym": "property",
             "synonym1": "Eigenschaft",
             "definition": "Ein Klassendiagramm enthält nicht nur Aussagen über die Existenz von Klassen, sondern gibt auch Auskunft über die einzelnen Eigenschaften, die bei den konkret betrachte­ten Exemplaren der Klasse mit konkreten Inhaltswerten belegt werden. Diese Eigenschaften werden als Attribute bezeichnet und beschreiben Charakteristika wie Häufigkeit, Datentyp und weitere Einschränkungen. ",
             "definition1": "Attribute werden üblicherweise im zweiten Abschnitt des Klassensymbols linksbündig untereinander angeordnet. Attributnamen werden kleingeschrieben und Klassenattribute unterstrichen. Ein Plus vor einem Attribut bedeutet public, ein Minus private, ein Doppelkreuz protected und ein Tilde package scoped. "
@@ -430,7 +430,7 @@
         {
             "term": "Instanzbeschreibung",
             "synonym": "instance specification",
-            "synonym1": "",
+            "synonym1": "Instanzbeschreibungen",
             "definition": "Eine Instanz, präziser eine Instanzbeschreibung, beschreibt eine zur Laufzeit vorhanden Einheit des modellierten Systems. In vielen Fällen handelt es sich bei Instanzbeschreibungen um Objekte, also Instanzen von Klassen. ",
             "definition1": "Für Instanzbeschreibungen sieht die UML kein eigenes Notationselement vor, sondern übernimmt die Notation des Classifiers der Instanz. "
         },
@@ -527,7 +527,7 @@
         },
         {
             "term": "Kollaboration",
-            "synonym": "Collaboration",
+            "synonym": "collaboration",
             "synonym1": "Kollaborationen",
             "definition": "Eine Kollaboration in der U M L ist ein Modellelement, das eine Sicht auf zusammenspie­lende Modellelemente darstellt. Diese arbeiten zusammen, um eine gemeinsame Aufgabe zu bewältigen. ",
             "definition1": "Eine Kollaboration wird durch eine gestrichelte Ellipse dargestellt, die durch eine weitere gestrichelte Linie in zwei Abschnitte geteilt wird. Im oberen Abschnitt wird der Name der Kollaboration angegeben. Im unteren Abschnitt werden dann die Modellelemente, die in diesem Kollaborationstypen zusammenarbeiten, mit Hilfe von Rollen und Konnektoren angeführt. "
@@ -673,6 +673,62 @@
             "definition1": "Verantwortlichkeitsbereiche werden dargestellt und abgeteilt durch senkrechte Linien, die aussehen wie Schwimmbahnen. In der UML-Spezifikation wird daher der Begriff swimlanes verwendet. "
         },
         {
+            "term": "Kontrollknoten",
+            "synonym": "control node",
+            "synonym1": "Kontrolle Knoten",
+            "definition": "Kontrollknoten werden bei der Spezifikation von Aktivitäten verwendet. Sie stellen spezielle Aktivitätsknoten dar, bei denen Objekt- und Kontrollflüsse koordiniert werden. Arten von Kontrollknoten sind: Startknoten, Endknoten, Parallelisierungsknoten, Synchronisationsknoten, Verzweigungsknoten sowie Verbindungsknoten. ",
+            "definition1": "Kontrollknoten werden sehr verschieden gezeichnet. Nenne einen Kontrollknoten deiner Wahl. "
+        },
+        {
+            "term": "Startknoten",
+            "synonym": "initial node",
+            "synonym1": "Start-Knoten",
+            "definition": "Mit dem Startknoten startet der Ablauf der Aktivität. Jeder Startknoten darf beliebig viele weiterführende Kanten besitzen. Der Startknoten generiert einen Token und bietet diesen allen Kanten an. Dabei ist der Startknoten der einzige Knoten, der den generierten Token eine Zeit lang halten darf, falls nachfolgende Notationselemente ihn nicht sofort übernehmen können. Es gibt am Startknoten keine eingehende Kante. Ein Startknoten ist nicht zwingend. ",
+            "definition1": "Ein Startknoten wird als kleiner ausgefüllter Kreis gezeichnet. "
+        },
+        {
+            "term": "Endknoten",
+            "synonym": "final node",
+            "synonym1": "End-Knoten",
+            "definition": "Ein Endknoten markiert das Ende eines Ablaufs. Es können beliebig viele Kanten in den Endknoten hineinlaufen, allerdings darf keine Kante weiterführen. ",
+            "definition1": "Die Endknoten einer Aktivität werden jeweils durch einen nicht ausgefüllten Kreis, in dem ein kleinerer ausgefüllter Kreis liegt gezeichnet. Die Endknoten eines Kontrollflusses werden mit einem X im nicht ausgefüllten Kreis gezeichnet. "
+        },
+        {
+            "term": "Parallelisierungsknoten",
+            "synonym": "fork node",
+            "synonym1": "Gabelungsknoten",
+            "definition": "Der Gabelungsknoten teilt einen Kontrollfluss in mehrere parallele Kontrollflüsse auf. Im Unterschied zum Entscheidungsknoten wird hier nicht ein spezieller Weg gewählt, sondern alle Kontrollflüsse laufen gleichzeitig ab. Die einzelnen Abläufe werden parallel abgearbeitet. Diese Form nennt sich Multithreading. Notwendig ist dies bei Anwendungen, in denen mehrere Kontrollflüsse gleichzeitig ablaufen müssen. ",
+            "definition1": "Bei der Parallelisierung oder Gabelung wird einem aus einer Aktivität ausgehenden Pfeil ein schwarzer Balken angefügt, der zur Verzweigung dient. Aus dem Balken folgen dann Pfeile zu mindestens 2 parallel auszuführenden Aktivitäten. "
+        },
+        {
+            "term": "Synchronisationsknoten",
+            "synonym": "merge node",
+            "synonym1": "Zusammenführung",
+            "definition": "Synchronisationsknoten können mehrere eingehende Kanten und nur eine ausgehende Kante besitzen. Es werden mehrere Kanten zu einer ausgehenden Kante zusammengeführt. Dabei wird nicht gewartet. ",
+            "definition1": "Der Synchronisationsknoten wird wie der Entscheidungsknoten durch eine ausgefüllte Raute dargestellt. "
+        },
+        {
+            "term": "Verzweigungsknoten",
+            "synonym": "decision node",
+            "synonym1": "Entscheidungsknoten",
+            "definition": "Der Entscheidungsknoten, dargestellt durch eine ausgefüllte Raute, kann eine eingehende und mehrere ausgehende Kanten enthalten. Ein Token, der über die eingehende Kante ankommt und am Entscheidungsknoten eingeht, wird je nach Bedingung weitergeleitet. ",
+            "definition1": "Der Entscheidungsknoten wird durch eine ausgefüllte Raute dargestellt. Die optionale Bedingung wird an der ausgehenden Kante ausgewertet. Dabei kann eine Entscheidung mit einem Kommentar noch näher beschrieben werden. "
+        },
+        {
+            "term": "Verbindungsknoten",
+            "synonym": "join node",
+            "synonym1": "Vereinigung",
+            "definition": "Die Vereinigung besagt genau das Gegenteil des Parallelisierungsknotens. Man spricht auch von der Und-Synchronisation. Dabei wird gewartet, bis alle Token der betroffenen Knoten angekommen sind. Eine Vereinigung besteht aus mehreren Kontrollflüssen, aus dem ein einziger Kontrollfluss wird. ",
+            "definition1": "Bei der Vereinigung oder Verbindung wird den parallelisierten Aktivitäten ausgehenden Pfeilen ein schwarzer Balken angefügt, der zur Vereinigung dient. Aus dem Balken folgt dann ein Pfeil zu  genau einer auszuführenden Aktivitäten. "
+        },
+        {
+            "term": "Token",
+            "synonym": "token",
+            "synonym1": "Tokens",
+            "definition": "Unter einem Token versteht man in der U M L eine Marke, die einen Zeitpunkt darstellt, in dem sich der gesamte Ablauf gerade befindet. Der Token-Fluss bestimmt, dass der gesamte Ablauf einem bestimmten vorgegebenen Weg folgt, der durch die Kanten dargestellt wird. ",
+            "definition1": "Es gibt kein Notationselement, das die Token in der U M L notiert, sondern kleine durchnummerierte Punkte, meist beginnend mit T 1. "
+        },
+        {
             "term": "Sequenz",
             "synonym": "sequence",
             "synonym1": "Sequenzen",
@@ -709,7 +765,7 @@
         },
         {
             "term": "Sequenzausdruck",
-            "synonym": "sequence expressions",
+            "synonym": "sequence expression",
             "synonym1": "Sequenznummer",
             "definition": "Die zeitliche Abfolge von Nachrichten wird in Kommunikationsdiagrammen mit Sequenzausdrücken modelliert. Jeder modellierten Nachricht ist ein Sequenzausdruck zugeordnet, aus dem hervorgeht, was die Vorgängernachrichten sind und welche Nachrichten allenfalls parallel ablaufen. ",
             "definition1": "Ein Sequenzausdruck besteht aus einer Folge von mit einem Punkt getrennten Sequenztermen, gefolgt von einem Doppelpunkt. "
@@ -731,7 +787,7 @@
         {
             "term": "Objektorientiere Analyse",
             "synonym": "O O A",
-            "synonym1": "",
+            "synonym1": "object-oriented analysis",
             "definition": "Die objektorientierte Analyse beinhaltet die Ermittlung und Beschreibung der Anforderungen an ein Software System mittels objektorientierter Konzepte und Notationen. Das Ergebnis ist ein O O A Modell. ",
             "definition1": "Aus der objektorientierten Analyse folgt das Produktmodell. "
         },
@@ -752,7 +808,7 @@
         {
             "term": "Softwarearchitektur",
             "synonym": "S A",
-            "synonym1": "Software Architektur",
+            "synonym1": "software architecture",
             "definition": "Die Softwarearchitektur eines Programms oder eines Computersystems ist die Struktur oder sind die Strukturen des Systems, die die Softwareelemente, die extern sichtbaren Eigenschaften dieser Elemente und die Verbindung zwischen diesen Elementen umfasst. ",
             "definition1": "Eine Softwarearchitektur beschreibt die Strukturen eines Softwaresystems durch Architekturbausteine und ihre Beziehungen und Interaktionen untereinander sowie ihre physikalische Verteilung. Die extern sichtbaren Eigenschaften eines Architekturbausteins werden durch Schnittstellen spezifiziert. "
         },
@@ -773,7 +829,7 @@
         {
             "term": "Anforderung",
             "synonym": "Anforderungen",
-            "synonym1": "Requirements",
+            "synonym1": "requirements",
             "definition": "Eine Anforderung ist eine übermittelte Eigenschaft oder Fähigkeit, die zur Lösung eines Problems oder zur Erreichung eines Ziels benötigt wird und gegebenenfalls aufgrund eines formellen Dokuments erfüllt werden muss. ",
             "definition1": ""
         },
@@ -787,7 +843,7 @@
         {
             "term": "funktionale Anforderung",
             "synonym": "funktionale Anforderungen",
-            "synonym1": "",
+            "synonym1": "functional requirements",
             "definition": "Die funktionalen Anforderungen können umschrieben werden als die Kernaufgaben, die ein System erfüllen muss. ",
             "definition1": "Die funktionale Anforderung wird definiert als die Festlegung einer vom Softwaresystem oder einer seiner Komponenten bereitzustellende Funktion oder bereitzustellenden Service. "
         },
@@ -815,27 +871,27 @@
         {
             "term": "Rahmenbedingungen",
             "synonym": "Rahmenbedingung",
-            "synonym1": "",
+            "synonym1": "conditions",
             "definition": "Eine Rahmenbedingung legt organisatorische und oder technische Restriktionen für das Softwaresystem und oder den Entwicklungsprozess fest. ",
             "definition1": "In der Literatur wird zwischen technischen und organisatorischen Randbedingungen beziehungsweise Rahmenbedingungen und Konventionen abgegrenzt, wobei die Begrifflichkeiten nicht konsistent verwendet werden. "
         },
         {
             "term": "Kontextabgrenzung",
             "synonym": "Abgrenzung",
-            "synonym1": "",
+            "synonym1": "context boundaries",
             "definition": "Im Rahmen der Systemanalyse muss die Umgebung und der genaue Umfang des Systems definiert werden. Dafür werden die Systemgrenze und die Kontextgrenze gezogen. ",
             "definition1": ""
         },
         {
             "term": "Systemgrenze",
-            "synonym": "",
-            "synonym1": "",
+            "synonym": "system boundaries",
+            "synonym1": "Systemgrenzen",
             "definition": "Die Systemgrenze zieht einen Strich zwischen dem System und dessen Umgebung. Das System kann Teile außerhalb dieser Grenze nicht durch den Entwicklungsprozess verändern. ",
             "definition1": ""
         },
         {
             "term": "Kontextgrenze",
-            "synonym": "",
+            "synonym": "context borderline",
             "synonym1": "",
             "definition": "Die Kontextgrenze trennt den relevanten Teil eines geplanten Systems vom irrelevanten Teil, das heißt dem Teil der Umgebung, der keinen Einfluss auf das geplante System und dessen Anforderungen hat. ",
             "definition1": ""
@@ -843,9 +899,24 @@
         {
             "term": "Kontext",
             "synonym": "Systemkontext",
-            "synonym1": "Context",
+            "synonym1": "context",
             "definition": "Der Systemkontext befindet sich zwischen Systemgrenze und Kontextgrenze. Er unmfasst alle Aspekte, die für die Anforderungen des geplanten Systems relevant sind, und die nicht im Rahmen der Entwicklung dieses Systems gestaltet werden können. ",
             "definition1": "Der Systemkontext, auch Systemumfang genannt, besteht aus allen materiellen und immateriellen Objekten, die eine Beziehung zu dem System haben. "
+        },
+        {
+            "term": "Schleife",
+            "synonym": "loop",
+            "synonym1": "Wiederholung",
+            "definition": "Eine Schleife ist eine Kontrollstruktur in Programmiersprachen. Sie wiederholt einen Anweisungs-Block – den sogenannten Schleifenrumpf oder Schleifenkörper – solange die Schleifenbedingung als Laufbedingung gültig bleibt beziehungsweise als Abbruchbedingung nicht eintritt. Schleifen, deren Schleifenbedingung immer zur Fortsetzung führt oder die keine Schleifenbedingung haben, sind Endlosschleifen. ",
+            "definition1": "Es gibt verschiedene Arten von Schleifen: die vorprüfende oder kopfgesteuerete Schleife, die nachprüfende oder fußgesteuerte Schleife, die Zählschleife, die Mengenschleife, Schleifen mit Laufbedingung sowie Schleifen mit Abbruchbedingung. "
+        },
+        {
+            "term": "Verzweigung",
+            "synonym": "decision",
+            "synonym1": "Verzweigungen",
+            "definition": "Bedingte Anweisungen und Verzweigungen bilden, zusammen mit den Schleifen, die Kontrollstrukturen der Programmiersprachen. Sie gehören zu den wichtigsten Bestandteilen der Programmierung, da durch sie ein Programm auf unterschiedliche Zustände und Eingaben reagieren kann. ",
+            "definition1": "Eine Verzweigung legt fest, welcher von zwei oder mehr Programmabschnitten, abhängig von einer oder mehreren Bedingungen, ausgeführt wird. "
         }
+
     ]
 }
