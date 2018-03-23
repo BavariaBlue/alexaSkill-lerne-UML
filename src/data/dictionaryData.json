@@ -916,6 +916,34 @@
             "synonym1": "Verzweigungen",
             "definition": "Bedingte Anweisungen und Verzweigungen bilden, zusammen mit den Schleifen, die Kontrollstrukturen der Programmiersprachen. Sie gehören zu den wichtigsten Bestandteilen der Programmierung, da durch sie ein Programm auf unterschiedliche Zustände und Eingaben reagieren kann. ",
             "definition1": "Eine Verzweigung legt fest, welcher von zwei oder mehr Programmabschnitten, abhängig von einer oder mehreren Bedingungen, ausgeführt wird. "
+        },
+        {
+            "term": "Kontrollfluss",
+            "synonym": "control flow",
+            "synonym1": "",
+            "definition": "Ein Kontrollfluss ist eine spezielle Aktivitätskante in einer Aktivität. Er verbindet Aktionen und Kontrollknoten. Über einen Kontrollfluss können im Gegensatz zu einem Objektfluss nur Kontroll-Token fließen. ",
+            "definition1": "Ein Kontrollfluss wird als durchgezogene Linie mit offener Pfeilspitze dargestellt. Diese Notation entspricht der Notation für den Objektfluss. Ein Kontrollfluss lässt sich aber meistens leicht von einem Objektfluss unterscheiden, weil er nie mit einem Objektknoten, zum Beispiel einem Pin, an einem der beiden Enden verbunden ist. Ein Kontrollfluss kann mittels Guards und Gewichten parametriert werden. "
+        },
+        {
+            "term": "Guard",
+            "synonym": "guard",
+            "synonym1": "",
+            "definition": "Ein Guard ist eine zu erfüllende Bedingung, damit der Übergang auf dem Kontrollfluss durchgezogen werden kann. Die Guards dürfen sich nicht gegenseitig überlappen. ",
+            "definition1": "Guards werden in eckigen Klammern über dem entsprechenden Kontrollfluss gezeichnet. "
+        },
+        {
+            "term": "Objektfluss",
+            "synonym": "object flow",
+            "synonym1": "",
+            "definition": "Ein Objektfluss ist eine spezielle Aktivitätskante in einer Aktivität. Er verbindet Objektknoten und Kontrollknoten. Er kann nie eine Aktion direkt mit einem Objektknoten oder mit einem Kontrollknoten verbinden, sondern immer nur indirekt über Pins, die der Aktion zugeordnet sind. ",
+            "definition1": "Ein Objektfluss wird - wie auch für den Kontrollfluss üblich - als durchgezogene Linie mit offener Pfeilspitze dargestellt."
+        },
+        {
+            "term": "Pin",
+            "synonym": "pin",
+            "synonym1": "pins",
+            "definition": "Dieses zu den Objektknoten gehörende Modellelement wird im Zusammenhang mit Aktionen verwendet. Der Pin spielt dort die Rolle einer Andockstelle. Man unterscheidet zwischen Eingabepins, die der Aktion Werte zur Verfügung stellen, und Ausgabepins, an die die Aktion Werte abgibt. ",
+            "definition1": "Pins werden mit einem kleinen Quadrat am Rand des Aktionssymbols gezeichnet. Wenn nichts anderes angegeben ist, sind die Pins am linken Rand meistens Eingabepins und diejenigen am rechten Rand Ausgabepins. Pins können einen Namen haben, der in der Nähe des Pins gezeichnet wird. "
         }
 
     ]

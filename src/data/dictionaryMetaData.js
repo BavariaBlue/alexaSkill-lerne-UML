@@ -58,7 +58,7 @@
     // Aufzählungstyp                           √ √
     // Literal                                  √ √
 
-// sixth group: specific terms for diagrams     (tmp: 45 + 21 + 7) = 73 (+ 38) ->  111 (+ 18) = 129 
+// sixth group: specific terms for diagrams     (tmp: 45 + 21 + 7) = 73 (+ 38) ->  111 (+ 24) = 135 
     // --- First type: structure diagrams ---
     /* 
     (1) Klassendiagramm             (23)
@@ -183,7 +183,7 @@
 
     // --- Third type: interaction diagrams ---
     /*
-    (1) Sequenz Diagramme          (5) 
+    (1) Sequenz Diagramme           (5) 
     // Sequenz                                  √ √
     // Nachricht                                √ √
     // Synchrone Nachricht                      √ √
@@ -205,12 +205,11 @@
 
     /*
     (4) Zeitdiagramm                (0)
-    //
     */
 
 
-// last group: big picture                      (18) -> 56         
-    /* Software Engineering
+// last group: big picture                      (18 + 6) -> 24         
+    /* Software Engineering         (18)
     // Requirements Engineering                 √ √
     // Objektorientierte Analyse                √ √
     // Designphase                              √ √
@@ -232,18 +231,22 @@
     //
     */
     /*
-    (2) Programming & Object-orientation
-    // Schleife                                 √   
-    // Verzweigung                              √
-    // Kontrollfluss    
-    //
-    //
+    (2) Programming & Object-orientation    (6)    
+    // Schleife                                 √ √ 
+    // Verzweigung                              √ √
+    // Kontrollfluss                            √ √
+    // Guard                                    √ √
+    // Objektfluss                              √ √
+    // Pin                                      √ √
+    // Parameter
+    // Boolean
+    // Integer
+    // Real 
+    // String
+    // Unlimited Natural
+    // Sichtbarkeit
+    // Rückgabetyp
     //
     */
-
     
-    // TODO: Iteration, Schleife, 
-    
-    // TODO: PIN (in Mulitplizität verwendet)
-
     // TODO: alle Stereotypen: http://www.comelio-medien.com/de/comelio-blog/uml/basis/ -> Stereotypen
