@@ -127,6 +127,8 @@ var handlers = {
     'AnswerDictionaryIntent': function () {
         console.log('AnswerDictionaryIntent called');
         let userQuestion = this.event.request.intent.slots.answerDictionarySlot.value;
+        //capitalize_Words 
+        userQuestion = capitalize_Words(userQuestion);
         console.log("Loaded userQuestion = " + userQuestion);
 
         // var currentDefinitionId = myArray.map((el) => el.color).indexOf('blue');
@@ -183,6 +185,19 @@ var handlers = {
             // right now: output tells synonym, not term!
         }
         // error: can't do response.speak in function? add parameter??
+
+        // e.g. value akteur -> Akteur or software architektur -> Software Architektur
+        function capitalize_Words(str)
+        {
+            return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+        }
+    },
+
+    // help
+    'AMAZON.HelpIntent': function () {
+        this.response.speak('Sage: Öffne Wörterbuch, wenn du ein Wort nachschlagen willst. Sage: Öffne Quiz, um ein kleines Quiz zu spielen. Deinen Score kannst du mit der Floskel: Öffne Score, ausgeben. Beende den Skill mit: Alexa, Stop oder Ende.')
+        .listen('Ein kleiner Tipp: mit: Öffne Quiz, kannst du deinen Score verbessern!');
+        this.emit(':responseReady');
     },
 
     // Stop
