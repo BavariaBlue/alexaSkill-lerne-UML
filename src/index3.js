@@ -1,4 +1,6 @@
 'use strict';
+// new index.js for states pattern
+// not working!
 const Alexa = require("alexa-sdk");
 const appId = 'amzn1.ask.skill.b68a737d-c970-4e3f-bd2f-0a3327f28277';
 

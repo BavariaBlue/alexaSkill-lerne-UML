@@ -1,0 +1,1383 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "lerne u. m. l.",
+      "intents": [{
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "Ich brauche Hilfe",
+            "Hilfe",
+            "Wie spiele ich ein Quiz",
+            "Wie öffne ich das Quiz",
+            "Was muss ich machen",
+            "Wie geht das",
+            "Wie rufe ich das Wörterbuch auf",
+            "Wie benutzte ich diesen Skill"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "Ende",
+            "Stop",
+            "Aufhören",
+            "Alexa aufhören",
+            "Alexa schließe Skill",
+            "Alexa Ende",
+            "Alexa Stop"
+          ]
+        },
+        {
+          "name": "AnswerQuizIntent",
+          "slots": [{
+            "name": "answerQuizSlot",
+            "type": "answerQuizSlot"
+          }],
+          "samples": [
+            "Das ist {answerQuizSlot}",
+            "{answerQuizSlot}",
+            "Das ist doch {answerQuizSlot}",
+            "Ich denke das ist {answerQuizSlot}"
+          ]
+        },
+        {
+          "name": "OpenQuizIntent",
+          "slots": [{
+            "name": "quizSynSlot",
+            "type": "quizSyn"
+          }],
+          "samples": [
+            "Ich möchte ein {quizSynSlot} spielen",
+            "Öffne bitte das {quizSynSlot}",
+            "Kannst du das {quizSynSlot} öffnen",
+            "{quizSynSlot} öffnen",
+            "{quizSynSlot}",
+            "Öffne das {quizSynSlot}",
+            "Öffne {quizSynSlot}"
+          ]
+        },
+        {
+          "name": "OpenScoreIntent",
+          "slots": [],
+          "samples": [
+            "Wie schneide ich ab",
+            "Öffne Score",
+            "Wie viele Punkte habe ich",
+            "Nenne mir meinen Score",
+            "Nenne mir meine Punkte",
+            "Welchen Score habe ich",
+            "Score abfragen",
+            "Score"
+          ]
+        },
+        {
+          "name": "OpenDictionaryIntent",
+          "slots": [{
+            "name": "openDictionarySlot",
+            "type": "dictionarySyn"
+          }],
+          "samples": [
+            "Befrage das {openDictionarySlot}",
+            "Befrage {openDictionarySlot}",
+            "Öffne {openDictionarySlot}",
+            "{openDictionarySlot} starten",
+            "Starte {openDictionarySlot}",
+            "{openDictionarySlot}",
+            "Nachschlagen"
+          ]
+        },
+        {
+          "name": "AnswerDictionaryIntent",
+          "slots": [{
+            "name": "answerDictionarySlot",
+            "type": "answerDictionarySlot"
+          }],
+          "samples": [
+            "Wie lautet die Definition von {answerDictionarySlot}",
+            "Was sind {answerDictionarySlot}",
+            "Was heißt {answerDictionarySlot}",
+            "Was bedeutet {answerDictionarySlot}",
+            "Erkläre {answerDictionarySlot}",
+            "Was ist eine {answerDictionarySlot}",
+            "Was ist ein {answerDictionarySlot}",
+            "Schlage {answerDictionarySlot} nach",
+            "Definiere {answerDictionarySlot}"
+          ]
+        }
+      ],
+      "types": [{
+          "name": "answerQuizSlot",
+          "values": [{
+              "name": {
+                "value": "wahr",
+                "synonyms": [
+                  "richtig",
+                  "korrekt"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "falsch",
+                "synonyms": [
+                  "unwahr",
+                  "inkorrekt"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "answerDictionarySlot",
+          "values": [{
+              "name": {
+                "value": "Pin",
+                "synonyms": [
+                  "pin",
+                  "pins"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Objektfluss",
+                "synonyms": [
+                  "object flow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Guard",
+                "synonyms": [
+                  "guard"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kontrollfluss",
+                "synonyms": [
+                  "control flow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verzweigung",
+                "synonyms": [
+                  "Verzweigungen",
+                  "decision"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Schleife",
+                "synonyms": [
+                  "Wiederholung",
+                  "loop"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Token",
+                "synonyms": [
+                  "Tokens",
+                  "token"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verbindungsknoten",
+                "synonyms": [
+                  "Vereinigung",
+                  "join node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verzweigungsknoten",
+                "synonyms": [
+                  "Entscheidungsknoten",
+                  "decision node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Synchronisationsknoten",
+                "synonyms": [
+                  "Zusammenführung",
+                  "merge node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Parallelisierungsknoten",
+                "synonyms": [
+                  "Gabelungsknoten",
+                  "fork node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Endknoten",
+                "synonyms": [
+                  "End-Knoten",
+                  "final node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Startknoten",
+                "synonyms": [
+                  "Start-Knoten",
+                  "initial node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kontrollknoten",
+                "synonyms": [
+                  "Kontrolle Knoten",
+                  "control node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Sequenzterm",
+                "synonyms": [
+                  "Sequenzterme",
+                  "sequence term"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Sequenzausdruck",
+                "synonyms": [
+                  "Sequenznummer",
+                  "sequence expression"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lebenslinie",
+                "synonyms": [
+                  "Lebenslinien",
+                  "lifeline"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Asynchrone Nachricht",
+                "synonyms": [
+                  "Asynchrone Nachrichten",
+                  "asynchronous message"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Synchrone Nachricht",
+                "synonyms": [
+                  "Synchrone Nachrichten",
+                  "synchronous message"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Nachricht",
+                "synonyms": [
+                  "Nachrichten",
+                  "message"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Sequenz",
+                "synonyms": [
+                  "Sequenzen",
+                  "sequence"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verantwortlichkeitsbereich",
+                "synonyms": [
+                  "Aktivitätsbereich",
+                  "swim lanes"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Aktivität",
+                "synonyms": [
+                  "Aktivitäten",
+                  "activity"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Endzustand",
+                "synonyms": [
+                  "End-Zustand",
+                  "terminate pseudostate"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Startzustand",
+                "synonyms": [
+                  "Start Zustand",
+                  "initial pseudostate"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Zustandsübergang",
+                "synonyms": [
+                  "Zustandsübergänge",
+                  "state transition"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Zustand",
+                "synonyms": [
+                  "Zustände",
+                  "state"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Ereignis",
+                "synonyms": [
+                  "Ereignisse",
+                  "event"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Erweiterungspunkt",
+                "synonyms": [
+                  "extend Punkt",
+                  "extension point"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Extend Beziehung",
+                "synonyms": [
+                  "extend relationship",
+                  "extend"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Include Beziehung",
+                "synonyms": [
+                  "include relationship",
+                  "include"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Akteur",
+                "synonyms": [
+                  "Akteure",
+                  "actor"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "System",
+                "synonyms": [
+                  "Systeme",
+                  "subject"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Use-Case",
+                "synonyms": [
+                  "use case",
+                  "Anwendungsfall"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Einsatzspezifikation",
+                "synonyms": [
+                  "Einsatz",
+                  "deployment specification"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verteilungsbeziehung",
+                "synonyms": [
+                  "Verteilungsbeziehungen",
+                  "deployment"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kommunikationspfad",
+                "synonyms": [
+                  "Kommunikationspfade",
+                  "communication path"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Ausführungsumgebung",
+                "synonyms": [
+                  "Ausführungsumgebungen",
+                  "execution environment"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Gerät",
+                "synonyms": [
+                  "Geräte",
+                  "device"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Knoten",
+                "synonyms": [
+                  "nodes",
+                  "node"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kollaborationsanwendung",
+                "synonyms": [
+                  "collaboration use"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kollaboration",
+                "synonyms": [
+                  "Kollaborationen",
+                  "collaboration"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Port",
+                "synonyms": [
+                  "Ports",
+                  "port"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Konnektor",
+                "synonyms": [
+                  "connector",
+                  "Konnektoren"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Part",
+                "synonyms": [
+                  "Parts",
+                  "part"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Artefakt",
+                "synonyms": [
+                  "Artefakte",
+                  "artefact"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Komponente",
+                "synonyms": [
+                  "Komponenten",
+                  "component"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Namensraum",
+                "synonyms": [
+                  "Namen Raum",
+                  "namespace"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Paket Merge",
+                "synonyms": [
+                  "Paket-Merge",
+                  "package merge"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Element Import",
+                "synonyms": [
+                  "Elementimport",
+                  "element import"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Paket Import",
+                "synonyms": [
+                  "Paketimport",
+                  "package import"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Paket",
+                "synonyms": [
+                  "Pakete",
+                  "package"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Instanz",
+                "synonyms": [
+                  "Instanzen",
+                  "instance"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Link",
+                "synonyms": [
+                  "link"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Wertangabe",
+                "synonyms": [
+                  "Wertangaben",
+                  "slot"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Instanzbeschreibung",
+                "synonyms": [
+                  "Instanzbeschreibungen",
+                  "instance specification"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kardinalität",
+                "synonyms": [
+                  "cardinality",
+                  "Kardinalitäten"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Multiplizität",
+                "synonyms": [
+                  "multiplicity",
+                  "Multiplizitäten"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Informationseinheit",
+                "synonyms": [
+                  "informationseinheiten",
+                  "information item"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Informationsfluss",
+                "synonyms": [
+                  "Informationsflüsse",
+                  "information flow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Vererbung",
+                "synonyms": [
+                  "Vererbungsbeziehung",
+                  "inheritance"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Realisierung",
+                "synonyms": [
+                  "Realisierungsbeziehung",
+                  "realization"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Substitution",
+                "synonyms": [
+                  "Substitutionsbeziehung",
+                  "substitution"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Abstraktion",
+                "synonyms": [
+                  "Abstraktionsbeziehung",
+                  "abstraction"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verwendung",
+                "synonyms": [
+                  "Verwendungsbeziehung",
+                  "usage"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Abhängigkeit",
+                "synonyms": [
+                  "Abhängigkeitsbeziehung",
+                  "dependency"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Komposition",
+                "synonyms": [
+                  "composite aggregation",
+                  "composition"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Aggregation",
+                "synonyms": [
+                  "aggregation",
+                  "Aggregationen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Assoziationsklasse",
+                "synonyms": [
+                  "Assoziationsklassen",
+                  "association class"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Assoziation",
+                "synonyms": [
+                  "Assoziationen",
+                  "association"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Generalisierung",
+                "synonyms": [
+                  "Generalisation",
+                  "generalization"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Socket",
+                "synonyms": [
+                  "Ball"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Schnittstelle",
+                "synonyms": [
+                  "interface",
+                  "Interface"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Operation",
+                "synonyms": [
+                  "operation",
+                  "Operationen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Attribut",
+                "synonyms": [
+                  "Eigenschaft",
+                  "property"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Objekt",
+                "synonyms": [
+                  "Objekte",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Compartments",
+                "synonyms": [
+                  "compartment"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Abstrakte Klasse",
+                "synonyms": [
+                  "abstract class",
+                  "Abstrakte Klassen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Klasse",
+                "synonyms": [
+                  "Klassen",
+                  "class"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Software Engineering",
+                "synonyms": [
+                  "Softwaretechnik",
+                  "S E"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kontext",
+                "synonyms": [
+                  "context"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kontextgrenze",
+                "synonyms": [
+                  "context borderline"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Systemgrenze",
+                "synonyms": [
+                  "Systemgrenzen",
+                  "system boundaries"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kontextabgrenzung",
+                "synonyms": [
+                  "context boundaries",
+                  "Abgrenzung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Rahmenbedingungen",
+                "synonyms": [
+                  "Rahmenbedingung"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Produktvision",
+                "synonyms": [
+                  "Vision"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Systemziel",
+                "synonyms": [
+                  "Ziel",
+                  "Ziele"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Stakeholder"
+              }
+            },
+            {
+              "name": {
+                "value": "funktionale Anforderung",
+                "synonyms": [
+                  "functional requirements",
+                  "funktionale Anforderungen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Qualitätsanforderung",
+                "synonyms": [
+                  "nicht funktionale Anforderungen",
+                  "Qualitätsanforderungen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Anforderung",
+                "synonyms": [
+                  "requirement",
+                  "Anforderungen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Grobdesign"
+              }
+            },
+            {
+              "name": {
+                "value": "Feindesign"
+              }
+            },
+            {
+              "name": {
+                "value": "Softwarearchitektur",
+                "synonyms": [
+                  "software architecture",
+                  "Software Architektur",
+                  "S A"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Designphase",
+                "synonyms": [
+                  "Entwurf",
+                  "Entwurfsprozess"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Objektorientierte Analyse",
+                "synonyms": [
+                  "object-oriented analysis",
+                  "O O A"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Requirements Engineering",
+                "synonyms": [
+                  "Anforderungsanalyse",
+                  "R E"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Literal",
+                "synonyms": [
+                  "literal",
+                  "Literale"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Aufzählungstyp",
+                "synonyms": [
+                  "Aufzählungstypen",
+                  "Enumeration"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Primitiver Datentyp",
+                "synonyms": [
+                  "Primitive Datentypen",
+                  "primitive datatype"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Datentyp",
+                "synonyms": [
+                  "Datentypen",
+                  "datatype"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Classifier",
+                "synonyms": [
+                  "classifier"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Randbedingung",
+                "synonyms": [
+                  "constraint",
+                  "Randbedingungen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Ausdruck",
+                "synonyms": [
+                  "expression",
+                  "Ausdrücke"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kommentar",
+                "synonyms": [
+                  "comment",
+                  "Kommentare"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Modell",
+                "synonyms": [
+                  "model",
+                  "modelle"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Rahmenkopf",
+                "synonyms": [
+                  "heading"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Rahmen",
+                "synonyms": [
+                  "frame"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Zustandsdiagramme",
+                "synonyms": [
+                  "state machine diagram",
+                  "Zustandsdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Use Case Diagramm",
+                "synonyms": [
+                  "Anwendungsfalldiagramme",
+                  "Anwendungsfalldiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Aktivitätsdiagramme",
+                "synonyms": [
+                  "activity diagram",
+                  "Aktivitätsdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Zeitverlaufdiagramme",
+                "synonyms": [
+                  "timing diagram",
+                  "Zeitverlaufdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Interaktionsübersichtsdiagramme",
+                "synonyms": [
+                  "interaction overview diagram",
+                  "Interaktionsübersicht",
+                  "Interaktionsübersichtsdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kommunikationsdiagramme",
+                "synonyms": [
+                  "communication diagram",
+                  "Kommunikationsdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Sequenzdiagramme",
+                "synonyms": [
+                  "sequence diagram",
+                  "Sequenzdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Paketdiagramme",
+                "synonyms": [
+                  "package diagram",
+                  "Paketdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Objektdiagramme",
+                "synonyms": [
+                  "object diagram",
+                  "Objektdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verteilungsdiagramme",
+                "synonyms": [
+                  "deployment diagram",
+                  "Verteilungsdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Komponentendiagramme",
+                "synonyms": [
+                  "component diagram",
+                  "Komponentendiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Kompositionsstrukturdiagramme",
+                "synonyms": [
+                  "composite structure diagram",
+                  "Kompositionsstrukturdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Klassendiagramme",
+                "synonyms": [
+                  "class diagram",
+                  "Klassendiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Profildiagramme",
+                "synonyms": [
+                  "profil diagram",
+                  "Profildiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Meta-Metamodellschicht",
+                "synonyms": [
+                  "meta meta model layer",
+                  "Meta Meta Modellschicht"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Meta Modellschicht",
+                "synonyms": [
+                  "Metamodellschicht",
+                  "Metamodell"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Modellschicht",
+                "synonyms": [
+                  "model layer"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Laufzeitschicht"
+              }
+            },
+            {
+              "name": {
+                "value": "OMG",
+                "synonyms": [
+                  "Object Management Group",
+                  "O M G"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Interaktionsdiagramme",
+                "synonyms": [
+                  "interaction diagram",
+                  "Interaktionsdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Verhaltendiagramme",
+                "synonyms": [
+                  "behaviour diagram",
+                  "Verhaltensdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Strukturdiagramme",
+                "synonyms": [
+                  "structure diagram",
+                  "Strukturdiagramm"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Dynamische Sicht",
+                "synonyms": [
+                  "Dynamik"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Statische Sicht",
+                "synonyms": [
+                  "Statik"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Sichten"
+              }
+            },
+            {
+              "name": {
+                "value": "Diagrammtyp",
+                "synonyms": [
+                  "Diagrammtypen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "UML",
+                "synonyms": [
+                  "Unified Modeling Language",
+                  "U M L"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "dictionarySyn",
+          "values": [{
+              "name": {
+                "value": "Wörterverzeichnis"
+              }
+            },
+            {
+              "name": {
+                "value": "Verzeichnis"
+              }
+            },
+            {
+              "name": {
+                "value": "Dictionary"
+              }
+            },
+            {
+              "name": {
+                "value": "Vokabular"
+              }
+            },
+            {
+              "name": {
+                "value": "Nachschlagwerk"
+              }
+            },
+            {
+              "name": {
+                "value": "Lexikon"
+              }
+            },
+            {
+              "name": {
+                "value": "Wörterbuch"
+              }
+            }
+          ]
+        },
+        {
+          "name": "quizSyn",
+          "values": [{
+              "name": {
+                "value": "Quizduell"
+              }
+            },
+            {
+              "name": {
+                "value": "Ratespiel"
+              }
+            },
+            {
+              "name": {
+                "value": "Quizzes"
+              }
+            },
+            {
+              "name": {
+                "value": "Quiz"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
